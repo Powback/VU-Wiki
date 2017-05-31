@@ -1,0 +1,5112 @@
+enum AddGameBanResponseType {
+	AddGameBanResponseType_Success = 0,
+	AddGameBanResponseType_Failure = 1,
+	AddGameBanResponseType_UserNotFound = 2,
+	AddGameBanResponseType_UserCannotBeBanned = 3
+}
+
+enum AdministrationEventType {
+	AdministrationEventType_Add = 0,
+	AdministrationEventType_Remove = 1,
+	AdministrationEventType_Clear = 2,
+	AdministrationEventType_List = 3,
+	AdministrationEventType_Load = 4,
+	AdministrationEventType_Save = 5
+}
+
+enum AdministrationRestrictionLevel {
+	AdministrationRestrictionLevel_Zero = 0,
+	AdministrationRestrictionLevel_One = 1,
+	AdministrationRestrictionLevel_Two = 2,
+	AdministrationRestrictionLevel_Three = 3,
+	AdministrationRestrictionLevel_Count = 4
+}
+
+enum AIAltFireFromAntState {
+	AltFireFromAntState_NoForcedFire = 0,
+	AltFireFromAntState_Prepare = 1,
+	AltFireFromAntState_ForceFire = 2
+}
+
+enum AIDeathReactionAnimationType {
+	AIDeathReactionAnimationType_1 = 0,
+	AIDeathReactionAnimationType_2 = 1,
+	AIDeathReactionAnimationType_3 = 2,
+	AIDeathReactionAnimationType_4 = 3,
+	AIDeathReactionAnimationType_5 = 4,
+	AIDeathReactionAnimationType_Count = 5
+}
+
+enum AIHitReactionAnimationType {
+	AIHitReactionAnimationType_1 = 0,
+	AIHitReactionAnimationType_2 = 1,
+	AIHitReactionAnimationType_3 = 2,
+	AIHitReactionAnimationType_4 = 3,
+	AIHitReactionAnimationType_5 = 4,
+	AIHitReactionAnimationType_Count = 5
+}
+
+enum AimOrigin {
+	AoDefault = 0,
+	AoCamera = 1,
+	AoWeapon = 2
+}
+
+enum AIStunReactionAnimationType {
+	AIStunReactionAnimationType_1 = 0,
+	AIStunReactionAnimationType_2 = 1,
+	AIStunReactionAnimationType_3 = 2,
+	AIStunReactionAnimationType_4 = 3,
+	AIStunReactionAnimationType_5 = 4,
+	AIStunReactionAnimationType_Count = 5
+}
+
+enum AngleUnit {
+	AngleUnit_Radians = 0,
+	AngleUnit_Degrees = 1
+}
+
+enum AnimatedAimingEnum {
+	AnimatedAimingTwoHanded = 0,
+	AnimatedAimingRightHanded = 1,
+	AnimatedAimingDisabled = 2
+}
+
+enum AnimatedFireEnum {
+	AnimatedFireAutomatic = 0,
+	AnimatedFireSingle = 1,
+	AnimatedFireHoldAndRelease = 2,
+	AnimatedFireDelayedSingleShot = 3,
+	AnimatedFireSimple = 4
+}
+
+enum AntAttentionStateEnum {
+	AntAttentionStateEnum_Relaxed = 0,
+	AntAttentionStateEnum_Ready = 1,
+	AntAttentionStateEnum_Combat = 2,
+	AntAttentionStateEnum_Evasive = 3,
+	AntAttentionStateEnum_AntEnumCount = 4,
+	AntAttentionStateEnum_NoChange = 5,
+	AntAttentionStateEnum_Count = 6,
+	AntAttentionStateEnum_Dummy1 = 7
+}
+
+enum AntCoverEnum {
+	AntCoverEnum_RightCover = 0,
+	AntCoverEnum_LeftCover = 1,
+	AntCoverEnum_MiddleCover = 2,
+	AntCoverEnum_MediumLeftCover = 3,
+	AntCoverEnum_MediumRightCover = 4,
+	AntCoverEnum_Prone = 5,
+	AntCoverEnum_Count = 6
+}
+
+enum AntCoverFireType {
+	AntCoverFireType_PeekFire = 0,
+	AntCoverFireType_FireStepOut = 1,
+	AntCoverFireType_FireOver = 2,
+	AntCoverFireType_BlindFireAround = 3,
+	AntCoverFireType_BlindFireOver = 4,
+	AntCoverFireType_FlankedWhileFiring = 8,
+	AntCoverFireType_FireStepOutSlow = 10,
+	AntCoverFireType_FireStepOutUrgent = 11,
+	AntCoverFireType_FireStepOut_Crouched = 12,
+	AntCoverFireType_FireLmg = 13,
+	AntCoverFireType_FireFromHipStepOut = 14
+}
+
+enum AntEntryIdEnum {
+	AntEntryIdEnum_Humvee_Driver = 0,
+	AntEntryIdEnum_Humvee_Gunner = 1,
+	AntEntryIdEnum_Humvee_PassengerRearLeft = 2,
+	AntEntryIdEnum_Humvee_PassengerRearRight = 3,
+	AntEntryIdEnum_F16_Pilot = 4,
+	AntEntryIdEnum_SU37_Pilot = 5,
+	AntEntryIdEnum_AH6_Pilot = 6,
+	AntEntryIdEnum_AH64_Pilot = 7,
+	AntEntryIdEnum_AH64_Gunner = 8,
+	AntEntryIdEnum_Vodnik_Driver = 9,
+	AntEntryIdEnum_Vodnik_Gunner = 10,
+	AntEntryIdEnum_Humvee_PassengerFrontRight = 11,
+	AntEntryIdEnum_Vodnik_PassengerFrontRight = 12,
+	AntEntryIdEnum_Vodnik_PassengerRearRight = 13,
+	AntEntryIdEnum_Vodnik_PassengerRearLeft = 14,
+	AntEntryIdEnum_VadsGunner = 15,
+	AntEntryIdEnum_F18F_Pilot = 16,
+	AntEntryIdEnum_F18F_Navigator = 17,
+	AntEntryIdEnum_M1A2_Gunner = 18,
+	AntEntryIdEnum_M1A2_Driver = 19
+}
+
+enum AntHitReactionWeaponType {
+	AntHitReactionWeaponType_Pistol = 0,
+	AntHitReactionWeaponType_SMG = 1,
+	AntHitReactionWeaponType_AssaultRifle = 2,
+	AntHitReactionWeaponType_LMG = 3,
+	AntHitReactionWeaponType_Shotgun = 4,
+	AntHitReactionWeaponType_SniperRifle = 5,
+	AntHitReactionWeaponType_Explosion = 6,
+	AntHitReactionWeaponType_Flashbang = 7,
+	AntHitReactionWeaponType_Melee = 8
+}
+
+enum AntPackagingType {
+	AntPackagingType_Static = 0,
+	AntPackagingType_Chunk = 1,
+	AntPackagingType_Bundle = 2,
+	AntPackagingType_AnimationSet = 3
+}
+
+enum AntPoseEnum {
+	AntPoseEnum_Stand = 0,
+	AntPoseEnum_Crouch = 1,
+	AntPoseEnum_AntEnumCount = 2,
+	AntPoseEnum_NoChange = 3,
+	AntPoseEnum_Count = 4
+}
+
+enum AntSpeedLevel {
+	AntSpeedLevel_Still = 0,
+	AntSpeedLevel_Walk = 1,
+	AntSpeedLevel_Jog_DEPRECATED_DO_NOT_USE = 2,
+	AntSpeedLevel_Sneak = 3,
+	AntSpeedLevel_Run = 4,
+	AntSpeedLevel_Sprint = 5,
+	AntSpeedLevel_Stairs_Walk_Up = 6,
+	AntSpeedLevel_Stairs_Walk_Down = 7,
+	AntSpeedLevel_Stairs_Run_Up = 8,
+	AntSpeedLevel_Stairs_Run_Down = 9,
+	AntSpeedLevel_Stairs_Sprint_Up = 10,
+	AntSpeedLevel_Stairs_Sprint_Down = 11,
+	AntSpeedLevel_AntEnumCount = 12,
+	AntSpeedLevel_NoChange = 13,
+	AntSpeedLevel_Count = 14
+}
+
+enum AreaTriggerInclude {
+	ATNone = 0,
+	ATAll = 1,
+	ATPlayers = 2,
+	ATAI = 3,
+	ATAI_Allies = 4,
+	ATAI_Enemies = 5,
+	ATPlayersNotInVehicle = 6
+}
+
+enum AudioCurveType {
+	AudioCurveType_Spline = 0
+}
+
+enum AudioSystemSpeakerSetup {
+	FiveDotOne = 6,
+	SevenDotOne = 8
+}
+
+enum AwardGroup {
+	AwardGroup_Undefined = 0,
+	AwardGroup_Ribbons = 1,
+	AwardGroup_DogTags = 2,
+	AwardGroup_Medals = 3,
+	AwardGroup_Star = 4,
+	AwardGroup_Mission = 5,
+	AwardGroup_LevelComplete = 6,
+	AwardGroup_Achievements = 7,
+	AwardGroup_LastAwardGroup = 8
+}
+
+enum AwardKitAssociation {
+	AwardKitAssociation_Undefined = 0,
+	AwardKitAssociation_Assault = 1,
+	AwardKitAssociation_Engineer = 2,
+	AwardKitAssociation_Recon = 3,
+	AwardKitAssociation_Support = 4,
+	AwardKitAssociation_All = 5,
+	AwardKitAssociation_LAST_ITEM = 6
+}
+
+enum AwardType {
+	AwardType_OnceGlobally = 0,
+	AwardType_OncePerRound = 1,
+	AwardType_Unlimited = 2,
+	AwardType_Limited = 3,
+	AwardType_GateList = 4
+}
+
+enum BackendType {
+	Backend_Lan = 0,
+	Backend_Blaze = 1,
+	Backend_Peer = 2,
+	Backend_Local = 3,
+	Backend_Count_ = 4
+}
+
+enum BlendShaderMode {
+	BsmLerp = 0,
+	BsmAdd = 1,
+	BsmSubtract = 2,
+	BsmMultiply = 3,
+	BsmMultiply2x = 4,
+	BsmScreen = 5,
+	BsmDifference = 6,
+	BsmLighten = 7,
+	BsmDarken = 8,
+	BsmOverlay = 9
+}
+
+enum BlinkType {
+	BTHold = 0,
+	BTBlink = 1,
+	BTCount = 2
+}
+
+enum BlurFilter {
+	BfNone = 0,
+	BfGaussian3Pixels = 1,
+	BfGaussian5Pixels = 2,
+	BfGaussian7Pixels = 3,
+	BfGaussian9Pixels = 4,
+	BfGaussian15Pixels = 5,
+	BfGaussian31Pixels = 6
+}
+
+enum BreakableControllerComponentNetworkId {
+	BreakableControllerComponentNetworkId_Collapsed = 0,
+	BreakableControllerComponentNetworkId_SpawnPartObjectsOnCollapse = 1,
+	BreakableControllerComponentNetworkId_ExtraPartCount = 2
+}
+
+enum BreakableControllerComponentNetworkIdMultiplier {
+	BreakableControllerComponentNetworkIdMultiplier_HidePartObjects = 0,
+	BreakableControllerComponentNetworkIdMultiplier_DisablePart = 1,
+	BreakableControllerComponentNetworkIdMultiplier_PartCount = 2
+}
+
+enum Buttons {
+	NoneButton = 0,
+	XButton = 1,
+	SquareButton = 2,
+	CircleButton = 3,
+	TriangleButton = 4
+}
+
+enum CameraIds {
+	NoCameraId = 0,
+	FreeCameraId = 1,
+	EntryCameraId = 2,
+	CameraIdCount = 3
+}
+
+enum CameraMovementActionMode {
+	CameraMovementActionMode_Start = 0,
+	CameraMovementActionMode_Stop = 1,
+	CameraMovementActionMode_StartAndStop = 2
+}
+
+enum CapturableType {
+	CTDefault = 0,
+	CTUnableToChangeTeam = 1,
+	CTCaptureEnablable = 2
+}
+
+enum ChangeGameSettingType {
+	CGSNone = 0,
+	CGSInvertVerticalLookAxis = 1,
+	CGSCount = 2
+}
+
+enum CharacterLightingMode {
+	CharacterLightingMode_Add = 0,
+	CharacterLightingMode_Blend = 1
+}
+
+enum CharacterPoseAction {
+	CPTNoAction = 0,
+	CPTForceToStand = 1,
+	CPTForceToCroch = 2,
+	CPTForceToProne = 3
+}
+
+enum CharacterPoseCollisionType {
+	CharacterPoseCollisionType_Capsule = 0,
+	CharacterPoseCollisionType_Pencil = 1
+}
+
+enum CharacterPoseType {
+	CharacterPoseType_Stand = 0,
+	CharacterPoseType_Crouch = 1,
+	CharacterPoseType_Prone = 2,
+	CharacterPoseTypeCount = 3
+}
+
+enum CharacterStateType {
+	CharacterStateType_OnGround = 0,
+	CharacterStateType_Jumping = 1,
+	CharacterStateType_InAir = 2,
+	CharacterStateType_Climbing = 3,
+	CharacterStateType_Falling = 4,
+	CharacterStateType_User_0 = 5,
+	CharacterStateType_Parachute = 5,
+	CharacterStateType_User_1 = 6,
+	CharacterStateType_Swimming = 6,
+	CharacterStateType_User_2 = 7,
+	CharacterStateType_AnimationControlled = 7,
+	CharacterStateType_User_3 = 8,
+	CharacterStateType_Sliding = 8,
+	CharacterStateType_User_4 = 9,
+	CharacterStateType_User_5 = 10,
+	CharacterStateType_StateCount = 11
+}
+
+enum ChatChannelType {
+	CctSayAll = 0,
+	CctTeam = 1,
+	CctSquad = 2,
+	CctSquadLeader = 3,
+	CctAdmin = 4,
+	CctSize = 5
+}
+
+enum ClientGameType {
+	ClientGameType_SinglePlayer = 0,
+	ClientGameType_Hosted = 1,
+	ClientGameType_Joined = 2
+}
+
+enum ClientState {
+	ClientState_WaitingForStaticBundleLoad = 0,
+	ClientState_LoadProfileOptions = 1,
+	ClientState_LostConnection = 2,
+	ClientState_Startup = 3,
+	ClientState_StartServer = 4,
+	ClientState_WaitingForLevel = 5,
+	ClientState_StartLoadingLevel = 6,
+	ClientState_WaitingForLevelLoaded = 7,
+	ClientState_WaitingForLevelLink = 8,
+	ClientState_LevelLinked = 9,
+	ClientState_WaitingUIIngame = 10,
+	ClientState_Ingame = 11,
+	ClientState_ConnectToServer = 12,
+	ClientState_WaitingUILoading = 13,
+	ClientState_WaitingUIUnload = 14,
+	ClientState_None = 15
+}
+
+enum CollisionMethodEnum {
+	CMESimple = 0,
+	CMEDetailed = 1
+}
+
+enum CombatPatrolMode {
+	CombatPatrolMode_MustStayOnPath = 0,
+	CombatPatrolMode_FreeToFight = 1,
+	CombatPatrolMode_FreeToFightAtDestination = 2
+}
+
+enum CompareOp {
+	CompareOp_Equal = 0,
+	CompareOp_NotEqual = 1,
+	CompareOp_Greater = 2,
+	CompareOp_Less = 3,
+	CompareOp_GreaterOrEqual = 4,
+	CompareOp_LessOrEqual = 5
+}
+
+enum CompareOperation {
+	Equal = 0,
+	NotEqual = 1,
+	LesserEqual = 2,
+	GreaterEqual = 3,
+	Lesser = 4,
+	Greater = 5
+}
+
+enum CompressorChannelMode {
+	CompressorChannelMode_Independent = 0,
+	CompressorChannelMode_Grouped = 1
+}
+
+enum ConditionType {
+	ConditionType_And = 0,
+	ConditionType_Or = 1,
+	ConditionType_XOr = 2,
+	ConditionType_Equal = 3,
+	ConditionType_Less = 4,
+	ConditionType_Greater = 5,
+	ConditionType_LessOrEqual = 6,
+	ConditionType_GreaterOrEqual = 7
+}
+
+enum ConsumableGroup {
+	ConsumableGroup_0 = 0,
+	ConsumableGroup_1 = 1,
+	ConsumableGroup_2 = 2,
+	ConsumableGroup_3 = 3,
+	ConsumableGroup_4 = 4,
+	ConsumableGroup_5 = 5,
+	ConsumableGroup_6 = 6,
+	ConsumableGroup_7 = 7,
+	ConsumableGroup_Count = 8
+}
+
+enum CoopPlayerEvent {
+	CoopPlayerEvent_Connecting = 0,
+	CoopPlayerEvent_Connected = 1,
+	CoopPlayerEvent_Disconnected = 2,
+	CoopPlayerEvent_Stats = 3,
+	CoopPlayerEvent_StatsFailed = 4
+}
+
+enum CoreLogLevel {
+	CllNone = 0,
+	CllEventRecord = 1,
+	CllCrash = 2,
+	CllError = 3,
+	CllAssert = 4,
+	CllFatalAssert = 5,
+	CllValidate = 6,
+	CllWarning = 7,
+	CllInfo = 8,
+	CllOutput = 9,
+	CllDebug = 10
+}
+
+enum CoverEnterStrategy {
+	CoverEnterStrategy_EnterNormally = 0,
+	CoverEnterStrategy_SkipEnterButAlign = 1,
+	CoverEnterStrategy_SkipEnterDontAlign = 2
+}
+
+enum CoverExitStyle {
+	CoverExitStyle_ExitCover = 0,
+	CoverExitStyle_VaultFromCrouchCover = 1,
+	CoverExitStyle_StrafeFire = 2,
+	CoverExitStyle_Surprised = 3,
+	CoverExitStyle_Sprint = 4
+}
+
+enum CoverFireType {
+	CoverFireType_Peek = 0,
+	CoverFireType_Out = 1,
+	CoverFireType_Over = 2,
+	CoverFireType_BlindOut = 3,
+	CoverFireType_BlindOver = 4,
+	CoverFireType_GrenadeOut = 5,
+	CoverFireType_GrenadeBlindOver = 6,
+	CoverFireType_NoFire = 7,
+	CoverFireType_Flanked = 8,
+	CoverFireType_OutSlow = 10,
+	CoverFireType_OutUrgent = 11,
+	CoverFireType_OutStandToCrouch = 12,
+	CoverFireType_Lmg = 13,
+	CoverFireType_OutFireFromHip = 14,
+	CoverFireType_FlankedSurprised = 15
+}
+
+enum CoverPeekType {
+	CoverPeekType_Out = 0,
+	CoverPeekType_Over = 1,
+	CoverPeekType_None = 2
+}
+
+enum CoverSelectionMethod {
+	CSMAgainstThreatPosition = 0,
+	CSMAgainstHighestThreat = 1,
+	CSMAgainstSelectedTarget = 2,
+	CSMAgainstAllEnemies = 3,
+	CSMAgainstAllEnemiesWithFallback = 4
+}
+
+enum CoverType {
+	CoverType_Stand = 0,
+	CoverType_Medium = 1,
+	CoverType_Crouch = 2,
+	CoverType_Prone = 3
+}
+
+enum CriteriaType {
+	CriteriaType_IAR_InARound = 0,
+	CriteriaType_IAR_InARoundResetIfValueNotChanged = 1,
+	CriteriaType_IAS_InASpawn = 2,
+	CriteriaType_IAS_InASpawnNotResetable = 3,
+	CriteriaType_IAS_InASpawnWithoutTakingDamage = 4,
+	CriteriaType_GLOBAL_AllTimeTotal = 5,
+	CriteriaType_GLOBAL_HighestValue = 6,
+	CriteriaType_GLOBAL_HighestValueAlways = 7,
+	CriteriaType_GLOBAL_HighestValueInASpawn = 8,
+	CriteriaType_GLOBAL_LowestValueAlways = 9,
+	CriteriaType_IfNotTrue = 10,
+	CriteriaType_IAD_InADeathStreak = 11,
+	CriteriaType_GLOBAL_HighestValuePersistent = 12,
+	CriteriaType_LAST_ITEM = 13
+}
+
+enum CurveInfinityType {
+	CurveInfinityType_Constant = 0,
+	CurveInfinityType_Linear = 1,
+	CurveInfinityType_Cycle = 2,
+	CurveInfinityType_CycleWithOffset = 3,
+	CurveInfinityType_Oscillate = 4
+}
+
+enum CurveShaderType {
+	CstSine = 0,
+	CstSineNormalized = 1,
+	CstSawtooth = 2,
+	CstTriangle = 3,
+	CstSquare = 4
+}
+
+enum CustomizationConstants {
+	MaxAttachedSockets = 4,
+	MaxVisualSockets = 16
+}
+
+enum CustomReportValueKind {
+	CustomReportValueKind_ScoreMultiplier = 0,
+	CustomReportValueKind_GunMasterLevel = 1
+}
+
+enum DamageIndicationType {
+	DamageIndicationType_GiverPlayer = 0,
+	DamageIndicationType_ExplosionCenter = 1
+}
+
+enum DeathAnimationOperation {
+	DALessThan = 0,
+	DAGreaterThan = 1,
+	DAEqualTo = 2
+}
+
+enum DebugMenuItemType {
+	DmitItem = 0,
+	DmitToggle = 1
+}
+
+enum DebugRenderType {
+	DebugRenderType_Text = 0,
+	DebugRenderType_Plot = 1,
+	DebugRenderType_Bar = 2
+}
+
+enum DepthStencilCompareFunc {
+	DepthStencilCompareFunc_Never = 0,
+	DepthStencilCompareFunc_Less = 1,
+	DepthStencilCompareFunc_Equal = 2,
+	DepthStencilCompareFunc_LessEqual = 3,
+	DepthStencilCompareFunc_Greater = 4,
+	DepthStencilCompareFunc_NotEqual = 5,
+	DepthStencilCompareFunc_GreaterEqual = 6,
+	DepthStencilCompareFunc_Always = 7
+}
+
+enum DestructionConnectivityType {
+	DestructionConnectivityType_Full = 0,
+	DestructionConnectivityType_Partial = 1,
+	DestructionConnectivityType_None = 2,
+	DestructionConnectivityType_Inherited = 3
+}
+
+enum Difficulty {
+	Difficulty_Easy = 0,
+	Difficulty_Medium = 1,
+	Difficulty_Hard = 2,
+	Difficulty_Hardcore = 3,
+	Difficulty_None = 4
+}
+
+enum DisableTeamType {
+	DttDisable = 0,
+	DttUnspawn = 1
+}
+
+enum DogTagCategory {
+	DTC_Invalid = 0,
+	DTC_Ribbons = 1,
+	DTC_Medals = 2,
+	DTC_Ranks = 3,
+	DTC_ServiceStars = 4,
+	DTC_Weapons = 5,
+	DTC_Misc = 6,
+	DTC_Assassin = 7
+}
+
+enum DTagUploadPolicy {
+	DTUP_FirstTimeSeenAndEndOfRound = 0,
+	DTUP_Always = 1
+}
+
+enum DynamicAOMethod {
+	DynamicAOMethod_SSAO = 0,
+	DynamicAOMethod_HBAO = 1
+}
+
+enum DynamicAvoidanceMode {
+	DynamicAvoidanceMode_Never = 0,
+	DynamicAvoidanceMode_WhenScripted = 1,
+	DynamicAvoidanceMode_WhenNotScripted = 2,
+	DynamicAvoidanceMode_Always = 3
+}
+
+enum EmittableField {
+	EfZero = 0,
+	EfOne = 1,
+	EfNormTime = 2,
+	EfEmitterNormTime = 3,
+	EfSpawnAnimationSpeed = 4,
+	EfSpawnAnimationFrameIndex = 5,
+	EfVelocity = 6,
+	EfParameters = 7,
+	EfRotation = 8,
+	EfSpeed = 9,
+	EfUserDefined = 10,
+	EfConstantFloat = 11,
+	EfConstantVec = 12,
+	EfNone = 13
+}
+
+enum EmittableType {
+	Point = 0,
+	Quad = 1,
+	ScreenAlignedQuad = 2,
+	DirectionAlignedQuad = 3,
+	WorldAlignedQuad = 4,
+	Trail = 5,
+	ParticleMesh = 6,
+	EmittableTypeCount = 7
+}
+
+enum EmitterParameter {
+	EmitterParameterNone = 0,
+	EmitterParameter1 = 1,
+	EmitterParameter2 = 2,
+	EmitterParameter3 = 3,
+	EmitterParameter4 = 4,
+	EmitterParameterVec = 5,
+	EmitterParameterDistance = 6,
+	EmitterParameterVecAverage = 7
+}
+
+enum EnlightenColorMode {
+	EnlightenColorMode_Multiply = 0,
+	EnlightenColorMode_Override = 1
+}
+
+enum EnlightenType {
+	EnlightenType_Dynamic = 0,
+	EnlightenType_LightProbe = 1,
+	EnlightenType_Static = 2
+}
+
+enum EntitlementType {
+	EntitlementType_Ignored = 0,
+	EntitlementType_Write = 1,
+	EntitlementType_Read = 2
+}
+
+enum EntityCreatorType {
+	EntityCreatorType_Unknown = 0,
+	EntityCreatorType_Level = 1,
+	EntityCreatorType_Spawner = 2,
+	EntityCreatorType_Owner = 3,
+	EntityCreatorType_Ghost = 4
+}
+
+enum EntityInitPass {
+	EntityInitPass_Early = 0,
+	EntityInitPass_Normal = 1,
+	EntityInitPass_Count = 2
+}
+
+enum EntityUpdateOrder {
+	EntityUpdateOrder_Async = 1,
+	EntityUpdateOrder_Sync = 2,
+	EntityUpdateOrder_Both = 3
+}
+
+enum EntropyCodecType {
+	EntropyCodecType_Arithmetic = 0
+}
+
+enum EntryClass {
+	ecPrimary = 0,
+	ecSecondary = 1
+}
+
+enum EntryEnterRestriction {
+	EntryEnterRestriction_NoRestriction = 0,
+	EntryEnterRestriction_OnlyPrimaryEntry = 1
+}
+
+enum EntryInputActionEnum {
+	EIAThrottle = 0,
+	EIAStrafe = 1,
+	EIABrake = 2,
+	EIASwitchPrimaryInventory = 3,
+	EIAYaw = 4,
+	EIAPitch = 5,
+	EIARoll = 6,
+	EIAFire = 7,
+	EIACameraPitch = 8,
+	EIACameraYaw = 9,
+	EIAFireCountermeasure = 10,
+	EIAZoom = 11,
+	EIAJump = 12,
+	EIAChangePose = 13,
+	EIAProne = 14,
+	EIAReload = 15,
+	EIASelectWeapon1 = 16,
+	EIASelectWeapon2 = 17,
+	EIASelectWeapon3 = 18,
+	EIASelectWeapon4 = 19,
+	EIASelectWeapon5 = 20,
+	EIASelectWeapon6 = 21,
+	EIASelectWeapon7 = 22,
+	EIASelectWeapon8 = 23,
+	EIASelectWeapon9 = 24,
+	EIASwitchPrimaryWeapon = 25,
+	EIAGrenadeLauncher = 26,
+	EIAStaticGadget = 27,
+	EIADynamicGadget1 = 28,
+	EIADynamicGadget2 = 29,
+	EIAMeleeAttack = 30,
+	EIAThrowGrenade = 31,
+	EIASprint = 32,
+	EIACrawlSpeed = 33,
+	EIACycleFireMode = 34,
+	EIAInteract = 35,
+	EIAToggleParachute = 36,
+	EIACycleRadioChannel = 37,
+	EIAToggleCamera = 38,
+	EIAScoreboardMenu = 39,
+	EIAGearUp = 40,
+	EIAGearUpOrToggleWeaponLight = 40,
+	EIAGearDown = 41,
+	EIAGearDownOrExitSupportedShooting = 41,
+	EIAClutch = 42,
+	EIAHandBrake = 43,
+	EIAGiveOrder = 44,
+	EIABreathControl = 45,
+	EIAMapZoom = 46,
+	EIAChangeVehicle = 47,
+	EIAChangeEntry = 48,
+	EIAChangeEntry1 = 49,
+	EIAChangeEntry2 = 50,
+	EIAChangeEntry3 = 51,
+	EIAChangeEntry4 = 52,
+	EIAChangeEntry5 = 53,
+	EIAChangeEntry6 = 54,
+	EIAChangeEntry7 = 55,
+	EIAChangeEntry8 = 56,
+	EIAThreeDimensionalMap = 57,
+	EIAShowCommoRose = 58,
+	EIAShowLeaderCommoRose = 59,
+	EIAQuicktimeInteractDrag = 60,
+	EIAQuicktimeFire = 61,
+	EIAQuicktimeBlock = 62,
+	EIAQuicktimeFastMelee = 63,
+	EIAQuicktimeJumpClimb = 64,
+	EIAQuicktimeCrouchDuck = 65,
+	EIAUndefined = 128,
+	EIANoInput = 128
+}
+
+enum EntrySeatType {
+	EST_Driver = 0,
+	EST_Gunner = 1,
+	EST_Passenger = 2
+}
+
+enum EntrySpottingSettings {
+	ESSDefault = 0,
+	ESSSendAndReceive = 1,
+	ESSReceive = 2,
+	ESSCount = 3
+}
+
+enum EvaluatorType {
+	EtDefault = 0,
+	EtBox = 1,
+	EtPolynomial = 2,
+	EtPolynomialOperator = 3,
+	EtRandom = 4,
+	EtRandomXYZ = 5,
+	EtRotateVector = 6,
+	EtSampleTexture = 7,
+	EtSphere = 8,
+	EtConstant = 9,
+	EtPolynomialColorInterp = 10,
+	EtCamProx = 11,
+	EvaluatorTypeCount = 12
+}
+
+enum EventCompareGateType {
+	EventCompareGate_Equals = 0,
+	EventCompareGate_NotEquals = 1,
+	EventCompareGate_Less = 2,
+	EventCompareGate_LessEquals = 3,
+	EventCompareGate_Greater = 4,
+	EventCompareGate_GreaterEquals = 5
+}
+
+enum EventConnectionTargetType {
+	EventConnectionTargetType_Invalid = 0,
+	EventConnectionTargetType_ClientAndServer = 1,
+	EventConnectionTargetType_Client = 2,
+	EventConnectionTargetType_Server = 3,
+	EventConnectionTargetType_NetworkedClient = 4,
+	EventConnectionTargetType_NetworkedClientAndServer = 5
+}
+
+enum EventGateState {
+	EGSInvalid = 0,
+	EGSUpright = 1,
+	EGSCrouched = 2,
+	EGSProne = 3,
+	EGSZoomed = 4,
+	EGSCount = 5
+}
+
+enum ExampleVehicleType {
+	ExampleVehicleType_Small = 0,
+	ExampleVehicleType_Medium = 1,
+	ExampleVehicleType_Large = 2
+}
+
+enum ExecutionModeType {
+	ExecutionMode_Play = 0,
+	ExecutionMode_GameView = 1,
+	ExecutionMode_PlayFromHere = 2
+}
+
+enum ExitToMenuReason {
+	ExitToMenuReason_None = 0,
+	ExitToMenuReason_UserDisconnected = 1,
+	ExitToMenuReason_DisconnectedFromServer = 2,
+	ExitToMenuReason_UnableToConnectToServer = 3,
+	ExitToMenuReason_ClientDisconnected = 4,
+	ExitToMenuReason_FirstPartyConnectionFailed = 5,
+	ExitToMenuReason_MissingContent = 6,
+	ExitToMenuReason_TeamKills = 7,
+	ExitToMenuReason_KickedByAdmin = 8,
+	ExitToMenuReason_Banned = 9,
+	ExitToMenuReason_InteractivityTimeout = 10,
+	ExitToMenuReason_KickedOutServerFull = 11,
+	ExitToMenuReason_ESportsMatchStarting = 12,
+	ExitToMenuReason_NotInESportsRosters = 13,
+	ExitToMenuReason_ESportsMatchEnding = 14,
+	ExitToMenuReason_VirtualServerExpired = 15,
+	ExitToMenuReason_VirtualServerRecreate = 16,
+	ExitToMenuReason_ESportsTeamFull = 17,
+	ExitToMenuReason_ESportsMatchAborted = 18,
+	ExitToMenuReason_ESportsMatchWalkover = 19,
+	ExitToMenuReason_ESportsMatchWarmupTimedOut = 20,
+	ExitToMenuReason_PremiumStatusMismatch = 21
+}
+
+enum ExpanderChannelMode {
+	ExpanderChannelMode_Independent = 0,
+	ExpanderChannelMode_Grouped = 1
+}
+
+enum EyeVectorSpace {
+	EyeVectorSpace_World = 0,
+	EyeVectorSpace_Object = 1,
+	EyeVectorSpace_Tangent = 2
+}
+
+enum FactionId {
+	FactionNeutral = 0,
+	FactionUS = 1,
+	FactionRUS = 2,
+	FactionMEC = 3,
+	FactionIdCount = 4,
+	FactionInvalid = 5
+}
+
+enum FadeCurveType {
+	FadeCurveType_LinearAmplitude = 0,
+	FadeCurveType_SineAmplitude = 1,
+	FadeCurveType_LinearDecibel = 2
+}
+
+enum FaderType {
+	FaderType_Linear = 0,
+	FaderType_Cosine = 1
+}
+
+enum FieldAccessType {
+	FieldAccessType_Source = 0,
+	FieldAccessType_Target = 1,
+	FieldAccessType_SourceAndTarget = 2
+}
+
+enum FireLogicType {
+	fltSingleFire = 0,
+	fltSingleFireWithBoltAction = 1,
+	fltAutomaticFire = 2,
+	fltBurstFire = 3,
+	fltHoldAndRelease = 4,
+	fltDetonatedFiring = 5,
+	fltCount = 6
+}
+
+enum ForceCondition {
+	FCNever = 0,
+	FCNotCriticalDamaged = 1,
+	FCCriticalDamaged = 2,
+	FCNotOccupied = 3,
+	FCOccupied = 4,
+	FCAlways = 5
+}
+
+enum ForceMagnitudeInputType {
+	FMITYaw = 0,
+	FMITPitch = 1,
+	FMITRoll = 2,
+	FMITThrottle = 3
+}
+
+enum ForceType {
+	FTForce = 0,
+	FTTorque = 1
+}
+
+enum FrequencyShiftSsbFilter {
+	FrequencyShiftSsbFilter_None = 0,
+	FrequencyShiftSsbFilter_Fir64 = 1
+}
+
+enum GainFaderFadeType {
+	GainFaderFadeType_LinearAmplitude = 0,
+	GainFaderFadeType_LinearPower = 1,
+	GainFaderFadeType_SineAmplitude = 2
+}
+
+enum GameOverResult {
+	GameOver_MajorDefeat = 1,
+	GameOver_Defeat = 2,
+	GameOver_MinorDefeat = 3,
+	GameOver_MajorVictory = 4,
+	GameOver_Victory = 5,
+	GameOver_MinorVictory = 6,
+	GameOver_Draw = 7
+}
+
+enum GamePlatform {
+	GamePlatform_Ps3 = 0,
+	GamePlatform_Win32 = 1,
+	GamePlatform_Xenon = 2,
+	GamePlatform_Any = 3,
+	GamePlatform_Invalid = 4,
+	GamePlatform_Count = 5
+}
+
+enum GameplayBones {
+	GameplayBones_UndefinedBone = 0,
+	GameplayBones_HeadBone = 1,
+	GameplayBones_AimBone = 2,
+	GameplayBones_RootBone = 3,
+	GameplayBones_WeaponBone = 4,
+	GameplayBones_ConnectBone = 5,
+	GameplayBones_RootMeshBone = 6,
+	GameplayBones_MagazineBone = 7,
+	GameplayBones_Count = 8
+}
+
+enum GameSplineType {
+	GameSplineType_Generic = 0,
+	GameSplineType_Pipe = 1,
+	GameSplineType_Zipline = 2,
+	GameSplineType_Swing = 3
+}
+
+enum GearSlot {
+	GearSlot_Melee = 0,
+	GearSlot_Sidearm = 1,
+	GearSlot_Primary = 2,
+	GearSlot_Auxiliary = 3,
+	GearSlot_Secondary = 4,
+	GearSlot_Gadget1 = 5,
+	GearSlot_Gadget2 = 6,
+	GearSlot_Gadget3 = 7,
+	GearSlot_Gadget4 = 8,
+	GearSlot_Gadget5 = 9,
+	GearSlot_Gadget6 = 10,
+	GearSlot_Gadget7 = 11,
+	GearSlot_GearSlotCount = 12,
+	GearSlot_NotEquipped = 13
+}
+
+enum GrenadeType {
+	GrenadeType_NotSet = 0,
+	GrenadeType_Frag = 1,
+	GrenadeType_Smoke = 2,
+	GrenadeType_Flash = 3
+}
+
+enum GunMasterNotificationType {
+	GunMasterNotificationType_LevelUp = 0,
+	GunMasterNotificationType_Demoted = 1,
+	GunMasterNotificationType_ReachedLevel = 2,
+	GunMasterNotificationType_TookLead = 3,
+	GunMasterNotificationType_LostLead = 4
+}
+
+enum HardwareProfile {
+	Hardware_Autodetect = 0,
+	Hardware_LowEnd = 1,
+	Hardware_Medium = 2,
+	Hardware_HighEnd = 3,
+	Hardware_Maximum = 4
+}
+
+enum HitReactionType {
+	HRT_Body = 0,
+	HRT_Head = 1,
+	HRT_RightArm = 2,
+	HRT_LeftArm = 3,
+	HRT_RightLeg = 4,
+	HRT_LeftLeg = 5,
+	HRT_Count = 6
+}
+
+enum HudTextReceiver {
+	HudTextReceiver_Team = 0,
+	HudTextReceiver_Squad = 1,
+	HudTextReceiver_All = 2,
+	HudTextReceiver_Count = 3
+}
+
+enum IKEffectorEnum {
+	IKLeftHand = 0,
+	IKRightHand = 1
+}
+
+enum IndexBufferFormat {
+	IndexBufferFormat_16Bit = 0,
+	IndexBufferFormat_32Bit = 1
+}
+
+enum IndexInBlueprint {
+	IndexInBlueprint_HighestIndex = 65534,
+	IndexInBlueprint_Unknown = 65535
+}
+
+enum InputActionMapPlatform {
+	IAMPWin32 = 0,
+	IAMPXenon = 1,
+	IAMPPs3 = 2,
+	IAMPAllPlatforms = 3
+}
+
+enum InputActionMapSlot {
+	InputActionMapSlot_Undefined = 0,
+	InputActionMapSlot_Root1 = 1,
+	InputActionMapSlot_Root2 = 2,
+	InputActionMapSlot_Root3 = 3,
+	InputActionMapSlot_Root4 = 4,
+	InputActionMapSlot_Root5 = 5,
+	InputActionMapSlot_Root6 = 6,
+	InputActionMapSlot_Root7 = 7,
+	InputActionMapSlot_Root8 = 8,
+	InputActionMapSlot_Root9 = 9,
+	InputActionMapSlot_Root10 = 10,
+	InputActionMapSlot_Root11 = 11,
+	InputActionMapSlot_Root12 = 12,
+	InputActionMapSlot_Root13 = 13,
+	InputActionMapSlot_Root14 = 14,
+	InputActionMapSlot_Root15 = 15,
+	InputActionMapSlot_Root16 = 16,
+	InputActionMapSlot_Sticks1 = 17,
+	InputActionMapSlot_Sticks2 = 18,
+	InputActionMapSlot_Sticks3 = 19,
+	InputActionMapSlot_Sticks4 = 20,
+	InputActionMapSlot_Buttons1 = 21,
+	InputActionMapSlot_Buttons2 = 22,
+	InputActionMapSlot_Buttons3 = 23,
+	InputActionMapSlot_Buttons4 = 24,
+	InputActionMapSlot_Sticks1Buttons1 = 25,
+	InputActionMapSlot_Sticks1Buttons2 = 26,
+	InputActionMapSlot_Sticks1Buttons3 = 27,
+	InputActionMapSlot_Sticks1Buttons4 = 28,
+	InputActionMapSlot_Sticks2Buttons1 = 29,
+	InputActionMapSlot_Sticks2Buttons2 = 30,
+	InputActionMapSlot_Sticks2Buttons3 = 31,
+	InputActionMapSlot_Sticks2Buttons4 = 32,
+	InputActionMapSlot_Sticks3Buttons1 = 33,
+	InputActionMapSlot_Sticks3Buttons2 = 34,
+	InputActionMapSlot_Sticks3Buttons3 = 35,
+	InputActionMapSlot_Sticks3Buttons4 = 36,
+	InputActionMapSlot_Sticks4Buttons1 = 37,
+	InputActionMapSlot_Sticks4Buttons2 = 38,
+	InputActionMapSlot_Sticks4Buttons3 = 39,
+	InputActionMapSlot_Sticks4Buttons4 = 40,
+	InputActionMapSlot_Count = 41
+}
+
+enum InputConceptIdentifiers {
+	ConceptMoveFB = 0,
+	ConceptMoveLR = 1,
+	ConceptMoveForward = 2,
+	ConceptMoveBackward = 3,
+	ConceptMoveLeft = 4,
+	ConceptMoveRight = 5,
+	ConceptYaw = 6,
+	ConceptPitch = 7,
+	ConceptRoll = 8,
+	ConceptRecenterCamera = 9,
+	ConceptFire = 10,
+	ConceptAltFire = 11,
+	ConceptFireCountermeasure = 12,
+	ConceptReload = 13,
+	ConceptZoom = 14,
+	ConceptToggleCamera = 15,
+	ConceptSprint = 16,
+	ConceptCrawl = 17,
+	ConceptToggleWeaponLight = 18,
+	ConceptJump = 19,
+	ConceptCrouch = 20,
+	ConceptCrouchOnHold = 21,
+	ConceptProne = 22,
+	ConceptInteract = 23,
+	ConceptPickUp = 24,
+	ConceptDrop = 25,
+	ConceptBreathControl = 26,
+	ConceptParachute = 27,
+	ConceptSwitchInventoryItem = 28,
+	ConceptSelectInventoryItem1 = 29,
+	ConceptSelectInventoryItem2 = 30,
+	ConceptSelectInventoryItem3 = 31,
+	ConceptSelectInventoryItem4 = 32,
+	ConceptSelectInventoryItem5 = 33,
+	ConceptSelectInventoryItem6 = 34,
+	ConceptSelectInventoryItem7 = 35,
+	ConceptSelectInventoryItem8 = 36,
+	ConceptSelectInventoryItem9 = 37,
+	ConceptSwitchToPrimaryWeapon = 38,
+	ConceptSwitchToGrenadeLauncher = 39,
+	ConceptSwitchToStaticGadget = 40,
+	ConceptSwitchToDynamicGadget1 = 41,
+	ConceptSwitchToDynamicGadget2 = 42,
+	ConceptMeleeAttack = 43,
+	ConceptThrowGrenade = 44,
+	ConceptCycleFireMode = 45,
+	ConceptChangeVehicle = 46,
+	ConceptBrake = 47,
+	ConceptHandBrake = 48,
+	ConceptClutch = 49,
+	ConceptGearUp = 50,
+	ConceptGearDown = 51,
+	ConceptGearSwitch = 52,
+	ConceptNextPosition = 53,
+	ConceptSelectPosition1 = 54,
+	ConceptSelectPosition2 = 55,
+	ConceptSelectPosition3 = 56,
+	ConceptSelectPosition4 = 57,
+	ConceptSelectPosition5 = 58,
+	ConceptSelectPosition6 = 59,
+	ConceptSelectPosition7 = 60,
+	ConceptSelectPosition8 = 61,
+	ConceptCameraPitch = 62,
+	ConceptCameraYaw = 63,
+	ConceptMapZoom = 64,
+	ConceptMapInnerZoom = 65,
+	ConceptMapSize = 66,
+	ConceptMapThreeDimensional = 67,
+	ConceptScoreboard = 68,
+	ConceptMenu = 69,
+	ConceptSpawnMenu = 70,
+	ConceptCancel = 71,
+	ConceptCommMenu1 = 72,
+	ConceptCommMenu2 = 73,
+	ConceptCommMenu3 = 74,
+	ConceptAccept = 75,
+	ConceptDecline = 76,
+	ConceptSelect = 77,
+	ConceptBack = 78,
+	ConceptActivate = 79,
+	ConceptDeactivate = 80,
+	ConceptEdit = 81,
+	ConceptView = 82,
+	ConceptParentNavigateLeft = 83,
+	ConceptParentNavigateRight = 84,
+	ConceptMenuZoomIn = 85,
+	ConceptMenuZoomOut = 86,
+	ConceptPanX = 87,
+	ConceptPanY = 88,
+	ConceptVoiceFunction1 = 89,
+	ConceptSayAllChat = 90,
+	ConceptTeamChat = 91,
+	ConceptSquadChat = 92,
+	ConceptSquadLeaderChat = 93,
+	ConceptToggleChat = 94,
+	ConceptQuicktimeInteractDrag = 95,
+	ConceptQuicktimeFire = 96,
+	ConceptQuicktimeBlock = 97,
+	ConceptQuicktimeFastMelee = 98,
+	ConceptQuicktimeJumpClimb = 99,
+	ConceptQuicktimeCrouchDuck = 100,
+	ConceptFreeCameraMoveUp = 101,
+	ConceptFreeCameraMoveDown = 102,
+	ConceptFreeCameraMoveLR = 103,
+	ConceptFreeCameraMoveFB = 104,
+	ConceptFreeCameraRotateX = 105,
+	ConceptFreeCameraRotateY = 106,
+	ConceptFreeCameraIncreaseSpeed = 107,
+	ConceptFreeCameraDecreaseSpeed = 108,
+	ConceptFreeCameraFOVModifier = 109,
+	ConceptFreeCameraChangeFOV = 110,
+	ConceptFreeCameraSwitchSpeed = 111,
+	ConceptFreeCameraTurboSpeed = 112,
+	ConceptFreeCameraActivator1 = 113,
+	ConceptFreeCameraActivator2 = 114,
+	ConceptFreeCameraActivator3 = 115,
+	ConceptFreeCameraMayaInputActivator = 116,
+	ConceptTargetedCameraDistance = 117,
+	ConceptTargetedCameraRotateX = 118,
+	ConceptTargetedCameraRotateY = 119,
+	ConceptTargetedCameraChangeSpeed = 120,
+	ConceptLThumb = 121,
+	ConceptRThumb = 122,
+	ConceptToggleMinimapType = 123,
+	ConceptUndefined = 124,
+	ConceptSize = 125
+}
+
+enum InputDeviceAxes {
+	IDA_Axis0X = 0,
+	IDA_Axis0Y = 1,
+	IDA_Axis0XPos = 2,
+	IDA_Axis0YPos = 3,
+	IDA_Axis0XNeg = 4,
+	IDA_Axis0YNeg = 5,
+	IDA_Axis1X = 6,
+	IDA_Axis1Y = 7,
+	IDA_Axis1XPos = 8,
+	IDA_Axis1YPos = 9,
+	IDA_Axis1XNeg = 10,
+	IDA_Axis1YNeg = 11,
+	IDA_Axis2X = 12,
+	IDA_Axis2Y = 13,
+	IDA_Axis3X = 14,
+	IDA_Axis3Y = 15,
+	IDA_Axis4X = 16,
+	IDA_Axis4Y = 17,
+	IDA_Axis5X = 18,
+	IDA_Axis5Y = 19,
+	IDA_Axis6X = 20,
+	IDA_Axis6Y = 21,
+	IDA_Axis7X = 22,
+	IDA_Axis7Y = 23,
+	IDA_Undefined = 24
+}
+
+enum InputDeviceKeys {
+	IDK_None = 0,
+	IDK_Escape = 1,
+	IDK_1 = 2,
+	IDK_2 = 3,
+	IDK_3 = 4,
+	IDK_4 = 5,
+	IDK_5 = 6,
+	IDK_6 = 7,
+	IDK_7 = 8,
+	IDK_8 = 9,
+	IDK_9 = 10,
+	IDK_0 = 11,
+	IDK_Minus = 12,
+	IDK_Equals = 13,
+	IDK_Backspace = 14,
+	IDK_Tab = 15,
+	IDK_Q = 16,
+	IDK_W = 17,
+	IDK_E = 18,
+	IDK_R = 19,
+	IDK_T = 20,
+	IDK_Y = 21,
+	IDK_U = 22,
+	IDK_I = 23,
+	IDK_O = 24,
+	IDK_P = 25,
+	IDK_LeftBracket = 26,
+	IDK_RightBracket = 27,
+	IDK_Enter = 28,
+	IDK_LeftCtrl = 29,
+	IDK_A = 30,
+	IDK_S = 31,
+	IDK_D = 32,
+	IDK_F = 33,
+	IDK_G = 34,
+	IDK_H = 35,
+	IDK_J = 36,
+	IDK_K = 37,
+	IDK_L = 38,
+	IDK_Semicolon = 39,
+	IDK_Apostrophe = 40,
+	IDK_Grave = 41,
+	IDK_LeftShift = 42,
+	IDK_Backslash = 43,
+	IDK_Z = 44,
+	IDK_X = 45,
+	IDK_C = 46,
+	IDK_V = 47,
+	IDK_B = 48,
+	IDK_N = 49,
+	IDK_M = 50,
+	IDK_Comma = 51,
+	IDK_Period = 52,
+	IDK_Slash = 53,
+	IDK_RightShift = 54,
+	IDK_Multiply = 55,
+	IDK_LeftAlt = 56,
+	IDK_Space = 57,
+	IDK_Capital = 58,
+	IDK_F1 = 59,
+	IDK_F2 = 60,
+	IDK_F3 = 61,
+	IDK_F4 = 62,
+	IDK_F5 = 63,
+	IDK_F6 = 64,
+	IDK_F7 = 65,
+	IDK_F8 = 66,
+	IDK_F9 = 67,
+	IDK_F10 = 68,
+	IDK_Numlock = 69,
+	IDK_ScrollLock = 70,
+	IDK_Numpad7 = 71,
+	IDK_Numpad8 = 72,
+	IDK_Numpad9 = 73,
+	IDK_Subtract = 74,
+	IDK_Numpad4 = 75,
+	IDK_Numpad5 = 76,
+	IDK_Numpad6 = 77,
+	IDK_Add = 78,
+	IDK_Numpad1 = 79,
+	IDK_Numpad2 = 80,
+	IDK_Numpad3 = 81,
+	IDK_Numpad0 = 82,
+	IDK_Decimal = 83,
+	IDK_OEM_102 = 86,
+	IDK_F11 = 87,
+	IDK_F12 = 88,
+	IDK_F13 = 100,
+	IDK_F14 = 101,
+	IDK_F15 = 102,
+	IDK_Kana = 112,
+	IDK_Convert = 121,
+	IDK_NoConvert = 123,
+	IDK_Yen = 125,
+	IDK_NumpadEquals = 141,
+	IDK_PrevTrack = 144,
+	IDK_At = 145,
+	IDK_Colon = 146,
+	IDK_Underline = 147,
+	IDK_Kanji = 148,
+	IDK_Stop = 149,
+	IDK_Ax = 150,
+	IDK_Unlabeled = 151,
+	IDK_NextTrack = 153,
+	IDK_NumpadEnter = 156,
+	IDK_RightCtrl = 157,
+	IDK_Mute = 160,
+	IDK_Calculator = 161,
+	IDK_PlayPause = 162,
+	IDK_MediaStop = 164,
+	IDK_VolumeDown = 174,
+	IDK_VolumeUp = 176,
+	IDK_WebHome = 178,
+	IDK_NumpadComma = 179,
+	IDK_Divide = 181,
+	IDK_PrintScreen = 183,
+	IDK_RightAlt = 184,
+	IDK_Pause = 197,
+	IDK_Home = 199,
+	IDK_ArrowUp = 200,
+	IDK_PageUp = 201,
+	IDK_ArrowLeft = 203,
+	IDK_ArrowRight = 205,
+	IDK_End = 207,
+	IDK_ArrowDown = 208,
+	IDK_PageDown = 209,
+	IDK_Insert = 210,
+	IDK_Delete = 211,
+	IDK_LeftWin = 219,
+	IDK_RightWin = 220,
+	IDK_AppMenu = 221,
+	IDK_Power = 222,
+	IDK_Sleep = 223,
+	IDK_Wake = 227,
+	IDK_WebSearch = 229,
+	IDK_WebFavorites = 230,
+	IDK_WebRefresh = 231,
+	IDK_WebStop = 232,
+	IDK_WebForward = 233,
+	IDK_WebBack = 234,
+	IDK_MyComputer = 235,
+	IDK_Mail = 236,
+	IDK_MediaSelect = 237,
+	IDK_Undefined = 255
+}
+
+enum InputDeviceMotionControllerButtons {
+	IDMCB_Rup = 0,
+	IDMCB_Rdown = 1,
+	IDMCB_Rleft = 2,
+	IDMCB_Rright = 3,
+	IDMCB_start = 4,
+	IDMCB_alt = 5,
+	IDMCB_center = 6,
+	IDMCB_trigger = 7,
+	IDMCB_reload = 8,
+	IDMCB_pumpaction = 9,
+	IDMCB_Gstab = 10,
+	IDMCB_Grotleft = 11,
+	IDMCB_Grotright = 12,
+	IDMCB_Undefined = 13
+}
+
+enum InputDeviceMouseButtons {
+	IDB_Button_0 = 0,
+	IDB_Button_1 = 1,
+	IDB_Button_2 = 2,
+	IDB_Button_3 = 3,
+	IDB_Button_4 = 4,
+	IDB_Button_5 = 5,
+	IDB_Button_6 = 6,
+	IDB_Button_7 = 7,
+	IDB_Button_Undefined = 8
+}
+
+enum InputDevicePadButtons {
+	IDB_Lup = 0,
+	IDB_Ldown = 1,
+	IDB_Lleft = 2,
+	IDB_Lright = 3,
+	IDB_Rup = 4,
+	IDB_Rdown = 5,
+	IDB_Rleft = 6,
+	IDB_Rright = 7,
+	IDB_Rtopleft = 8,
+	IDB_Rtopright = 9,
+	IDB_Lthumb = 10,
+	IDB_Rthumb = 11,
+	IDB_start = 12,
+	IDB_alt = 13,
+	IDB_Ltrigger = 14,
+	IDB_Rtrigger = 15,
+	IDB_Ltrigger2 = 16,
+	IDB_Rtrigger2 = 17,
+	IDB_XButton1 = 18,
+	IDB_XButton2 = 19,
+	IDB_XButton3 = 20,
+	IDB_XButton4 = 21,
+	IDB_XButton5 = 22,
+	IDB_XButton6 = 23,
+	IDB_XButton7 = 24,
+	IDB_XButton8 = 25,
+	IDB_XButton9 = 26,
+	IDB_XButton10 = 27,
+	IDB_XButton11 = 28,
+	IDB_XButton12 = 29,
+	IDB_XButton13 = 30,
+	IDB_XButton14 = 31,
+	IDB_XButton15 = 32,
+	IDB_XButton16 = 33,
+	IDB_XButton17 = 34,
+	IDB_XButton18 = 35,
+	IDB_PosZAxis = 36,
+	IDB_NegZAxis = 37,
+	IDB_XRotationPos = 38,
+	IDB_XRotationNeg = 39,
+	IDB_YRotationPos = 40,
+	IDB_YRotationNeg = 41,
+	IDB_ZRotationPos = 42,
+	IDB_ZRotationNeg = 43,
+	IDB_Pov1North = 44,
+	IDB_Pov1South = 45,
+	IDB_Pov1West = 46,
+	IDB_Pov1East = 47,
+	IDB_Pov2North = 48,
+	IDB_Pov2South = 49,
+	IDB_Pov2West = 50,
+	IDB_Pov2East = 51,
+	IDB_Pov3North = 52,
+	IDB_Pov3South = 53,
+	IDB_Pov3West = 54,
+	IDB_Pov3East = 55,
+	IDB_Pov4North = 56,
+	IDB_Pov4South = 57,
+	IDB_Pov4West = 58,
+	IDB_Pov4East = 59,
+	IDB_Undefined = 60,
+	IDB_NumPadButtons = 60
+}
+
+enum InputDevicePOVs {
+	IDP_POV_0 = 0,
+	IDP_POV_1 = 1,
+	IDP_POV_2 = 2,
+	IDP_POV_Undefined = 3
+}
+
+enum InputIds {
+	NoInputId = 0,
+	SpectatorInputId = 1,
+	FreeCameraInputId = 2,
+	EntryInputId = 3
+}
+
+enum InteractionEntityType {
+	IET_None = 0,
+	IET_RushCrateArm = 1,
+	IET_RushCrateDisarm = 2,
+	IET_CTFFlag = 3
+}
+
+enum InterpolationType {
+	InterpolationType_None = 0,
+	InterpolationType_Linear = 1,
+	InterpolationType_CatmullRom = 2,
+	InterpolationType_Curves = 3
+}
+
+enum InvitePlatform {
+	InvitePlatform_Invalid = 0,
+	InvitePlatform_X360 = 1,
+	InvitePlatform_PS3 = 2,
+	InvitePlatform_PC = 3,
+	InvitePlatform_Count = 4
+}
+
+enum InviteType {
+	InviteType_Invalid = 0,
+	InviteType_Invite = 1,
+	InviteType_JoinSession = 2,
+	InviteType_JoinFriendSession = 3,
+	InviteType_Count = 4
+}
+
+enum LanguageFormat {
+	LanguageFormat_English = 0,
+	LanguageFormat_French = 1,
+	LanguageFormat_German = 2,
+	LanguageFormat_Spanish = 3,
+	LanguageFormat_Italian = 4,
+	LanguageFormat_Japanese = 5,
+	LanguageFormat_Russian = 6,
+	LanguageFormat_Polish = 7,
+	LanguageFormat_Dutch = 8,
+	LanguageFormat_Portuguese = 9,
+	LanguageFormat_TraditionalChinese = 10,
+	LanguageFormat_Korean = 11,
+	LanguageFormat_Czech = 12,
+	LanguageFormat_Count = 13,
+	LanguageFormat_Undefined = 14
+}
+
+enum LimiterChannelMode {
+	LimiterChannelMode_Independent = 0,
+	LimiterChannelMode_Grouped = 1
+}
+
+enum LockType {
+	LockAlways = 0,
+	LockOnRadar = 1,
+	LockOnHeat = 2,
+	LockOnLaserPainted = 3,
+	LockNever = 4,
+	LockTypeCount = 5
+}
+
+enum LogFileCollisionMode {
+	LFCM_Overwrite = 0,
+	LFCM_Rotate = 1,
+	LFCM_TimeStamp = 2
+}
+
+enum LogicalExpressionOperator {
+	LogicalExpressionOperator_And = 0,
+	LogicalExpressionOperator_Or = 1,
+	LogicalExpressionOperator_Nand = 2,
+	LogicalExpressionOperator_Nor = 3
+}
+
+enum LoopType {
+	LtNone = 0,
+	LtForward = 1,
+	LtRelease = 2,
+	LtInstantRelease = 3
+}
+
+enum MapMarkerColorType {
+	MMCTRed = 0,
+	MMCTBlue = 1,
+	MMCTGreen = 2
+}
+
+enum MapMarkerType {
+	MMTMissionObjective = 0,
+	MMTSecondaryMissionObjective = 1,
+	MMTSoldier = 2,
+	MMTVehicle = 3,
+	MMTAmmoCrate = 4,
+	MMTGeneric = 5,
+	MMTFlag = 6
+}
+
+enum MatchmakingNetworkTopology {
+	MatchmakingNetworkTopology_Disabled = 0,
+	MatchmakingNetworkTopology_Peer2Peer = 1,
+	MatchmakingNetworkTopology_PeerHosted = 2,
+	MatchmakingNetworkTopology_DedicatedServer = 3
+}
+
+enum MatchmakingPeer2PeerMode {
+	MatchmakingPeer2PeerMode_FullMesh = 0,
+	MatchmakingPeer2PeerMode_PartialMesh = 1,
+	MatchmakingPeer2PeerMode_DirtyCastFailover = 2
+}
+
+enum MatchmakingPlatform {
+	MatchmakingPlatform_PC = 0,
+	MatchmakingPlatform_Console = 1,
+	MatchmakingPlatform_360 = 2,
+	MatchmakingPlatform_PS3 = 3,
+	MatchmakingPlatform_Any = 4
+}
+
+enum MatchmakingRankedMode {
+	MatchmakingRankedMode_Ranked = 0,
+	MatchmakingRankedMode_Unranked = 1,
+	MatchmakingRankedMode_Any = 2
+}
+
+enum MatchmakingSessionMode {
+	MatchmakingSessionMode_FindDedicatedServer = 0,
+	MatchmakingSessionMode_ResetDedicatedServer = 1,
+	MatchmakingSessionMode_FindPeerGame = 2,
+	MatchmakingSessionMode_CreatePeerGame = 3,
+	MatchmakingSessionMode_Invalid = 4
+}
+
+enum MatchmakingVirtualizationMode {
+	MatchmakingVirtualizationMode_Virtualized = 0,
+	MatchmakingVirtualizationMode_Standard = 1,
+	MatchmakingVirtualizationMode_Any = 2
+}
+
+enum MathOp {
+	MathOp_Add = 0,
+	MathOp_Subtract = 1,
+	MathOp_Multiply = 2,
+	MathOp_Divide = 3,
+	MathOp_Min = 4,
+	MathOp_Max = 5
+}
+
+enum MenuResponse {
+	ResponseOk = 0,
+	ResponseCancel = 1,
+	ResponseSquare = 2,
+	ResponseCount = 3
+}
+
+enum MeshHandleFlags {
+	InvalidMeshHandle = 0
+}
+
+enum MeshLimits {
+	MaxMeshLodCount = 5
+}
+
+enum MeshScatteringElevationMode {
+	MeshScatteringElevationMode_SnapBoundingBox = 0,
+	MeshScatteringElevationMode_SnapPivotPoint = 1
+}
+
+enum MeshScatteringInstanceDataMode {
+	MeshScatteringInstanceDataMode_None = 0,
+	MeshScatteringInstanceDataMode_Normal = 1,
+	MeshScatteringInstanceDataMode_NormalAndColor = 2
+}
+
+enum MeshScatteringOrientationMode {
+	MeshScatteringOrientationMode_Horizontal = 0,
+	MeshScatteringOrientationMode_LeanToTerrain = 1,
+	MeshScatteringOrientationMode_SkewToTerrain = 2
+}
+
+enum MeshScatteringRotationMode {
+	MeshScatteringRotationMode_Random = 0,
+	MeshScatteringRotationMode_TowardsSlope = 1,
+	MeshScatteringRotationMode_Fixed = 2
+}
+
+enum MeshSubsetCategory {
+	MeshSubsetCategory_Opaque = 0,
+	MeshSubsetCategory_Transparent = 1,
+	MeshSubsetCategory_TransparentDecal = 2,
+	MeshSubsetCategory_ZOnly = 3,
+	MeshSubsetCategoryCount = 4
+}
+
+enum MeshSubsetCategoryFlags {
+	MeshSubsetCategoryFlags_Opaque = 1,
+	MeshSubsetCategoryFlags_Transparent = 2,
+	MeshSubsetCategoryFlags_TransparentDecal = 4,
+	MeshSubsetCategoryFlags_Normal = 7,
+	MeshSubsetCategoryFlags_ZOnly = 8,
+	MeshSubsetCategoryFlags_DynamicEnvmap = 16,
+	MeshSubsetCategoryFlags_PlanarReflection = 32,
+	MeshSubsetCategoryFlags_All = 63
+}
+
+enum MeshType {
+	MeshType_Rigid = 0,
+	MeshType_Skinned = 1,
+	MeshType_Composite = 2
+}
+
+enum MessageReciever {
+	MrAll = 0,
+	MrTeam = 1,
+	MrTeamAndSquad = 2,
+	MrPlayer = 3
+}
+
+enum MinimapIconInteractionConcept {
+	MinimapIconInteractionConcept_None = 0,
+	MinimapIconInteractionConcept_SelectSpawnPoint = 1,
+	MinimapIconInteractionConcept_RemoveOrder = 2,
+	MinimapIconInteractionConcept_AttackDefendCapturePoint = 3
+}
+
+enum MipmapFilterMode {
+	MipmapFilterMode_Box = 0,
+	MipmapFilterMode_Renormalize = 1,
+	MipmapFilterMode_Poisson13 = 2,
+	MipmapFilterMode_Poisson13Clamped = 3
+}
+
+enum MixerValueAccumulateMode {
+	MixerValueAccumulateMode_None = 0,
+	MixerValueAccumulateMode_Min = 1,
+	MixerValueAccumulateMode_Max = 2
+}
+
+enum MixerValueUI {
+	MixerValueUI_None = 0,
+	MixerValueUI_Fader = 1,
+	MixerValueUI_Knob = 2,
+	MixerValueUI_EditBox = 3
+}
+
+enum MixerValueUIOrientation {
+	MixerValueUIOrientation_Horizontal = 0,
+	MixerValueUIOrientation_Vertical = 1
+}
+
+enum MixerValueUIScale {
+	MixerValueUIScale_Linear = 0,
+	MixerValueUIScale_Logarithmic = 1
+}
+
+enum MixGroupPropertyType {
+	MixGroupPropertyType_Gain = 0,
+	MixGroupPropertyType_Pitch = 1,
+	MixGroupPropertyTypeCount = 2
+}
+
+enum MixGroupState {
+	MixGroupState_Normal = 0,
+	MixGroupState_Mute = 1,
+	MixGroupState_Solo = 2
+}
+
+enum ModelAnimationTransformType {
+	ModelAnimationTransformType_World = 0,
+	ModelAnimationTransformType_Model = 1,
+	ModelAnimationTransformType_Local = 2
+}
+
+enum ModelAnimationUpdateOrder {
+	ModelAnimationUpdateOrder_PostAnimation = 0,
+	ModelAnimationUpdateOrder_PreInput = 1,
+	ModelAnimationUpdateOrder_PreFrame = 1
+}
+
+enum ModifierAxis {
+	maLeft = 0,
+	maUp = 1,
+	maForward = 2
+}
+
+enum ModifierEuler {
+	Roll = 0,
+	Pitch = 1,
+	Yaw = 2,
+	Trans = 3
+}
+
+enum NotifyType {
+	NotifyPersonal = 0,
+	NotifyGeneral = 1,
+	NotifyConsole = 2,
+	NotityTooltip = 3,
+	NotifyCount = 4
+}
+
+enum NumberGeneratorMode {
+	NumberGeneratorMode_RandomUniform = 0
+}
+
+enum ObjectiveType {
+	OTPrimary = 0,
+	OTTactical = 1,
+	OTChildMisson = 2
+}
+
+enum OnlineEnvironment {
+	OnlineEnvironment_Development = 0,
+	OnlineEnvironment_Test = 1,
+	OnlineEnvironment_Certification = 2,
+	OnlineEnvironment_Production = 3,
+	OnlineEnvironment_Count = 4
+}
+
+enum OrderType {
+	OrderType_None = 0,
+	OrderType_RequestHeal = 1,
+	OrderType_LetMeHeal = 2,
+	OrderType_RequestAmmo = 3,
+	OrderType_LetMeGiveAmmo = 4,
+	OrderType_LetMeRepair = 5,
+	OrderType_RequestRepair = 6,
+	OrderType_RequestRide = 7,
+	OrderType_GoGoGo = 8,
+	OrderType_FollowMe = 9,
+	OrderType_Negative = 10,
+	OrderType_Sorry = 11,
+	OrderType_ThankYou = 12,
+	OrderType_RogerThat = 13,
+	OrderType_NeedBackup = 14,
+	OrderType_GetIn = 15,
+	OrderType_GetOut = 16,
+	OrderType_Attack = 17,
+	OrderType_Count = 18
+}
+
+enum OutputTransformSource {
+	OutputTransformSource_Sound = 0,
+	OutputTransformSource_Listener = 1,
+	OutputTransformSource_Output = 2
+}
+
+enum PackagingDetailLevel {
+	PackagingDetailLevel_Low = 0,
+	PackagingDetailLevel_Medium = 1,
+	PackagingDetailLevel_High = 2,
+	PackagingDetailLevel_Base = 3,
+	PackagingDetailLevel_Count = 4
+}
+
+enum PartComponentConstants {
+	MaxHealthStateCount = 256
+}
+
+enum PathfindingReplayMode {
+	PathfindingReplayMode_Disabled = 0,
+	PathfindingReplayMode_Binary = 1,
+	PathfindingReplayMode_Text = 2
+}
+
+enum PathfindingRepresentation {
+	PathfindingRepresentation_Ignore = 0,
+	PathfindingRepresentation_WalkableMesh = 1,
+	PathfindingRepresentation_ObstacleMesh = 2,
+	PathfindingRepresentation_ObstacleMeshAndThinSideLink = 3,
+	PathfindingRepresentation_BoundingBoxExclusion = 4
+}
+
+enum PathfindingStreamAndConnect {
+	PathfindingStreamAndConnect_Grid = 0,
+	PathfindingStreamAndConnect_Manual = 1
+}
+
+enum PerformanceProfilePlatform {
+	PPP_Win32 = 0,
+	PPP_Xenon = 1,
+	PPP_PS3 = 2
+}
+
+enum PersistenceGameType {
+	PersistenceGameType_Singleplayer = 0,
+	PersistenceGameType_Cooperative = 1,
+	PersistenceGameType_Multiplayer = 2,
+	PersistenceGameType_Count = 3
+}
+
+enum PersistentValueDataKind {
+	PersistentValueDataKind_Raw = 0,
+	PersistentValueDataKind_Seconds = 1,
+	PersistentValueDataKind_Minutes = 2,
+	PersistentValueDataKind_Hours = 3,
+	PersistentValueDataKind_Percent = 4
+}
+
+enum PersistentValueDataType {
+	PersistentValueDataType_Decimal = 0,
+	PersistentValueDataType_Integer = 1,
+	PersistentValueDataType_String = 2,
+	PersistentValueDataType_HighPrecisionDecimal = 3
+}
+
+enum PersistentValueHistoryType {
+	PersistentValueHistoryType_None = 0,
+	PersistentValueHistoryType_Delta = 1,
+	PersistentValueHistoryType_DeltaAndAbsolute = 2,
+	PersistentValueHistoryType_HistoryOnly = 3
+}
+
+enum PersistentValueType {
+	PersistentValueType_Set = 0,
+	PersistentValueType_High = 1,
+	PersistentValueType_Low = 2,
+	PersistentValueType_Increment = 3,
+	PersistentValueType_Decrement = 4
+}
+
+enum PersonViewMode {
+	PersonViewMode_FirstPerson = 0,
+	PersonViewMode_ThirdPerson = 1
+}
+
+enum PhysicsWorldType {
+	PhysicsWorldType_Client = 0,
+	PhysicsWorldType_ClientEffect = 1,
+	PhysicsWorldType_Server = 2,
+	PhysicsWorldType_Unknown = 100
+}
+
+enum PickupPlayerEnum {
+	PickupPlayerEnum_None = 0,
+	PickupPlayerEnum_Both = 1,
+	PickupPlayerEnum_HumanOnly = 2,
+	PickupPlayerEnum_AIOnly = 3
+}
+
+enum PixelNormalSpace {
+	PnsTangent = 0
+}
+
+enum PlayerKilledWeaponType {
+	PlayerKilledWeaponType_Unknown = 0,
+	PlayerKilledWeaponType_HandheldWeapon = 1,
+	PlayerKilledWeaponType_Vehicle = 2,
+	PlayerKilledWeaponType_Count = 3
+}
+
+enum PlayerRole {
+	PRSquadLeader = 0,
+	PRSquadMember = 1,
+	PRUnknown = 2
+}
+
+enum PlayerSpawnType {
+	PlayerSpawnType_HumanPlayer = 0,
+	PlayerSpawnType_AiPlayer = 1,
+	PlayerSpawnType_Actor = 2
+}
+
+enum PointCloudAttributeQuantization {
+	PointCloudAttributeQuantization_s5e5 = 0,
+	PointCloudAttributeQuantization_s7e5 = 1,
+	PointCloudAttributeQuantization_s10e5 = 2,
+	PointCloudAttributeQuantization_s16e7 = 3,
+	PointCloudAttributeQuantization_None = 4,
+	PointCloudAttributeQuantization_Count = 5
+}
+
+enum PointCloudAttributeUsage {
+	PointCloudAttributeUsage_Position = 0,
+	PointCloudAttributeUsage_Normal = 1,
+	PointCloudAttributeUsage_Tangent = 2,
+	PointCloudAttributeUsage_Binormal = 3,
+	PointCloudAttributeUsage_Count = 4
+}
+
+enum PolynomialOperation {
+	Multiplication = 0,
+	Addition = 1,
+	Subtraction = 2
+}
+
+enum PoseTransition {
+	PTStandToProne = 0,
+	PTStandToCrouch = 1,
+	PTCrouchToStand = 2,
+	PTCrouchToProne = 3,
+	PTProneToStand = 4,
+	PTProneToCrouch = 5
+}
+
+enum PoseType {
+	PoseType_Current = 0,
+	PoseType_Stand = 1,
+	PoseType_Crouch = 2
+}
+
+enum PostProcessDebugMode {
+	PpdmDefault = 0,
+	PpdmBloom = 1,
+	PpdmBloomStep = 2,
+	PpdmDofBlur = 3,
+	PpdmBlur = 4,
+	PpdmBlurStep = 5,
+	PpdmDepth = 6
+}
+
+enum PresenceRequest {
+	PresenceRequest_Invalid = 0,
+	PresenceRequest_DownloadBlob = 1,
+	PresenceRequest_UploadBlob = 2,
+	PresenceRequest_DownloadUserSettings = 3,
+	PresenceRequest_UploadUserSettings = 4,
+	PresenceRequest_InitializeCommerceService = 5,
+	PresenceRequest_ShutDownCommerceService = 6,
+	PresenceRequest_EnumerateCommerceContent = 7,
+	PresenceRequest_PurchaseCommerceContent = 8,
+	PresenceRequest_PurchaseConsumableCommerceContent = 9,
+	PresenceRequest_ConsumeCommerceContent = 10,
+	PresenceRequest_GetCommerceContentImage = 11,
+	PresenceRequest_CheckOnlinePass = 12,
+	PresenceRequest_PurchaseOnlinePass = 13,
+	PresenceRequest_RedeemOnlinePassCode = 14,
+	PresenceRequest_SetOverlayUrl = 15,
+	PresenceRequest_ListEntitlements = 16,
+	PresenceRequest_GrantEntitlement = 17,
+	PresenceRequest_GetFriends = 18,
+	PresenceRequest_InviteFriend = 19,
+	PresenceRequest_RemoveFriend = 20,
+	PresenceRequest_HttpGet = 21,
+	PresenceRequest_JoinGameByOnlineNativeData = 22,
+	PresenceRequest_DownloadUpdate = 23,
+	PresenceRequest_SendMessage = 24,
+	PresenceRequest_CreatePlaygroup = 25,
+	PresenceRequest_JoinPlaygroup = 26,
+	PresenceRequest_JoinPlaygroupByUsername = 27,
+	PresenceRequest_JoinPlaygroupByOnlineNativeData = 28,
+	PresenceRequest_JoinPlaygroupByInviteToken = 29,
+	PresenceRequest_SetPlaygroupAttribute = 30,
+	PresenceRequest_LeavePlaygroup = 31,
+	PresenceRequest_DownloadStatistics = 32,
+	PresenceRequest_GetLeaderboard = 33,
+	PresenceRequest_UploadProgression = 34,
+	PresenceRequest_SendInvite = 35,
+	PresenceRequest_KickFromPlaygroup = 36,
+	PresenceRequest_ViewInvite = 37,
+	PresenceRequest_SendInviteToLiveParty = 38,
+	PresenceRequest_SetUserInfoAttribute = 39,
+	PresenceRequest_GetServerBrowserSnapshot = 40,
+	PresenceRequest_GetGamesWithFriends = 41,
+	PresenceRequest_GetGamesByServerId = 42,
+	PresenceRequest_GetDetailedServerInfo = 43,
+	PresenceRequest_UnlockAchievements = 44,
+	PresenceRequest_RspGetServers = 45,
+	PresenceRequest_RspGetServerDetails = 46,
+	PresenceRequest_RspUpdateServerSettings = 47,
+	PresenceRequest_RspGetConfig = 48,
+	PresenceRequest_RspRestartServer = 49,
+	PresenceRequest_RspUpdatePreset = 50,
+	PresenceRequest_RspUpdateMapRotation = 51,
+	PresenceRequest_RspUpdateAdminUser = 52,
+	PresenceRequest_RspUpdateBannedUser = 53,
+	PresenceRequest_RspUpdateVipUser = 54,
+	PresenceRequest_RspUpdateServerBanner = 55,
+	PresenceRequest_ReportServerBanner = 56,
+	PresenceRequest_GetUserId = 57,
+	PresenceRequest_VerifyGrantEntitlement = 58,
+	PresenceRequest_ResetStatistics = 59,
+	PresenceRequest_GetXPromoInformation = 60,
+	PresenceRequest_GetContentInformation = 61,
+	PresenceRequest_DownloadPromoItem = 62,
+	PresenceRequest_Count = 63
+}
+
+enum PrimitiveType {
+	PrimitiveType_PointList = 0,
+	PrimitiveType_LineList = 1,
+	PrimitiveType_LineStrip = 2,
+	PrimitiveType_TriangleList = 3,
+	PrimitiveType_TriangleStrip = 5,
+	PrimitiveType_QuadList = 7,
+	PrimitiveType_XenonRectList = 8
+}
+
+enum ProcessorType {
+	PtBaseEmitter = 0,
+	PtSpawnRate = 1,
+	PtSpawnSpeed = 2,
+	PtSpawnPosition = 3,
+	PtSpawnDirection = 4,
+	PtSpawnSize = 5,
+	PtSpawnAnimation = 6,
+	PtSpawnAnimationFrame = 7,
+	PtSpawnRotation = 8,
+	PtSpawnOrientation = 9,
+	PtSpawnRotationSpeed = 10,
+	PtUpdatePosition = 11,
+	PtUpdateAge = 12,
+	PtTurbulance = 13,
+	PtGravity = 14,
+	PtLocalForce = 15,
+	PtAirResistance = 16,
+	PtUpdateLinearVelocity = 17,
+	PtUpdateOrientation = 18,
+	PtEmitter = 19,
+	PtUpdateColor = 20,
+	PtUpdateColorLeaf = 21,
+	PtUpdateTransparency = 22,
+	PtUpdateTextureCoords = 23,
+	PtUpdateRotation = 24,
+	PtUpdateSizeX = 25,
+	PtUpdateSizeY = 26,
+	PtUpdateSizeZ = 27,
+	PtUpdateSize = 28,
+	PtUpdateAlphaLevelMin = 29,
+	PtUpdateAlphaLevelMax = 30,
+	PtUpdateAlphaLevelScale = 31,
+	PtUpdateClipScale = 32,
+	PtUpdateCameraProximity = 33,
+	ProcessorTypeCount = 34
+}
+
+enum ProfileOptionsType {
+	GstAudio = 0,
+	GstRender = 1,
+	GstInput = 2,
+	GstAI = 3,
+	GstGameplay = 4,
+	GstPlayerProfile = 5,
+	GstPersistence = 6,
+	GstBinary = 7,
+	GstKeyBinding = 8,
+	GstCount = 9
+}
+
+enum ProgressType {
+	PT_CapturePointCooldown = 0
+}
+
+enum PropellerType {
+	PropellerType_Regular = 0,
+	PropellerType_Rotor = 1
+}
+
+enum ProximityObjectType {
+	PotProximityDisabled = 0,
+	PotVaultableLow = 1,
+	PotVaultableHigh = 2,
+	PotSupportedShooting = 3,
+	PotInteractWith = 4,
+	PotBashable = 5
+}
+
+enum QualityLevel {
+	QualityLevel_Low = 0,
+	QualityLevel_Medium = 1,
+	QualityLevel_High = 2,
+	QualityLevel_Ultra = 3
+}
+
+enum QuickThrowTypeEnum {
+	QttHand = 0,
+	QttBag = 1
+}
+
+enum RasterNodeUsage {
+	RasterNodeUsage_Default = 0,
+	RasterNodeUsage_Disabled = 1,
+	RasterNodeUsage_Persistent = 2,
+	RasterNodeUsage_PersistentDedicatedServer = 3,
+	RasterNodeUsage_Pruned = 4
+}
+
+enum RasterTreeBuildMode {
+	RasterTreeBuildMode_InlinePersistentStreamRest = 0,
+	RasterTreeBuildMode_InlinePersistentRemoveRest = 1,
+	RasterTreeBuildMode_InlineAll = 2
+}
+
+enum ReadinessLevel {
+	RLPatrol = 0,
+	RLReady = 1,
+	RLCombat = 2,
+	RLNone = 3
+}
+
+enum ReadinessState {
+	RSPatrol = 0,
+	RSReady = 1,
+	RSCombat = 2
+}
+
+enum Realm {
+	Realm_Client = 0,
+	Realm_Server = 1,
+	Realm_ClientAndServer = 2,
+	Realm_None = 3,
+	Realm_Pipeline = 4
+}
+
+enum ReloadBehavior {
+	RbInCover = 0,
+	RbStationary = 1,
+	RbAnywhere = 2
+}
+
+enum ReloadLogic {
+	rlWeaponSwitchCancelsUnfinishedReload = 0,
+	rlReloadUnaffectedByWeaponSwitch = 1
+}
+
+enum ReloadType {
+	rtSingleBullet = 0,
+	rtMagazine = 1,
+	rtMagazineWithPossibleShorterReload = 2
+}
+
+enum RenderBlendMode {
+	RenderBlendMode_Zero = 0,
+	RenderBlendMode_One = 1,
+	RenderBlendMode_SourceColor = 2,
+	RenderBlendMode_InvSourceColor = 3,
+	RenderBlendMode_SourceAlpha = 4,
+	RenderBlendMode_InvSourceAlpha = 5,
+	RenderBlendMode_DestColor = 6,
+	RenderBlendMode_InvDestColor = 7,
+	RenderBlendMode_DestAlpha = 8,
+	RenderBlendMode_InvDestAlpha = 9,
+	RenderBlendMode_SourceAlphaSaturate = 10
+}
+
+enum RenderBlendOp {
+	RenderBlendOp_Add = 0,
+	RenderBlendOp_Subtract = 1,
+	RenderBlendOp_RevSubtract = 2,
+	RenderBlendOp_Min = 3,
+	RenderBlendOp_Max = 4
+}
+
+enum RenderClearMask {
+	RenderClearMask_Color0 = 1,
+	RenderClearMask_Color1 = 2,
+	RenderClearMask_Color2 = 4,
+	RenderClearMask_Color3 = 8,
+	RenderClearMask_Color4 = 16,
+	RenderClearMask_Color5 = 32,
+	RenderClearMask_Color6 = 64,
+	RenderClearMask_Color7 = 128,
+	RenderClearMask_Color = 255,
+	RenderClearMask_Depth = 256,
+	RenderClearMask_Stencil = 512,
+	RenderClearMask_All = 1023
+}
+
+enum RenderCullMode {
+	RenderCullMode_None = 0,
+	RenderCullMode_Front = 1,
+	RenderCullMode_Back = 2
+}
+
+enum RenderDepthMode {
+	RenderDepthMode_Disabled = 0,
+	RenderDepthMode_ReadOnly = 1,
+	RenderDepthMode_ReadAndWrite = 2,
+	RenderDepthMode_WriteOnly = 3
+}
+
+enum RenderFillMode {
+	RenderFillMode_Solid = 0,
+	RenderFillMode_Wireframe = 1
+}
+
+enum RenderVolumeTransformType {
+	RenderVolumeTransformType_WorldSpaceInv = 0,
+	RenderVolumeTransformType_WorldSpaceNoScale = 1
+}
+
+enum RenderWriteMask {
+	RenderWriteMask_None = 0,
+	RenderWriteMask_Red = 1,
+	RenderWriteMask_Green = 2,
+	RenderWriteMask_Blue = 4,
+	RenderWriteMask_Color = 7,
+	RenderWriteMask_Alpha = 8,
+	RenderWriteMask_All = 15
+}
+
+enum ResourceBundleKind {
+	ResourceBundleKind_AlwaysLoaded = 0,
+	ResourceBundleKind_GlobalPackage = 1,
+	ResourceBundleKind_AssetPackage = 2,
+	ResourceBundleKind_SubLevelPackage = 3,
+	ResourceBundleKind_BlueprintBundle = 4
+}
+
+enum RichPresencePropertyType {
+	RichPresencePropertyType_Float = 0,
+	RichPresencePropertyType_Integer = 1,
+	RichPresencePropertyType_LongFloat = 2,
+	RichPresencePropertyType_LongInteger = 3
+}
+
+enum RigidBodyCollisionLayer {
+	RigidBodyCollisionLayer_Invalid = 0,
+	RigidBodyCollisionLayer_VehicleLayer = 1,
+	RigidBodyCollisionLayer_VehicleAndCharacterCollisionLayer = 2,
+	RigidBodyCollisionLayer_Size = 3
+}
+
+enum RigidBodyMotionType {
+	RigidBodyMotionType_Invalid = 0,
+	RigidBodyMotionType_Fixed = 1,
+	RigidBodyMotionType_Keyframed = 2,
+	RigidBodyMotionType_Dynamic = 3,
+	RigidBodyMotionType_Size = 4
+}
+
+enum RigidBodyQualityType {
+	RigidBodyQualityType_Invalid = 0,
+	RigidBodyQualityType_Fixed = 1,
+	RigidBodyQualityType_Debris = 2,
+	RigidBodyQualityType_DebrisSimpleToi = 3,
+	RigidBodyQualityType_Moving = 4,
+	RigidBodyQualityType_Critical = 5,
+	RigidBodyQualityType_Size = 6
+}
+
+enum RigidBodyType {
+	RBTypeCollision = 0,
+	RBTypeDetail = 1,
+	RBTypeCharacter = 2,
+	RBTypeRaycast = 3,
+	RBTypeGroup = 4,
+	RBTypeSize = 5
+}
+
+enum RotationAxis {
+	raX = 0,
+	raY = 1,
+	raZ = 2
+}
+
+enum RotationAxisEnum {
+	RALeft = 0,
+	RAUp = 1,
+	RADof = 2
+}
+
+enum RotationChannel {
+	RotationChannel_Pitch = 0,
+	RotationChannel_Yaw = 1,
+	RotationChannel_Roll = 2
+}
+
+enum RouteChannel {
+	RouteChannel_0 = 0,
+	RouteChannel_1 = 1,
+	RouteChannel_2 = 2,
+	RouteChannel_3 = 3,
+	RouteChannel_4 = 4,
+	RouteChannel_5 = 5,
+	RouteChannel_6 = 6,
+	RouteChannel_7 = 7,
+	RouteChannel_8 = 8,
+	RouteChannel_9 = 9,
+	RouteChannel_10 = 10,
+	RouteChannel_11 = 11,
+	RouteChannel_12 = 12,
+	RouteChannel_13 = 13,
+	RouteChannel_14 = 14,
+	RouteChannel_15 = 15,
+	RouteChannel_16 = 16,
+	RouteChannel_17 = 17,
+	RouteChannel_18 = 18,
+	RouteChannel_19 = 19,
+	RouteChannel_21 = 20,
+	RouteChannel_22 = 21,
+	RouteChannel_23 = 22,
+	RouteChannel_24 = 23,
+	RouteChannel_25 = 24,
+	RouteChannel_26 = 25,
+	RouteChannel_27 = 26,
+	RouteChannel_28 = 27,
+	RouteChannel_29 = 28,
+	RouteChannel_30 = 29,
+	RouteChannel_31 = 30,
+	RouteChannel_32 = 31,
+	RouteChannel_33 = 32,
+	RouteChannel_34 = 33,
+	RouteChannel_35 = 34,
+	RouteChannel_36 = 35,
+	RouteChannel_37 = 36,
+	RouteChannel_38 = 37,
+	RouteChannel_39 = 38,
+	RouteChannel_40 = 39,
+	RouteChannel_41 = 40,
+	RouteChannel_42 = 41,
+	RouteChannel_43 = 42,
+	RouteChannel_44 = 43,
+	RouteChannel_45 = 44,
+	RouteChannel_46 = 45,
+	RouteChannel_47 = 46,
+	RouteChannel_48 = 47,
+	RouteChannel_49 = 48,
+	RouteChannel_50 = 49,
+	RouteChannel_51 = 50,
+	RouteChannel_52 = 51,
+	RouteChannel_53 = 52,
+	RouteChannel_54 = 53,
+	RouteChannel_55 = 54,
+	RouteChannel_56 = 55,
+	RouteChannel_57 = 56,
+	RouteChannel_58 = 57,
+	RouteChannel_59 = 58,
+	RouteChannel_60 = 59,
+	RouteChannel_61 = 60,
+	RouteChannel_62 = 61,
+	RouteChannel_63 = 62
+}
+
+enum RouteType {
+	RouteStop = 0,
+	RouteCircular = 1
+}
+
+enum SampleCenter {
+	SampleCenter_Center = 0,
+	SampleCenter_TopLeft = 1
+}
+
+enum ScoreboardPosition {
+	ScoreboardPosition_FirstPlace = 0,
+	ScoreboardPosition_SecondPlace = 1,
+	ScoreboardPosition_ThirdPlace = 2,
+	ScoreboardPosition_FourthPlace = 3,
+	ScoreboardPosition_FifthPlace = 4,
+	ScoreboardPosition_LAST_ITEM = 5
+}
+
+enum ScoringBucket {
+	ScoringBucket_General = 0,
+	ScoringBucket_Teamwork = 1,
+	ScoringBucket_Bonus = 2,
+	ScoringBucket_Squad = 3,
+	ScoringBucket_Objective = 4,
+	ScoringBucket_Award = 5,
+	ScoringBucket_VehicleMBT = 6,
+	ScoringBucket_VehicleIFV = 7,
+	ScoringBucket_VehicleAA = 8,
+	ScoringBucket_VehicleAttackHeli = 9,
+	ScoringBucket_VehicleScoutHeli = 10,
+	ScoringBucket_VehicleJet = 11,
+	ScoringBucket_KitAssault = 12,
+	ScoringBucket_KitEngineer = 13,
+	ScoringBucket_KitRecon = 14,
+	ScoringBucket_KitSupport = 15,
+	ScoringBucket_SinglePlayer = 16,
+	ScoringBucket_Cooperation = 17,
+	ScoringBucket_CoopIndivid = 18,
+	ScoringBucket_Unlock = 19,
+	ScoringBucket_SpecialKit = 20,
+	ScoringBucket_VehicleLBT = 21,
+	ScoringBucket_VehicleArtillery = 22,
+	ScoringBucket_LastScoringBucketItem = 23
+}
+
+enum ScoringBucketType {
+	ScoringBucketType_Disabled = 0,
+	ScoringBucketType_Normal = 1,
+	ScoringBucketType_Vehicle = 2,
+	ScoringBucketType_Kit = 3,
+	ScoringBucketType_Count = 4
+}
+
+enum ScoringVisibilityType {
+	ScoringVisibilityType_Major = 0,
+	ScoringVisibilityType_Minor = 1,
+	ScoringVisibilityType_Hidden = 2
+}
+
+enum ScreenEffectFrameType {
+	ScreenEffectFrameType_FullFrame = 0,
+	ScreenEffectFrameType_SingleFramePart = 1,
+	ScreenEffectFrameType_SingleSquareFramePart = 2
+}
+
+enum SecureReason {
+	SecureReason_Ok = 0,
+	SecureReason_WrongProtocolVersion = 1,
+	SecureReason_WrongTitleVersion = 2,
+	SecureReason_ServerFull = 3,
+	SecureReason_KickedOut = 4,
+	SecureReason_Banned = 5,
+	SecureReason_GenericError = 6,
+	SecureReason_WrongPassword = 7,
+	SecureReason_KickedOutDemoOver = 8,
+	SecureReason_RankRestricted = 9,
+	SecureReason_ConfigurationNotAllowed = 10,
+	SecureReason_ServerReclaimed = 11,
+	SecureReason_MissingContent = 12,
+	SecureReason_NotVerified = 13,
+	SecureReason_TimedOut = 14,
+	SecureReason_ConnectFailed = 15,
+	SecureReason_NoReply = 16,
+	SecureReason_AcceptFailed = 17,
+	SecureReason_MismatchingContent = 18,
+	SecureReason_InteractivityTimeout = 19,
+	SecureReason_KickedFromQueue = 20,
+	SecureReason_TeamKills = 21,
+	SecureReason_KickedByAdmin = 22,
+	SecureReason_KickedViaPunkBuster = 23,
+	SecureReason_KickedOutServerFull = 24,
+	SecureReason_ESportsMatchStarting = 25,
+	SecureReason_NotInESportsRosters = 26,
+	SecureReason_ESportsMatchEnding = 27,
+	SecureReason_VirtualServerExpired = 28,
+	SecureReason_VirtualServerRecreate = 29,
+	SecureReason_ESportsTeamFull = 30,
+	SecureReason_ESportsMatchAborted = 31,
+	SecureReason_ESportsMatchWalkover = 32,
+	SecureReason_ESportsMatchWarmupTimedOut = 33,
+	SecureReason_NotAllowedToSpectate = 34,
+	SecureReason_NoSpectateSlotAvailable = 35,
+	SecureReason_InvalidSpectateJoin = 36,
+	SecureReason_PremiumStatusMismatch = 37
+}
+
+enum ServerBackendAttribute {
+	ServerBackendAttribute_Level = 0,
+	ServerBackendAttribute_GameMode = 1,
+	ServerBackendAttribute_LevelLocation = 2,
+	ServerBackendAttribute_Mod = 3,
+	ServerBackendAttribute_Public = 4,
+	ServerBackendAttribute_Vip = 5,
+	ServerBackendAttribute_Preset = 6,
+	ServerBackendAttribute_Settings1 = 7,
+	ServerBackendAttribute_Settings2 = 8,
+	ServerBackendAttribute_MapSettings = 9,
+	ServerBackendAttribute_Maps1 = 10,
+	ServerBackendAttribute_Maps2 = 11,
+	ServerBackendAttribute_Description1 = 12,
+	ServerBackendAttribute_Description2 = 13,
+	ServerBackendAttribute_Admins1 = 14,
+	ServerBackendAttribute_Admins2 = 15,
+	ServerBackendAttribute_ReservedSlots1 = 16,
+	ServerBackendAttribute_ReservedSlots2 = 17,
+	ServerBackendAttribute_Message = 18,
+	ServerBackendAttribute_BannerUrl = 19,
+	ServerBackendAttribute_Mission = 20,
+	ServerBackendAttribute_Difficulty = 21,
+	ServerBackendAttribute_PingSite = 22,
+	ServerBackendAttribute_MapsInfo = 23,
+	ServerBackendAttribute_Owner = 24,
+	ServerBackendAttribute_MatchId = 25,
+	ServerBackendAttribute_RosterA1 = 26,
+	ServerBackendAttribute_RosterA2 = 27,
+	ServerBackendAttribute_RosterA3 = 28,
+	ServerBackendAttribute_RosterA4 = 29,
+	ServerBackendAttribute_RosterA5 = 30,
+	ServerBackendAttribute_RosterA6 = 31,
+	ServerBackendAttribute_RosterA7 = 32,
+	ServerBackendAttribute_RosterA8 = 33,
+	ServerBackendAttribute_RosterA9 = 34,
+	ServerBackendAttribute_RosterB1 = 35,
+	ServerBackendAttribute_RosterB2 = 36,
+	ServerBackendAttribute_RosterB3 = 37,
+	ServerBackendAttribute_RosterB4 = 38,
+	ServerBackendAttribute_RosterB5 = 39,
+	ServerBackendAttribute_RosterB6 = 40,
+	ServerBackendAttribute_RosterB7 = 41,
+	ServerBackendAttribute_RosterB8 = 42,
+	ServerBackendAttribute_RosterB9 = 43,
+	ServerBackendAttribute_Spectators = 44,
+	ServerBackendAttribute_ExpirationDate = 45,
+	ServerBackendAttribute_MatchState = 46,
+	ServerBackendAttribute_PremiumStatus = 47,
+	ServerBackendAttribute_Count = 48
+}
+
+enum ServerMapSequencerEventType {
+	ServerMapSequencerEventType_Add = 0,
+	ServerMapSequencerEventType_Remove = 1,
+	ServerMapSequencerEventType_Clear = 2,
+	ServerMapSequencerEventType_List = 3,
+	ServerMapSequencerEventType_Load = 4,
+	ServerMapSequencerEventType_Save = 5,
+	ServerMapSequencerEventType_SetNextMapIndex = 6,
+	ServerMapSequencerEventType_GetMapIndices = 7,
+	ServerMapSequencerEventType_GetRounds = 8,
+	ServerMapSequencerEventType_RunNextRound = 9,
+	ServerMapSequencerEventType_RestartRound = 10,
+	ServerMapSequencerEventType_AvailableMaps = 11
+}
+
+enum ServerUnlockListEventType {
+	ServerUnlockListEventType_Add = 0,
+	ServerUnlockListEventType_Remove = 1,
+	ServerUnlockListEventType_Clear = 2,
+	ServerUnlockListEventType_List = 3,
+	ServerUnlockListEventType_Load = 4,
+	ServerUnlockListEventType_Save = 5,
+	ServerUnlockListEventType_GetMode = 6,
+	ServerUnlockListEventType_SetMode = 7,
+	ServerUnlockListEventType_SetFromBitmap = 8
+}
+
+enum ServerUnlockSystemType {
+	ServerUnlockSystemType_All = 0,
+	ServerUnlockSystemType_Common = 1,
+	ServerUnlockSystemType_None = 2,
+	ServerUnlockSystemType_FromStats = 3,
+	ServerUnlockSystemType_FromWhiteList = 4,
+	ServerUnlockSystemType_FromBlackList = 5,
+	ServerUnlockSystemType_Count = 6
+}
+
+enum ShaderBlendMode {
+	ShaderBlendMode_Lerp = 0,
+	ShaderBlendMode_Additive = 1,
+	ShaderBlendMode_Multiply = 2,
+	ShaderBlendMode_LerpPremultiplied = 3,
+	ShaderBlendMode_DecalLerpNoSpec = 4,
+	ShaderBlendMode_DecalLerpNormal = 5,
+	ShaderBlendMode_DecalLerpNormalMultiplyDiffuse = 6,
+	ShaderBlendMode_DecalLerpDiffuse = 7,
+	ShaderBlendMode_DecalLerpDiffuseNoSpec = 8
+}
+
+enum ShaderBranchMethod {
+	SbmStatic = 0,
+	SbmFlat = 1,
+	SbmDynamicIfElse = 2,
+	SbmDynamicIfTrue = 3,
+	SbmDynamicIfFalse = 4
+}
+
+enum ShaderComparisonOperator {
+	ScoEquals = 0,
+	ScoNotEquals = 1,
+	ScoLess = 2,
+	ScoLessEquals = 3,
+	ScoGreater = 4,
+	ScoGreaterEquals = 5
+}
+
+enum ShaderConstantFunction {
+	ShaderConstantFunction_ViewMatrix = 0,
+	ShaderConstantFunction_ViewProjMatrix = 1,
+	ShaderConstantFunction_WorldViewMatrix = 2,
+	ShaderConstantFunction_WorldViewProjMatrix = 3,
+	ShaderConstantFunction_CrViewProjMatrix = 4,
+	ShaderConstantFunction_CrWorldViewProjMatrix = 5,
+	ShaderConstantFunction_CameraPos = 6,
+	ShaderConstantFunction_PrevViewProjMatrix = 7,
+	ShaderConstantFunction_PrevWorldViewProjMatrix = 8,
+	ShaderConstantFunction_WorldMatrix = 9,
+	ShaderConstantFunction_PrevWorldMatrix = 10,
+	ShaderConstantFunction_BoneVectors = 11,
+	ShaderConstantFunction_PrevBoneVectors = 12,
+	ShaderConstantFunction_LightProbeShR = 13,
+	ShaderConstantFunction_LightProbeShG = 14,
+	ShaderConstantFunction_LightProbeShB = 15,
+	ShaderConstantFunction_LightProbeShO = 16,
+	ShaderConstantFunction_LightMapUvTransform = 17,
+	ShaderConstantFunction_LightMapUvTranslation = 18,
+	ShaderConstantFunction_LightMapIrradianceTexture = 19,
+	ShaderConstantFunction_LightMapIrradianceChromaTexture = 20,
+	ShaderConstantFunction_LightMapIrradianceLumaTexture = 21,
+	ShaderConstantFunction_LightMapDirectionTexture = 22,
+	ShaderConstantFunction_LightMapSkyVisibilityTexture = 23,
+	ShaderConstantFunction_DepthBufferTexture = 24,
+	ShaderConstantFunction_ViewportZMinMaxKzKw = 25,
+	ShaderConstantFunction_Time = 26,
+	ShaderConstantFunction_ScreenSize = 27,
+	ShaderConstantFunction_OutdoorLightDir = 28,
+	ShaderConstantFunction_OutdoorLightHemisphereDir = 29,
+	ShaderConstantFunction_OutdoorLightKeyColor = 30,
+	ShaderConstantFunction_OutdoorLightKeySpecularColorAndHemisphereVisibility = 31,
+	ShaderConstantFunction_OutdoorLightTopColor = 32,
+	ShaderConstantFunction_OutdoorLightBottomColor = 33,
+	ShaderConstantFunction_OutdoorLightShadowTransform = 34,
+	ShaderConstantFunction_OutdoorLightShadowmapSizeAndInvSize = 35,
+	ShaderConstantFunction_OutdoorLightShadowmapTexture = 36,
+	ShaderConstantFunction_OutdoorLightTransparencyShadowmapTexture = 37,
+	ShaderConstantFunction_OutdoorLightSkyEnvmap = 38,
+	ShaderConstantFunction_OutdoorLightDynamicEnvmap = 39,
+	ShaderConstantFunction_OutdoorLightTopColorEnvmap = 40,
+	ShaderConstantFunction_OutdoorLightBottomColorEnvmap = 41,
+	ShaderConstantFunction_OutdoorLightKeyColorEnvmap = 42,
+	ShaderConstantFunction_OutdoorLightSkyEnvmap8BitTexInvScale = 43,
+	ShaderConstantFunction_TransparentStartAndEndAndClamp = 44,
+	ShaderConstantFunction_BestFitNormalScaleTexture = 45,
+	ShaderConstantFunction_SceneTexture = 46,
+	ShaderConstantFunction_ColorScale = 47,
+	ShaderConstantFunction_DebugNonFiniteColor = 48,
+	ShaderConstantFunction_XenonInstancingIndexCount = 49,
+	ShaderConstantFunction_Ps3ClipPlane = 50,
+	ShaderConstantFunction_DxVectorBufferOffsets = 51,
+	ShaderConstantFunctionCount = 52
+}
+
+enum ShaderConstantSystemTexture {
+	ShaderConstantSystemTexture_DepthBufferTexture = 0,
+	ShaderConstantSystemTextureCount = 1
+}
+
+enum ShaderDepthBiasGroup {
+	ShaderDepthBiasGroup_Default = 0,
+	ShaderDepthBiasGroup_Decal = 1,
+	ShaderDepthBiasGroup_EmitterOcclusion = 2,
+	ShaderDepthBiasGroup_EdgeModel = 3,
+	ShaderDepthBiasGroup_TerrainDecal = 4,
+	ShaderDepthBiasGroup_TerrainDecalZPass = 5,
+	ShaderDepthBiasGroup_Shadow16Bit = 6,
+	ShaderDepthBiasGroup_Shadow24Bit = 7,
+	ShaderDepthBiasGroup_ZPass = 8,
+	ShaderDepthBiasGroup_Emissive = 9,
+	ShaderDepthBiasGroupCount = 10
+}
+
+enum ShaderGBufferLayout {
+	ShaderGBufferLayout_Default = 0,
+	ShaderGBufferLayout_Test = 1
+}
+
+enum ShaderGeometrySpace {
+	ShaderGeometrySpace_Object = 0,
+	ShaderGeometrySpace_ObjectScaled = 1,
+	ShaderGeometrySpace_World = 2,
+	ShaderGeometrySpace_Screen = 3
+}
+
+enum ShaderInstancingMethod {
+	ShaderInstancingMethod_None = 0,
+	ShaderInstancingMethod_ObjectTransform4x3Half = 1,
+	ShaderInstancingMethod_ObjectTransform4x3InstanceData4x1Half = 2,
+	ShaderInstancingMethod_ObjectTransform4x3InstanceData4x2Half = 3,
+	ShaderInstancingMethod_WorldTransform4x3Float = 4,
+	ShaderInstancingMethod_ObjectTranslationScaleHalf = 5,
+	ShaderInstancingMethod_ObjectTranslationScaleHalfInstanceData4x1Half = 6,
+	ShaderInstancingMethod_ObjectTranslationScaleHalfInstanceData4x2Half = 7,
+	ShaderInstancingMethod_VertexAnimation = 8,
+	ShaderInstancingMethod_DxBuffer = 9,
+	ShaderInstancingMethodCount = 10
+}
+
+enum ShaderInterpolationType {
+	ShaderInterpolationType_Linear = 0,
+	ShaderInterpolationType_Centroid = 1,
+	ShaderInterpolationType_NoInterpolation = 2,
+	ShaderInterpolationType_NoPerspective = 3,
+	ShaderInterpolationType_Sample = 4,
+	ShaderInterpolationType_Count = 5
+}
+
+enum ShaderLightingModel {
+	ShaderLightingModel_Standard = 0,
+	ShaderLightingModel_Metallic = 1,
+	ShaderLightingModel_Skin = 2,
+	ShaderLightingModel_DynamicEnvmap = 3,
+	ShaderLightingModel_Translucent = 4
+}
+
+enum ShaderObjectLighting {
+	ShaderObjectLighting_None = 0,
+	ShaderObjectLighting_LightProbe = 1,
+	ShaderObjectLighting_LightMap = 2
+}
+
+enum ShaderParameterType {
+	ShaderParameterType_Bool = 0,
+	ShaderParameterType_Int = 1,
+	ShaderParameterType_Scalar = 2,
+	ShaderParameterType_Vec2 = 3,
+	ShaderParameterType_Vec3 = 4,
+	ShaderParameterType_Vec4 = 5,
+	ShaderParameterType_Color = 6,
+	ShaderParameterType_TextureSlice = 7,
+	ShaderParameterTypeCount = 8
+}
+
+enum ShaderPortType {
+	SptBool = 0,
+	SptInteger = 1,
+	SptScalar = 2,
+	SptVec2 = 3,
+	SptVec3 = 4,
+	SptVec4 = 5,
+	SptColor = 6
+}
+
+enum ShaderPositionSpace {
+	ShaderPositionSpace_Object = 0,
+	ShaderPositionSpace_World = 1
+}
+
+enum ShaderProgram {
+	ShaderProgram_DebugRender_Font2d = 0,
+	ShaderProgram_DebugRender_FontShadow2d = 1,
+	ShaderProgram_DebugRender_Color2d = 2,
+	ShaderProgram_DebugRender_Color3d = 3,
+	ShaderProgram_DebugRender_Lit3d = 4,
+	ShaderProgram_DebugRender_LitGrid3d = 5,
+	ShaderProgram_SimpleWhite = 6,
+	ShaderProgram_MaterialID = 7,
+	ShaderProgram_DownsampleQuarter = 8,
+	ShaderProgram_DownsampleQuarterZ = 9,
+	ShaderProgram_DownsampleHalf = 10,
+	ShaderProgram_DownsampleDepthHalfSingleSample = 11,
+	ShaderProgram_DownsampleHalfGrayscaleLog = 12,
+	ShaderProgram_DownsampleCubeHalfPoisson13 = 13,
+	ShaderProgram_DownsampleCubeHalfPoisson13Clamped = 14,
+	ShaderProgram_SeperableFilter = 15,
+	ShaderProgram_GaussianBlurRgb15HCube = 16,
+	ShaderProgram_GaussianBlurRgb15VCube = 17,
+	ShaderProgram_FastGaussian9H = 18,
+	ShaderProgram_FastGaussian9V = 19,
+	ShaderProgram_GreyscaleGaussian9H = 20,
+	ShaderProgram_GreyscaleGaussian9V = 21,
+	ShaderProgram_CosineBlurRgbHCube = 22,
+	ShaderProgram_CosineBlurRgbVCube = 23,
+	ShaderProgram_GaussianBlurRgba15HCube = 24,
+	ShaderProgram_GaussianBlurRgba15VCube = 25,
+	ShaderProgram_CosineBlurRgbaHCube = 26,
+	ShaderProgram_CosineBlurRgbaVCube = 27,
+	ShaderProgram_Tex2d = 28,
+	ShaderProgram_Tex2dConstantAlpha = 29,
+	ShaderProgram_Tex2dSaturateAlpha = 30,
+	ShaderProgram_Tex2dAlpha = 31,
+	ShaderProgram_Tex2dAlphaOverlayAdd = 32,
+	ShaderProgram_Tex2dAlphaOverlayLerp = 33,
+	ShaderProgram_Tex2dPow = 34,
+	ShaderProgram_Tex2dPowAlpha = 35,
+	ShaderProgram_Tex2dMrt2 = 36,
+	ShaderProgram_Tex2dMrt3 = 37,
+	ShaderProgram_Tex2dMrt4 = 38,
+	ShaderProgram_Tex2dGrayscaleLog = 39,
+	ShaderProgram_Tex3d = 40,
+	ShaderProgram_TexCube = 41,
+	ShaderProgram_TexCubeAlpha = 42,
+	ShaderProgram_TexCubeAlphaOverlayAdd = 43,
+	ShaderProgram_TexCubeAlphaOverlayLerp = 44,
+	ShaderProgram_Color = 45,
+	ShaderProgram_Tonemap = 46,
+	ShaderProgram_ColorGrade = 47,
+	ShaderProgram_Dof = 48,
+	ShaderProgram_UnprojectDepthBuffer = 49,
+	ShaderProgram_UnprojectDepthBufferHalf = 50,
+	ShaderProgram_UnprojectDepthBufferMsaa = 51,
+	ShaderProgram_SingleDepthSampleMsaa = 52,
+	ShaderProgram_MaxDepthSampleMsaa = 53,
+	ShaderProgram_TexYCrCb = 54,
+	ShaderProgram_CombineTextures2 = 55,
+	ShaderProgram_CombineTextures3 = 56,
+	ShaderProgram_CombineTextures4 = 57,
+	ShaderProgram_CombineTextures5 = 58,
+	ShaderProgram_CombineTextures6 = 59,
+	ShaderProgram_CombineTextures2Bilinear = 60,
+	ShaderProgram_CombineTextures3Bilinear = 61,
+	ShaderProgram_CombineTextures4Bilinear = 62,
+	ShaderProgram_CombineTextures5Bilinear = 63,
+	ShaderProgram_CombineTextures6Bilinear = 64,
+	ShaderProgram_CombineOpaqueAndTrans2d = 65,
+	ShaderProgram_CombineOpaqueAndTransCube = 66,
+	ShaderProgram_CombineOpaqueAndTrans2dSpecial = 67,
+	ShaderProgram_CombineOpaqueAndTransCubeSpecial = 68,
+	ShaderProgram_CrtHudFx = 69,
+	ShaderProgram_CrtAnalogLinkHudFx = 70,
+	ShaderProgram_RadialBlur = 71,
+	ShaderProgram_PoissonRadialBlur = 72,
+	ShaderProgram_ChromaticAberrationWithRadialBlend = 73,
+	ShaderProgram_FLIR = 74,
+	ShaderProgram_ColorTint = 75,
+	ShaderProgram_WriteZ = 76,
+	ShaderProgram_WriteHalfResZ = 77,
+	ShaderProgram_WriteHalfResZFat = 78,
+	ShaderProgram_WriteHalfResZAverage = 79,
+	ShaderProgram_LinearZ = 80,
+	ShaderProgram_ParticleVertexShadows = 81,
+	ShaderProgram_ParticleVertexShadowsAccum = 82,
+	ShaderProgram_ParticleVertexShadowsAccumBlend = 83,
+	ShaderProgram_HalfResUpsampleBilateral = 84,
+	ShaderProgram_HalfResUpsampleBilateralTiled = 85,
+	ShaderProgram_HalfResUpsampleBilinearTiled = 86,
+	ShaderProgram_HalfResCategorize = 87,
+	ShaderProgram_HalfResCategorizeDownsample = 88,
+	ShaderProgram_DigitalDistortion = 89,
+	ShaderProgram_MotionBlur = 90,
+	ShaderProgram_CalcVelocityFromZBuffer = 91,
+	ShaderProgram_FXAA = 92,
+	ShaderProgram_HorizonBasedAO = 93,
+	ShaderProgram_HorizonBasedAO_BlurPS = 94,
+	ShaderProgram_HorizonBasedAO_BlurCS = 95,
+	ShaderProgram_HorizonBasedAO_PackAODepth = 96,
+	ShaderProgram_HorizonBasedAO_CompositeTemporal = 97,
+	ShaderProgram_HorizonBasedAO_NoiseDetection = 98,
+	ShaderProgram_SSAO = 99,
+	ShaderProgram_SSAO_DilateDraw = 100,
+	ShaderProgram_LightTileDownsampleHalf = 101,
+	ShaderProgram_LightTileDownsampleHalfStage2 = 102,
+	ShaderProgram_LightTileDownsampleHalfStage3 = 103,
+	ShaderProgram_TiledLightVisibility_Point = 104,
+	ShaderProgram_TiledLightVisibility_Spot = 105,
+	ShaderProgram_TiledLightVisibility_Line = 106,
+	ShaderProgram_TiledLightVisibility_CalcTileFrustaData = 107,
+	ShaderProgram_DeferredGBufferSimpleFixup = 108,
+	ShaderProgram_MsaaClassify = 109,
+	ShaderProgram_DeferredPointLight = 110,
+	ShaderProgram_DeferredPointLightCS = 111,
+	ShaderProgram_DeferredPointLightTile = 112,
+	ShaderProgram_DeferredPointLightZ = 113,
+	ShaderProgram_DeferredLineLight = 114,
+	ShaderProgram_DeferredLineLightTile = 115,
+	ShaderProgram_DeferredSpotLight = 116,
+	ShaderProgram_DeferredSpotLightZ = 117,
+	ShaderProgram_DeferredConeLight = 118,
+	ShaderProgram_DeferredConeLightTile = 119,
+	ShaderProgram_DeferredOutdoorLight = 120,
+	ShaderProgram_DeferredOutdoorLightTile = 121,
+	ShaderProgram_DeferredShadow = 122,
+	ShaderProgram_Sky = 123,
+	ShaderProgram_HeightfieldTessellation = 124,
+	ShaderProgram_XenonMemCopy = 125,
+	ShaderProgram_XenonFastUntile = 126,
+	ShaderProgram_XenonFastDepthStencilFill = 127,
+	ShaderProgram_XenonFastDepthStencilFill_ZOnly = 128,
+	ShaderProgram_XenonJobEnable = 129,
+	ShaderProgram_Ui_Textured = 130,
+	ShaderProgram_Ui_Textured2 = 131,
+	ShaderProgram_Ui_Textured3 = 132,
+	ShaderProgram_Ui_Textured2GlobalColor = 133,
+	ShaderProgram_Ui_Scaleform_StripSolidColor = 134,
+	ShaderProgram_Ui_Scaleform_StripCxformTextureMultiply = 135,
+	ShaderProgram_Ui_Scaleform_StripCxformTexture = 136,
+	ShaderProgram_Ui_Scaleform_StripCxformGauraudNoAddAlpha = 137,
+	ShaderProgram_Ui_Scaleform_StripCxformGauraud = 138,
+	ShaderProgram_Ui_Scaleform_StripCxformGauraudTexture = 139,
+	ShaderProgram_Ui_Scaleform_StripCxform2Texture = 140,
+	ShaderProgram_Ui_Scaleform_StripCxformGauraudMultiply = 141,
+	ShaderProgram_Ui_Scaleform_StripCxformGauraudMultiplyNoAddAlpha = 142,
+	ShaderProgram_Ui_Scaleform_StripCxformGauraudMultiplyTexture = 143,
+	ShaderProgram_Ui_Scaleform_StripCxformMultiply2Texture = 144,
+	ShaderProgram_Ui_Scaleform_XY16iC32SolidColor = 145,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformTextureMultiply = 146,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformTexture = 147,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformGauraudNoAddAlpha = 148,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformGauraud = 149,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformGauraudTexture = 150,
+	ShaderProgram_Ui_Scaleform_XY16iC32Cxform2Texture = 151,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformGauraudMultiply = 152,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformGauraudMultiplyNoAddAlpha = 153,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformGauraudMultiplyTexture = 154,
+	ShaderProgram_Ui_Scaleform_XY16iC32CxformMultiply2Texture = 155,
+	ShaderProgram_Ui_Scaleform_XY16iCF32SolidColor = 156,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformTextureMultiply = 157,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformTexture = 158,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformGauraudNoAddAlpha = 159,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformGauraud = 160,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformGauraudTexture = 161,
+	ShaderProgram_Ui_Scaleform_XY16iCF32Cxform2Texture = 162,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformGauraudMultiply = 163,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformGauraudMultiplyNoAddAlpha = 164,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformGauraudMultiplyTexture = 165,
+	ShaderProgram_Ui_Scaleform_XY16iCF32CxformMultiply2Texture = 166,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2SolidColor = 167,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformTextureMultiply = 168,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformTexture = 169,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformGauraudNoAddAlpha = 170,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformGauraud = 171,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformGauraudTexture = 172,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2Cxform2Texture = 173,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformGauraudMultiply = 174,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformGauraudMultiplyNoAddAlpha = 175,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformGauraudMultiplyTexture = 176,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2CxformMultiply2Texture = 177,
+	ShaderProgram_Ui_Scaleform_GlyphTextTextureAlpha = 178,
+	ShaderProgram_Ui_Scaleform_GlyphTextTextureColorMultiply = 179,
+	ShaderProgram_Ui_Scaleform_GlyphTextTextureColor = 180,
+	ShaderProgram_Ui_Scaleform_StripFilterBlur = 181,
+	ShaderProgram_Ui_Scaleform_StripFilterShadow = 182,
+	ShaderProgram_Ui_Scaleform_XY16iC32FilterBlur = 183,
+	ShaderProgram_Ui_Scaleform_XY16iC32FilterShadow = 184,
+	ShaderProgram_Ui_Scaleform_XY16iCF32FilterBlur = 185,
+	ShaderProgram_Ui_Scaleform_XY16iCF32FilterShadow = 186,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2FilterBlur = 187,
+	ShaderProgram_Ui_Scaleform_XY16iCF32_T2FilterShadow = 188,
+	ShaderProgram_Ui_Scaleform_GlyphFilterBlur = 189,
+	ShaderProgram_Ui_Scaleform_GlyphFilterShadow = 190,
+	ShaderProgram_Ui_Minimap = 191,
+	ShaderProgram_Ui_MinimapIcon = 192,
+	ShaderProgram_Ui_CombatArea = 193,
+	ShaderProgram_ExperimentShader_A = 194,
+	ShaderProgram_ExperimentShader_B = 195,
+	ShaderProgram_TextureCompress_A = 196,
+	ShaderProgram_TextureCompress_DXT1 = 197,
+	ShaderProgram_TextureCompress_DXT5 = 198,
+	ShaderProgram_ErrorDifferenceSurface_RGB = 199,
+	ShaderProgram_ErrorDifferenceSurface_Alpha = 200,
+	ShaderProgram_XenonEncodeDXT5MemExport = 201,
+	ShaderProgram_TerrainEncodeSurface_A = 202,
+	ShaderProgram_TerrainEncodeSurface_B = 203,
+	ShaderProgram_TerrainPatchVertexYFetch = 204,
+	ShaderProgram_TerrainMeshScatteringYFetch = 205,
+	ShaderProgram_TexYCrCbA = 206,
+	ShaderProgram_RgbSeparation = 207,
+	ShaderProgram_Distort = 208,
+	ShaderProgram_DiffusionDofComputeRadius = 209,
+	ShaderProgram_DiffusionDofTridiagonalFill = 210,
+	ShaderProgram_DiffusionDofForwardCR = 211,
+	ShaderProgram_DiffusionDofBackwardCR = 212,
+	ShaderProgram_DiffusionDofSolveFinal = 213,
+	ShaderProgram_DiffusionDofOutputPS = 214,
+	ShaderProgram_DiffusionDofLinearRadiusPS = 215,
+	ShaderProgram_DiffusionDofNonLinearRadiusPS = 216,
+	ShaderProgram_DiffusionDofDetectForegroundPS = 217,
+	ShaderProgram_DiffusionDofCombineForegroundPS = 218,
+	ShaderProgram_DiffusionDofBlurXForegroundPS = 219,
+	ShaderProgram_DiffusionDofBlurYForegroundPS = 220,
+	ShaderProgram_Ui_DetailTexturedMinimap = 221,
+	ShaderProgramCount = 222
+}
+
+enum ShaderRenderMode {
+	ShaderRenderMode_Default = 0,
+	ShaderRenderMode_DynamicEnvmap = 1,
+	ShaderRenderMode_ZOnly = 2,
+	ShaderRenderMode_DeferredShadingGBufferLayout0 = 3,
+	ShaderRenderMode_DeferredShadingGBufferLayout1 = 4,
+	ShaderRenderMode_DeferredShadingEmissive = 5,
+	ShaderRenderMode_DeferredShadingUnlit = 6,
+	ShaderRenderMode_VelocityVector = 7,
+	ShaderRenderMode_DistortionVector = 8,
+	ShaderRenderMode_AmbientOcclusionVolume = 9,
+	ShaderRenderMode_DebugSimple = 10,
+	ShaderRenderMode_DebugMulti = 11,
+	ShaderRenderMode_DebugOverdraw = 12,
+	ShaderRenderMode_DebugShaderCost = 13,
+	ShaderRenderModeCount = 14
+}
+
+enum ShaderRenderPath {
+	ShaderRenderPath_Dx10 = 0,
+	ShaderRenderPath_Dx10Plus = 1,
+	ShaderRenderPath_Dx10_1 = 2,
+	ShaderRenderPath_Dx11 = 3,
+	ShaderRenderPath_Xenon = 4,
+	ShaderRenderPath_Ps3 = 5,
+	ShaderRenderPath_Gl = 6,
+	ShaderRenderPathCount = 7
+}
+
+enum ShaderShadowmapMethod {
+	ShaderShadowmapMethod_None = 0,
+	ShaderShadowmapMethod_Single = 1,
+	ShaderShadowmapMethod_SingleDiscard = 2,
+	ShaderShadowmapMethod_CascadedBox3 = 3,
+	ShaderShadowmapMethod_CascadedBox4 = 4
+}
+
+enum ShaderShadowmapQuality {
+	ShaderShadowmapQuality_Pcf2x2 = 0,
+	ShaderShadowmapQuality_Pcf4x4 = 1,
+	ShaderShadowmapQuality_Gaussian = 2
+}
+
+enum ShaderSkinningMethod {
+	ShaderSkinningMethod_None = 0,
+	ShaderSkinningMethod_Linear1Bone = 1,
+	ShaderSkinningMethod_Linear2Bone = 2,
+	ShaderSkinningMethod_Linear4Bone = 4,
+	ShaderSkinningMethod_Linear8Bone = 8,
+	ShaderSkinningMethod_Null = 9,
+	ShaderSkinningMethod_DualQuaternion4Bone = 10
+}
+
+enum ShaderStageType {
+	ShaderStageType_Vertex = 0,
+	ShaderStageType_Pixel = 1,
+	ShaderStageType_Hull = 2,
+	ShaderStageType_Domain = 3,
+	ShaderStageType_Geometry = 4,
+	ShaderStageType_Compute = 5,
+	ShaderStageTypeCount = 6
+}
+
+enum ShaderTextureCoordType {
+	ShaderTextureCoordType_Unknown = 0,
+	ShaderTextureCoordType_VertexElement = 1,
+	ShaderTextureCoordType_WorldPos = 2
+}
+
+enum ShaderTextureDecompression {
+	ShaderTextureDecompression_None = 0,
+	ShaderTextureDecompression_NormalAG = 1,
+	ShaderTextureDecompression_NormalRG = 2,
+	ShaderTextureDecompression_NormalRGA = 3,
+	ShaderTextureDecompression_RGBE = 4,
+	ShaderTextureDecompression_SrgbToLinear = 5,
+	ShaderTextureDecompression_NormalRGorAG = 6
+}
+
+enum ShaderTimeType {
+	ShaderTimeType_Game = 0,
+	ShaderTimeType_Real = 1
+}
+
+enum ShaderValueFormat {
+	ShaderValueFormat_Half = 0,
+	ShaderValueFormat_Float = 1,
+	ShaderValueFormat_Int = 2,
+	ShaderValueFormat_UInt = 3,
+	ShaderValueFormat_Bool = 4
+}
+
+enum ShaderValueParameterType {
+	SvptLiteral = 0,
+	SvptExternalPermutation = 1,
+	SvptExternalConstant = 2,
+	SvptExternalSubMaterial = 3
+}
+
+enum ShaderValueType {
+	ShaderValueType_None = 0,
+	ShaderValueType_Half1 = 1,
+	ShaderValueType_Half1x2 = 2,
+	ShaderValueType_Half1x3 = 3,
+	ShaderValueType_Half1x4 = 4,
+	ShaderValueType_Half2 = 5,
+	ShaderValueType_Half2x2 = 6,
+	ShaderValueType_Half2x3 = 7,
+	ShaderValueType_Half2x4 = 8,
+	ShaderValueType_Half3 = 9,
+	ShaderValueType_Half3x2 = 10,
+	ShaderValueType_Half3x3 = 11,
+	ShaderValueType_Half3x4 = 12,
+	ShaderValueType_Half4 = 13,
+	ShaderValueType_Half4x2 = 14,
+	ShaderValueType_Half4x3 = 15,
+	ShaderValueType_Half4x4 = 16,
+	ShaderValueType_Float1 = 17,
+	ShaderValueType_Float1x2 = 18,
+	ShaderValueType_Float1x3 = 19,
+	ShaderValueType_Float1x4 = 20,
+	ShaderValueType_Float2 = 21,
+	ShaderValueType_Float2x2 = 22,
+	ShaderValueType_Float2x3 = 23,
+	ShaderValueType_Float2x4 = 24,
+	ShaderValueType_Float3 = 25,
+	ShaderValueType_Float3x2 = 26,
+	ShaderValueType_Float3x3 = 27,
+	ShaderValueType_Float3x4 = 28,
+	ShaderValueType_Float4 = 29,
+	ShaderValueType_Float4x2 = 30,
+	ShaderValueType_Float4x3 = 31,
+	ShaderValueType_Float4x4 = 32,
+	ShaderValueType_Int1 = 33,
+	ShaderValueType_Int1x2 = 34,
+	ShaderValueType_Int1x3 = 35,
+	ShaderValueType_Int1x4 = 36,
+	ShaderValueType_Int2 = 37,
+	ShaderValueType_Int2x2 = 38,
+	ShaderValueType_Int2x3 = 39,
+	ShaderValueType_Int2x4 = 40,
+	ShaderValueType_Int3 = 41,
+	ShaderValueType_Int3x2 = 42,
+	ShaderValueType_Int3x3 = 43,
+	ShaderValueType_Int3x4 = 44,
+	ShaderValueType_Int4 = 45,
+	ShaderValueType_Int4x2 = 46,
+	ShaderValueType_Int4x3 = 47,
+	ShaderValueType_Int4x4 = 48,
+	ShaderValueType_UInt1 = 49,
+	ShaderValueType_UInt1x2 = 50,
+	ShaderValueType_UInt1x3 = 51,
+	ShaderValueType_UInt1x4 = 52,
+	ShaderValueType_UInt2 = 53,
+	ShaderValueType_UInt2x2 = 54,
+	ShaderValueType_UInt2x3 = 55,
+	ShaderValueType_UInt2x4 = 56,
+	ShaderValueType_UInt3 = 57,
+	ShaderValueType_UInt3x2 = 58,
+	ShaderValueType_UInt3x3 = 59,
+	ShaderValueType_UInt3x4 = 60,
+	ShaderValueType_UInt4 = 61,
+	ShaderValueType_UInt4x2 = 62,
+	ShaderValueType_UInt4x3 = 63,
+	ShaderValueType_UInt4x4 = 64,
+	ShaderValueType_Bool1 = 65,
+	ShaderValueType_Bool1x2 = 66,
+	ShaderValueType_Bool1x3 = 67,
+	ShaderValueType_Bool1x4 = 68,
+	ShaderValueType_Bool2 = 69,
+	ShaderValueType_Bool2x2 = 70,
+	ShaderValueType_Bool2x3 = 71,
+	ShaderValueType_Bool2x4 = 72,
+	ShaderValueType_Bool3 = 73,
+	ShaderValueType_Bool3x2 = 74,
+	ShaderValueType_Bool3x3 = 75,
+	ShaderValueType_Bool3x4 = 76,
+	ShaderValueType_Bool4 = 77,
+	ShaderValueType_Bool4x2 = 78,
+	ShaderValueType_Bool4x3 = 79,
+	ShaderValueType_Bool4x4 = 80,
+	ShaderValueType_Sampler1d = 81,
+	ShaderValueType_Sampler1dArray = 82,
+	ShaderValueType_Sampler2d = 83,
+	ShaderValueType_Sampler2dArray = 84,
+	ShaderValueType_Sampler3d = 85,
+	ShaderValueType_SamplerCube = 86
+}
+
+enum ShapeType {
+	ShapeType_Hull = 0,
+	ShapeType_Box = 1,
+	ShapeType_OBB = 2,
+	ShapeType_Sphere = 3,
+	ShapeType_Cylinder = 4,
+	ShapeType_Capsule = 5,
+	ShapeType_Mesh = 6,
+	ShapeType_Decompose = 7,
+	ShapeType_Unknown = 8
+}
+
+enum ShooterInfo {
+	ShooterInfoInVehicle = 1,
+	ShooterInfoInLandVehicle = 2,
+	ShooterInfoInAerialVehicle = 4,
+	ShooterInfoDrivingVehicle = 8,
+	ShooterInfoInStationaryWeapon = 16,
+	ShooterInfoInLightArmoredVehicle = 32,
+	ShooterInfoInMediumArmoredVehicle = 64,
+	ShooterInfoInHeavyArmoredVehicle = 128,
+	ShooterInfoInBoat = 256,
+	ShooterInfoUsedGrenade = 512,
+	ShooterInfoUsedArtilleryStrike = 1024,
+	ShooterInfoUsedLaserDesignator = 2048,
+	ShooterInfoUsedMortarStrike = 4096,
+	ShooterInfoUsedStingerMissile = 8192,
+	ShooterInfoNoTeamKillPenalty = 16384
+}
+
+enum ShootType {
+	ShootType_OneBurstPerTarget = 0,
+	ShootType_Continuous = 1
+}
+
+enum SimpleTransformOperation {
+	SimpleTransformOperation_Add = 0,
+	SimpleTransformOperation_Subtract = 1,
+	SimpleTransformOperation_Multiply = 2,
+	SimpleTransformOperation_Divide = 3,
+	SimpleTransformOperation_Sine = 4,
+	SimpleTransformOperation_Cosine = 5,
+	SimpleTransformOperation_ArcSine = 6,
+	SimpleTransformOperation_ArcCosine = 7,
+	SimpleTransformOperation_Modulus = 8,
+	SimpleTransformOperation_Round = 9,
+	SimpleTransformOperation_Floor = 10,
+	SimpleTransformOperation_Ceiling = 11,
+	SimpleTransformOperation_Power = 12,
+	SimpleTransformOperation_SquareRoot = 13,
+	SimpleTransformOperation_Absolute = 14,
+	SimpleTransformOperation_Exp = 15,
+	SimpleTransformOperation_Log = 16,
+	SimpleTransformOperation_Log10 = 17,
+	SimpleTransformOperation_Tangent = 18,
+	SimpleTransformOperation_ArcTangent = 19
+}
+
+enum SKU {
+	WW = 0,
+	EU = 1,
+	US = 2,
+	JPN = 3,
+	ROA = 4,
+	RU = 5,
+	EN = 6
+}
+
+enum SocketPhysics {
+	SocketPhysics_Default = 0,
+	SocketPhysics_FakePhysics = 1,
+	SocketPhysics_Droppable = 2
+}
+
+enum SocketType {
+	SocketType_Undefined = 0,
+	SocketType_Gameplay = 1,
+	SocketType_Visual = 2
+}
+
+enum SoldierBuffId {
+	SBImprovedBodyArmor = 0,
+	SBCount = 1
+}
+
+enum SoldierChangeAction {
+	SCA_Done = 0,
+	SCA_Altered = 1,
+	SCA_None = 2
+}
+
+enum SoldierEmote {
+	SoldierEmote_Spot = 0,
+	SoldierEmote_Ok = 1,
+	SoldierEmote_NeedARide = 2,
+	SoldierEmote_GoGoGo = 3,
+	SoldierEmote_NeedBackup = 4,
+	SoldierEmote_Thanks = 5,
+	SoldierEmote_NeedMedic = 6,
+	SoldierEmote_FollowMe = 7,
+	SoldierEmote_NeedAmmo = 8,
+	SoldierEmote_Sorry = 9,
+	SoldierEmote_No = 10,
+	SoldierEmote_DefendCapturePoint = 11,
+	SoldierEmote_AttackCapturePoint = 12,
+	SoldierEmote_MoveToPosition = 13,
+	SoldierEmote_Count = 14
+}
+
+enum SoundDataRequestResult {
+	SoundDataRequestResult_NotRequested = 0,
+	SoundDataRequestResult_Requested = 1,
+	SoundDataRequestResult_Available = 2
+}
+
+enum SoundDataState {
+	SoundDataState_Pending = 0,
+	SoundDataState_Cancelled = 1,
+	SoundDataState_Lost = 2,
+	SoundDataState_Valid = 3
+}
+
+enum SoundGraphPluginConnectionType {
+	SoundGraphPluginConnectionType_Unconnected = 0,
+	SoundGraphPluginConnectionType_Voice = 1,
+	SoundGraphPluginConnectionType_Bus = 2
+}
+
+enum SoundPatchDefaultEvent {
+	SoundPatchDefaultEvent_Start = 0,
+	SoundPatchDefaultEvent_Stop = 1,
+	SoundPatchDefaultEvent_EnterScope = 2,
+	SoundPatchDefaultEvent_ForceInit = 3
+}
+
+enum SoundTestParamBehavior {
+	SoundTestParamBehavior_Constant = 0,
+	SoundTestParamBehavior_LinearRamp = 1,
+	SoundTestParamBehavior_Random = 2
+}
+
+enum SoundTestTransformBehavior {
+	SoundTestTransformBehavior_Static = 0
+}
+
+enum SoundWaveReadPriority {
+	SoundWaveReadPriority_Unspecified = 0,
+	SoundWaveReadPriority_Low = 1,
+	SoundWaveReadPriority_Medium = 2,
+	SoundWaveReadPriority_Normal = 3,
+	SoundWaveReadPriority_High = 4
+}
+
+enum SoundWaveVariationSelection {
+	SwvsSequential = 0,
+	SwvsRandom = 1
+}
+
+enum SoundWaveVoicePriority {
+	SoundWaveVoicePriority_Unspecified = 0,
+	SoundWaveVoicePriority_Low = 1,
+	SoundWaveVoicePriority_Normal = 2,
+	SoundWaveVoicePriority_High = 3,
+	SoundWaveVoicePriority_Permanent = 4
+}
+
+enum SpaceType {
+	STBody = 0,
+	STWorld = 1
+}
+
+enum SpecialMovesPoseType {
+	SpecialMovesPoseType_None = -1,
+	SpecialMovesPoseType_Stand = 0,
+	SpecialMovesPoseType_Crouch = 1,
+	SpecialMovesPoseType_Prone = 2
+}
+
+enum SpotLightShape {
+	SpotLightShape_Cone = 0,
+	SpotLightShape_Frustum = 1,
+	SpotLightShape_OrthoFrustum = 2
+}
+
+enum SpottingType {
+	STGunner = 0,
+	STSquadLeader = 1,
+	STDefault = 2,
+	STPersonal = 3,
+	STSnapshot = 4,
+	STSquadUav = 5,
+	STTypesCount = 6
+}
+
+enum SpotType {
+	SpotType_None = 0,
+	SpotType_Active = 1,
+	SpotType_Passive = 2,
+	SpotType_Radar = 3,
+	SpotType_Unspottable = 4,
+	SpotType_Count = 5
+}
+
+enum SquadAction {
+	SquadAction_PlayerJoined = 0,
+	SquadAction_PlayerLeft = 1,
+	SquadAction_PlayerWasKicked = 2
+}
+
+enum SquadId {
+	SquadNone = 0,
+	Squad1 = 1,
+	Squad2 = 2,
+	Squad3 = 3,
+	Squad4 = 4,
+	Squad5 = 5,
+	Squad6 = 6,
+	Squad7 = 7,
+	Squad8 = 8,
+	Squad9 = 9,
+	Squad10 = 10,
+	Squad11 = 11,
+	Squad12 = 12,
+	Squad13 = 13,
+	Squad14 = 14,
+	Squad15 = 15,
+	Squad16 = 16,
+	Squad17 = 17,
+	Squad18 = 18,
+	Squad19 = 19,
+	Squad20 = 20,
+	Squad21 = 21,
+	Squad22 = 22,
+	Squad23 = 23,
+	Squad24 = 24,
+	Squad25 = 25,
+	Squad26 = 26,
+	Squad27 = 27,
+	Squad28 = 28,
+	Squad29 = 29,
+	Squad30 = 30,
+	Squad31 = 31,
+	Squad32 = 32,
+	SquadIdCount = 33
+}
+
+enum StabilizerProperty {
+	SPPitchAngle = 0,
+	SPYawAngle = 1,
+	SPRollAngle = 2,
+	SPVerticalPosition = 3,
+	SPVerticalVelocity = 4
+}
+
+enum StatEvent {
+	StatEvent_Kill = 0,
+	StatEvent_Kill_In_X = 1,
+	StatEvent_Kill_As_X = 2,
+	StatEvent_KillWith_X_As_Y = 3,
+	StatEvent_KillDistance = 4,
+	StatEvent_KillOf_X_As_Y = 5,
+	StatEvent_KillOf_X_In_Y = 6,
+	StatEvent_TeamKill = 7,
+	StatEvent_AvengerKill = 8,
+	StatEvent_SaviorKill = 9,
+	StatEvent_DriverAssist = 10,
+	StatEvent_TeamDriverAssist = 11,
+	StatEvent_SquadDriverAssist = 12,
+	StatEvent_PassengerAssist = 13,
+	StatEvent_TeamPassengerAssist = 14,
+	StatEvent_SquadPassengerAssist = 15,
+	StatEvent_RoadKill = 16,
+	StatEvent_Death = 17,
+	StatEvent_DoubleKill = 18,
+	StatEvent_TripleKill = 19,
+	StatEvent_MultiKill = 20,
+	StatEvent_PostMortemKill = 21,
+	StatEvent_KillStreak = 22,
+	StatEvent_KillStreakX = 23,
+	StatEvent_CancelKillStreak = 24,
+	StatEvent_Comeback = 25,
+	StatEvent_SquadWipe = 26,
+	StatEvent_NemesisKill = 27,
+	StatEvent_NemesisKillX = 28,
+	StatEvent_CancelNemesisKill = 29,
+	StatEvent_SecondsAs_X = 30,
+	StatEvent_SecondsWith_X = 31,
+	StatEvent_SecondsIn_X = 32,
+	StatEvent_SecondsOn_X = 33,
+	StatEvent_Destroy_X = 34,
+	StatEvent_Destroy_X_As_Y = 35,
+	StatEvent_Destroy_X_In_Y = 36,
+	StatEvent_DestroyWith_X_As_Y = 37,
+	StatEvent_Destroy_X_With_Y = 38,
+	StatEvent_DestroyExplosives = 39,
+	StatEvent_Disabled_X = 40,
+	StatEvent_KillOfWith_X_As_Y = 41,
+	StatEvent_TaggedDamageAssist_X = 42,
+	StatEvent_Tagged_X = 43,
+	StatEvent_SuppressWith_X_As_Y = 44,
+	StatEvent_Level_X_Completed_Y_Difficulty = 45,
+	StatEvent_Level_X_Completed_Y_Difficulty_WithTimeValue = 46,
+	StatEvent_CleanLevel_X_Completed = 47,
+	StatEvent_RoundOverOutcome_X_On_Y = 48,
+	StatEvent_Rounds = 49,
+	StatEvent_Headshot_X_With_Y = 50,
+	StatEvent_HeadshotAs_X_With_Y = 51,
+	StatEvent_HeadshotDistance_With_X = 52,
+	StatEvent_SelfHeal = 53,
+	StatEvent_BestSquad = 54,
+	StatEvent_ShotsFired_With_X = 55,
+	StatEvent_ShotsHit_With_X = 56,
+	StatEvent_SpotAssist = 57,
+	StatEvent_SpotAssistFrom_X = 58,
+	StatEvent_SuppressionAssist = 59,
+	StatEvent_Heal = 60,
+	StatEvent_TeamHeal = 61,
+	StatEvent_SquadHeal = 62,
+	StatEvent_Revive = 63,
+	StatEvent_TeamRevive = 64,
+	StatEvent_SquadRevive = 65,
+	StatEvent_ReviveAccepted = 66,
+	StatEvent_TeamReviveAccepted = 67,
+	StatEvent_SquadReviveAccepted = 68,
+	StatEvent_ManDownRevive = 69,
+	StatEvent_Resupply = 70,
+	StatEvent_TeamResupply = 71,
+	StatEvent_SquadResupply = 72,
+	StatEvent_KillAssist = 73,
+	StatEvent_Repair = 74,
+	StatEvent_TeamRepair = 75,
+	StatEvent_SquadRepair = 76,
+	StatEvent_VehicleDestroyAssist = 77,
+	StatEvent_TreeDestroyed = 78,
+	StatEvent_WallDestroyed = 79,
+	StatEvent_CaptureCapturePoint = 80,
+	StatEvent_CaptureCapturePointAssist = 81,
+	StatEvent_NeutralizeCapturePoint = 82,
+	StatEvent_NeutralizeCapturePointAssist = 83,
+	StatEvent_CapturePointDefense = 84,
+	StatEvent_CapturePointAttack = 85,
+	StatEvent_CrateArmed = 86,
+	StatEvent_CrateDisarmed = 87,
+	StatEvent_CrateDestroyed = 88,
+	StatEvent_CrateDefendKill = 89,
+	StatEvent_CrateAttackKill = 90,
+	StatEvent_SquadDefendOrder = 91,
+	StatEvent_SquadAttackOrder = 92,
+	StatEvent_SquadLeaderDefendOrder = 93,
+	StatEvent_SquadLeaderAttackOrder = 94,
+	StatEvent_RankUp = 95,
+	StatEvent_UniqueAward = 96,
+	StatEvent_DogTag = 97,
+	StatEvent_DogTagSavior = 98,
+	StatEvent_SquadSpawn = 99,
+	StatEvent_SquadSpawnOnRemoteVehicle_X = 100,
+	StatEvent_Suicide = 101,
+	StatEvent_GainAward_X = 102,
+	StatEvent_PlayerScoreboardPosition_X = 103,
+	StatEvent_GainedHighestRank = 104,
+	StatEvent_GainedHighestUnlockInBucket_X = 105,
+	StatEvent_Misc_X_and_Y = 106,
+	StatEvent_TotalScoreOn_X_Difficulty_Y = 107,
+	StatEvent_Invalid = 108,
+	StatEvent_Damage = 109,
+	StatEvent_PlayerScoreboardPosition_X_On_Y = 110,
+	StatEvent_CaptureCapturePointDOM = 111,
+	StatEvent_CaptureCapturePointAssistDOM = 112,
+	StatEvent_NeutralizeCapturePointDOM = 113,
+	StatEvent_NeutralizeCapturePointAssistDOM = 114,
+	StatEvent_Kill_With_X_In_Y = 115,
+	StatEvent_DoubleKill_With_X_In_Y = 116,
+	StatEvent_ShotFired_With_X = 117,
+	StatEvent_SpotAssistFor_X = 118,
+	StatEvent_Misc_X_In_Y = 119,
+	StatEvent_CTF_Capture = 120,
+	StatEvent_CTF_CaptureStreak = 121,
+	StatEvent_CTF_CaptureAssist = 122,
+	StatEvent_CTF_PickUp = 123,
+	StatEvent_CTF_PickUpAssist = 124,
+	StatEvent_CTF_Return = 125,
+	StatEvent_CTF_CarrierAssist = 126,
+	StatEvent_CTF_CarrierAssistStreak = 127,
+	StatEvent_CTF_FlagTransporter_In_X = 128,
+	StatEvent_CTF_CarrierSavior = 129,
+	StatEvent_CTF_CarrierSuppression = 130,
+	StatEvent_CTF_CarrierKiller = 131,
+	StatEvent_CTF_CarrierKillAssist = 132,
+	StatEvent_CTF_CarrierHeal = 133,
+	StatEvent_BadLuck = 134,
+	StatEvent_Jump_In_X = 135,
+	StatEvent_Kill_From_X = 136,
+	StatEvent_ParadropDestroy_X = 137,
+	StatEvent_ParadropKill = 138,
+	StatEvent_FreefallDeath = 139,
+	StatEvent_PassengerKill_In_X = 140,
+	StatEvent_TakeDogTagAssassin = 141,
+	StatEvent_Spawn_In_X = 142,
+	StatEvent_RoadKill_With_X = 143,
+	StatEvent_LAST_ITEM = 144
+}
+
+enum StatPeriod {
+	StatPeriod_AllTime = 0,
+	StatPeriod_Monthly = 1,
+	StatPeriod_Weekly = 2,
+	StatPeriod_Daily = 3,
+	StatPeriod_Size = 4,
+	StatPeriod_Error = 5
+}
+
+enum StatsMultiplicity {
+	StatsMultiplicity_Invalid = 0,
+	StatsMultiplicity_Solo = 1,
+	StatsMultiplicity_Club = 2,
+	StatsMultiplicity_LAST_ITEM = 3
+}
+
+enum StencilOperation {
+	StencilOperation_Keep = 0,
+	StencilOperation_Zero = 1,
+	StencilOperation_Replace = 2,
+	StencilOperation_IncrementSaturate = 3,
+	StencilOperation_DecrementSaturate = 4,
+	StencilOperation_Invert = 5,
+	StencilOperation_IncrementWrap = 6,
+	StencilOperation_DecrementWrap = 7
+}
+
+enum StreamRealm {
+	StreamRealm_None = 0,
+	StreamRealm_Client = 1,
+	StreamRealm_Both = 2
+}
+
+enum StreamStarveMode {
+	StreamStarveMode_Off = 0,
+	StreamStarveMode_On = 1,
+	StreamStarveMode_Dynamic = 2
+}
+
+enum StrengthType {
+	Infantry = 0,
+	LightArmour = 1,
+	HeavyArmour = 2,
+	Helicopter = 3,
+	NumberOfStrengthTypes = 4
+}
+
+enum SubRealm {
+	SubRealm_All = 0,
+	SubRealm_LocalPlayer = 1,
+	SubRealm_RemotePlayer = 2
+}
+
+enum SurfaceShaderType {
+	SurfaceShaderType_Opaque = 0,
+	SurfaceShaderType_OpaqueAlphaTest = 1,
+	SurfaceShaderType_OpaqueAlphaTestSimple = 2,
+	SurfaceShaderType_Transparent = 3,
+	SurfaceShaderType_TransparentDecal = 4
+}
+
+enum SweepSelectionType {
+	SstTargetLost = 0,
+	SstFirstTime = 1
+}
+
+enum SwitchTeamsResult {
+	SwitchTeamsResult_Success = -1,
+	SwitchTeamsResult_FailedUnbalanced = 0,
+	SwitchTeamsResult_FailedTooSoon = 1,
+	SwitchTeamsResult_FailedTooFewTickets = 2,
+	SwitchTeamsResult_FailedMustBeDead = 3,
+	SwitchTeamsResult_FailedTeamFull = 4,
+	SwitchTeamsResult_FailedDisabled = 5
+}
+
+enum SyncAnimationsState {
+	Idle = 0,
+	Play = 1,
+	Skip = 2,
+	Stop = 3
+}
+
+enum TargetMode {
+	TargetMode_FirstPerson = 0,
+	TargetMode_ThirdPerson = 1,
+	TargetMode_Index = 2
+}
+
+enum TargetPosKnowledgeType {
+	TargetPosKnown = 0,
+	TargetPosUnknown = 1,
+	TargetPosFind = 2
+}
+
+enum TeamAssignMode {
+	TamEqualTeams = 0,
+	TamFullTeams = 1,
+	TamOneTeam = 2
+}
+
+enum TeamId {
+	TeamNeutral = 0,
+	Team1 = 1,
+	Team2 = 2,
+	Team3 = 3,
+	Team4 = 4,
+	Team5 = 5,
+	Team6 = 6,
+	Team7 = 7,
+	Team8 = 8,
+	Team9 = 9,
+	Team10 = 10,
+	Team11 = 11,
+	Team12 = 12,
+	Team13 = 13,
+	Team14 = 14,
+	Team15 = 15,
+	Team16 = 16,
+	TeamIdCount = 17
+}
+
+enum TerrainBrushDetailOperation {
+	Lerp = 0,
+	Add = 1,
+	Multiply = 2
+}
+
+enum TerrainDrawPassType {
+	TerrainDrawPassType_SinglePass = 0,
+	TerrainDrawPassType_MultipassFirst = 1,
+	TerrainDrawPassType_MultipassConsecutive = 2
+}
+
+enum TerrainLayerType {
+	TerrainLayerType_IgnoreMask = 0,
+	TerrainLayerType_Masked = 1,
+	TerrainLayerType_BinaryMasked = 2
+}
+
+enum TerrainRenderMode {
+	TerrainRenderMode_Default = 0,
+	TerrainRenderMode_DrawPassCount2d = 1,
+	TerrainRenderMode_LayerCount2d = 2,
+	TerrainRenderMode_LayerCount3d = 3,
+	TerrainRenderMode_MaskedLayerCount2d = 4,
+	TerrainRenderMode_MaskedLayerCount3d = 5
+}
+
+enum TextureAddress {
+	TaWrap = 0,
+	TaMirror = 1,
+	TaClamp = 2,
+	TaBorder = 4,
+	TaMirrorOnce = 5
+}
+
+enum TextureCompressQualityMode {
+	TextureCompressQualityMode_Default = 0,
+	TextureCompressQualityMode_Simple = 1,
+	TextureCompressQualityMode_HighQuality = 2
+}
+
+enum TextureFilter {
+	TfNone = 0,
+	TfPoint = 1,
+	TfLinear = 2,
+	TfAnisotropic = 3,
+	TfDefault = 4
+}
+
+enum TextureFormat {
+	TextureFormat_DXT1 = 0,
+	TextureFormat_DXT3 = 1,
+	TextureFormat_DXT5 = 2,
+	TextureFormat_DXT5A = 3,
+	TextureFormat_DXN = 4,
+	TextureFormat_RGB565 = 5,
+	TextureFormat_RGB888 = 6,
+	TextureFormat_ARGB1555 = 7,
+	TextureFormat_ARGB4444 = 8,
+	TextureFormat_ARGB8888 = 9,
+	TextureFormat_L8 = 10,
+	TextureFormat_L16 = 11,
+	TextureFormat_ABGR16 = 12,
+	TextureFormat_ABGR16F = 13,
+	TextureFormat_ABGR32F = 14,
+	TextureFormat_R16F = 15,
+	TextureFormat_R32F = 16,
+	TextureFormat_NormalDXN = 17,
+	TextureFormat_NormalDXT1 = 18,
+	TextureFormat_NormalDXT5 = 19,
+	TextureFormat_NormalDXT5RGA = 20,
+	TextureFormat_RG8 = 21,
+	TextureFormat_GR16 = 22,
+	TextureFormat_GR16F = 23,
+	TextureFormat_D16 = 24,
+	TextureFormat_D24S8 = 25,
+	TextureFormat_D24FS8 = 26,
+	TextureFormat_D32F = 27,
+	TextureFormat_ABGR32 = 28,
+	TextureFormat_GR32F = 29,
+	TextureFormat_A2R10G10B10 = 30,
+	TextureFormat_Unknown = 31
+}
+
+enum TextureType {
+	TextureType_2d = 0,
+	TextureType_Cube = 1,
+	TextureType_3d = 2,
+	TextureType_2dArray = 3,
+	TextureType_1dArray = 4,
+	TextureType_1d = 5
+}
+
+enum TicketDecreaseType {
+	TDTOnKilled = 0,
+	TDTOnRespawned = 1,
+	TDTNoDecreaseOnSoldierDeath = 2
+}
+
+enum TimerMode {
+	TimerMode_Repeating = 0,
+	TimerMode_SingleShot = 1
+}
+
+enum TinyEvent {
+	TinyEvent_AckTimeSyncDone = 1,
+	TinyEvent_AckLevelLinked = 2,
+	TinyEvent_AckLevelRestarted = 3,
+	TinyEvent_AckEnterPatchRecvState = 4,
+	TinyEvent_AckAuthentication = 5,
+	TinyEvent_NackAuthentication = 6,
+	TinyEvent_AckExitLevel = 7,
+	TinyEvent_CmdLinkLevel = 8,
+	TinyEvent_CmdEnterPatchRecvState = 9,
+	TinyEvent_CmdExitLevel = 10,
+	TinyEvent_CmdContinueLevel = 11
+}
+
+enum TonemapMethod {
+	TonemapMethod_Linear = 0,
+	TonemapMethod_Filmic = 1,
+	TonemapMethod_FilmicNeutral = 2,
+	TonemapMethod_None = 3,
+	TonemapMethodCount = 3
+}
+
+enum ToolTipType {
+	AimAtTeamMateToolTip = 1,
+	AimAtEnemyToolTip = 2
+}
+
+enum TransformPart {
+	TransformPart_TranslationX = 0,
+	TransformPart_TranslationY = 1,
+	TransformPart_TranslationZ = 2,
+	TransformPart_RotationX = 3,
+	TransformPart_RotationY = 4,
+	TransformPart_RotationZ = 5
+}
+
+enum UI3dIconQuery {
+	UI3dIconQuery_Active3dIconsData = 0
+}
+
+enum UIColorType {
+	UIColorType_Unselected = 0,
+	UIColorType_Selected = 1,
+	UIColorType_SelectInside = 2,
+	UIColorType_UnselectedInside = 3,
+	UIColorType_Locked = 4,
+	UIColorType_IconBg = 5,
+	UIColorType_FrameSoft = 6,
+	UIColorType_FrameHard = 7,
+	UIColorType_HudYellow = 8,
+	UIColorType_CriticalColor = 9,
+	UIColorType_Friendly = 10,
+	UIColorType_Enemy = 11,
+	UIColorType_SquadColor = 12,
+	UIColorType_NormalTextColor = 13,
+	UIColorType_HeaderTextColor = 14,
+	UIColorType_StaticHUDColor = 15,
+	UIColorType_DynamicHUDColor = 16,
+	UIColorType_MouseOver = 17,
+	UIColorType_MouseOut = 18
+}
+
+enum UIConsoleKeyboardStatus {
+	UIConsoleKeyboardStatus_Success = 0,
+	UIConsoleKeyboardStatus_Failed = 1,
+	UIConsoleKeyboardStatus_Cancelled = 2,
+	UIConsoleKeyboardStatus_Active = 3,
+	UIConsoleKeyboardStatus_Inactive = 4,
+	UIConsoleKeyboardStatus_Count = 5
+}
+
+enum UIConstants {
+	UIConstants_MaxCaptureAreas = 16
+}
+
+enum UICreditsTextType {
+	SingleLine = 0,
+	MultiLine = 1
+}
+
+enum UIGraphPriority {
+	UIGraphPriority_Low = 0,
+	UIGraphPriority_Normal = 1,
+	UIGraphPriority_High = 2,
+	UIGraphPriority_OverlayScreens = 3,
+	UIGraphPriority_Critical = 4
+}
+
+enum UIHudIcon {
+	UIHudIcon_Unused = 0,
+	UIHudIcon_LocalPlayer = 1,
+	UIHudIcon_LocalDirection = 2,
+	UIHudIcon_FriendlyPlayer = 3,
+	UIHudIcon_EnemyPlayer = 4,
+	UIHudIcon_NeutralPlayer = 5,
+	UIHudIcon_SquadMember = 6,
+	UIHudIcon_SquadLeader = 7,
+	UIHudIcon_SquadLeaderTargeted = 8,
+	UIHudIcon_Vehicle = 9,
+	UIHudIcon_PrimaryObjective = 10,
+	UIHudIcon_PrimaryObjectiveBlink = 11,
+	UIHudIcon_SecondaryObjective = 12,
+	UIHudIcon_AreaMapMarker = 13,
+	UIHudIcon_ObjectiveDestroy = 14,
+	UIHudIcon_ObjectiveScout = 15,
+	UIHudIcon_ObjectiveDefend = 16,
+	UIHudIcon_ObjectiveMoveTo = 17,
+	UIHudIcon_ObjectiveAttack = 18,
+	UIHudIcon_ObjectiveFollow = 19,
+	UIHudIcon_ObjectiveGeneral = 20,
+	UIHudICon_UAV = 21,
+	UIHudIcon_AmmoCrate = 22,
+	UIHudIcon_MedicBag = 23,
+	UIHudIcon_C4 = 24,
+	UIHudIcon_ATMine = 25,
+	UIHudIcon_StationaryWeapon = 26,
+	UIHudIcon_North = 27,
+	UIHudIcon_South = 28,
+	UIHudIcon_West = 29,
+	UIHudIcon_East = 30,
+	UIHudIcon_NeutralFlag = 31,
+	UIHudIcon_FriendlyFlag = 32,
+	UIHudIcon_EnemyFlag = 33,
+	UIHudIcon_FriendlyBase = 34,
+	UIHudIcon_EnemyBase = 35,
+	UIHudIcon_Team1Flag = 36,
+	UIHudIcon_Team2Flag = 37,
+	UIHudIcon_NeutralFlagLit = 38,
+	UIHudIcon_FriendlyFlagLit = 39,
+	UIHudIcon_EnemyFlagLit = 40,
+	UIHudIcon_SelectableSpawnPoint = 41,
+	UIHudIcon_SelectedSpawnPoint = 42,
+	UIHudIcon_NonSelectableSpawnPoint = 43,
+	UIHudIcon_FriendlyFlagUnderAttack = 44,
+	UIHudIcon_EnemyFlagUnderAttack = 45,
+	UIHudIcon_OrderAttack = 46,
+	UIHudIcon_OrderDefend = 47,
+	UIHudIcon_OrderAttackObserved = 48,
+	UIHudIcon_OrderDefendObserved = 49,
+	UIHudIcon_Boat = 50,
+	UIHudIcon_Car = 51,
+	UIHudIcon_Jeep = 52,
+	UIHudIcon_HeliAttack = 53,
+	UIHudIcon_HeliScout = 54,
+	UIHudIcon_Tank = 55,
+	UIHudIcon_TankIFV = 56,
+	UIHudIcon_TankArty = 57,
+	UIHudIcon_TankAA = 58,
+	UIHudIcon_TankAT = 59,
+	UIHudIcon_Jet = 60,
+	UIHudIcon_JetBomber = 61,
+	UIHudIcon_Stationary = 62,
+	UIHudIcon_Strategic = 63,
+	UIHudIcon_MotionRadarSweep = 64,
+	UIHudIcon_NeedBackup = 65,
+	UIHudIcon_NeedAmmo = 66,
+	UIHudIcon_NeedMedic = 67,
+	UIHudIcon_NeedPickup = 68,
+	UIHudIcon_NeedRepair = 69,
+	UIHudIcon_KitAssault = 70,
+	UIHudIcon_KitDemolition = 71,
+	UIHudIcon_KitRecon = 72,
+	UIHudIcon_KitSpecialist = 73,
+	UIHudIcon_KitSupport = 74,
+	UIHudIcon_KitMedic = 75,
+	UIHudIcon_KitEngineer = 76,
+	UIHudIcon_KitPickupAssault = 77,
+	UIHudIcon_KitPickupDemolition = 78,
+	UIHudIcon_KitPickupRecon = 79,
+	UIHudIcon_KitPickupSpecialist = 80,
+	UIHudIcon_KitPickupSupport = 81,
+	UIHudIcon_KitPickupMedic = 82,
+	UIHudIcon_KitPickupEngineer = 83,
+	UIHudIcon_Pickup = 84,
+	UIHudIcon_TaggedVehicle = 85,
+	UIHudIcon_LaserPaintedVehicle = 86,
+	UIHudIcon_HeliTargetEnemy = 87,
+	UIHudIcon_HeliTargetFriendly = 88,
+	UIHudIcon_ArtilleryTarget = 89,
+	UIHudIcon_NeutralFlagAttacker = 90,
+	UIHudIcon_FriendlyFlagAttacker = 91,
+	UIHudIcon_EnemyFlagAttacker = 92,
+	UIHudIcon_LaserTarget = 93,
+	UIHudIcon_ObjectiveAttacker = 94,
+	UIHudIcon_ObjectiveDefender = 95,
+	UIHudIcon_HealthbarBackground = 96,
+	UIHudIcon_Healthbar = 97,
+	UIHudIcon_RadarSweepComponent = 98,
+	UIHudIcon_Blank = 99,
+	UIHudIcon_LocalPlayerBigIcon = 100,
+	UIHudIcon_LocalPlayerOutOfMap = 101,
+	UIHudIcon_PrimaryObjectiveLarge = 102,
+	UIHudIcon_TargetUnlocked = 103,
+	UIHudIcon_TargetLocked = 104,
+	UIHudIcon_TargetLocking = 105,
+	UIHudIcon_ArtilleryStrikeNametag = 106,
+	UIHudIcon_ArtilleryStrikeMinimap = 107,
+	UIHudIcon_CapturePointContested = 108,
+	UIHudIcon_CapturePointDefended = 109,
+	UIHudIcon_RoundBar = 110,
+	UIHudIcon_RoundBarBg = 111,
+	UIHudIcon_RoundBarBgPlate = 112,
+	UIHudIcon_SnapOvalArrow = 113,
+	UIHudIcon_SquadleaderBg = 114,
+	UIHudIcon_VehicleBg = 115,
+	UIHudIcon_NonTakeableControlPoint = 116,
+	UIHudIcon_SpottedPosition = 117,
+	UIHudIcon_Grenade = 118,
+	UIHudIcon_Revive = 119,
+	UIHudIcon_Repair = 120,
+	UIHudIcon_Interact = 121,
+	UIHudIcon_Voip = 122,
+	UIHudIcon_Claymore = 123,
+	UIHudIcon_EodBot = 124,
+	UIHudIcon_Explosive = 125,
+	UIHudIcon_LaserDesignator = 126,
+	UIHudIcon_Mav = 127,
+	UIHudIcon_Mortar = 128,
+	UIHudIcon_RadioBeacon = 129,
+	UIHudIcon_Ugs = 130,
+	UIHudIcon_PercetageBarMiddle = 131,
+	UIHudIcon_PercetageBarEdge = 132,
+	UIHudIcon_PercentageBarBackground = 133,
+	UIHudIcon_TankLC = 134,
+	UIHudIcon_HeliTrans = 135,
+	UIHudIcon_StaticAT = 136,
+	UIHudIcon_StaticAA = 137,
+	UIHudIcon_SprintBoost = 138,
+	UIHudIcon_AmmoBoost = 139,
+	UIHudIcon_ExplosiveBoost = 140,
+	UIHudIcon_ExplosiveResistBoost = 141,
+	UIHudIcon_SuppressionBoost = 142,
+	UIHudIcon_SuppressionResistBoost = 143,
+	UIHudIcon_GrenadeBoost = 144,
+	UIHudIcon_HealSpeedBoost = 145,
+	UIHudIcon_NeedAmmoHighlight = 146,
+	UIHudIcon_NeedMedicHighlight = 147,
+	UIHudIcon_NeedRepairHighlight = 148,
+	UIHudIcon_NeedPickupHighlight = 149,
+	UIHudIcon_PlayerDead = 150,
+	UIHudIcon_Player = 151,
+	UIHudIcon_Flag = 152,
+	UIHudIcon_Base = 153,
+	UIHudIcon_TankDestroyer = 154,
+	UIHudIcon_Gunship = 155,
+	UIHudIcon_ATV = 156,
+	UIHudIcon_WeaponPickupTier1 = 157,
+	UIHudIcon_WeaponPickupTier2 = 158,
+	UIHudIcon_WeaponPickupTier3 = 159,
+	UIHudIcon_VehicleParachuted = 160,
+	UIHudIcon_CTFFlagFriendlyHome = 161,
+	UIHudIcon_CTFFlagFriendlyPicked = 162,
+	UIHudIcon_CTFFlagFriendlyDropped = 163,
+	UIHudIcon_CTFFlagEnemyHome = 164,
+	UIHudIcon_CTFFlagEnemyPicked = 165,
+	UIHudIcon_CTFFlagEnemyDropped = 166,
+	UIHudIcon_FriendlyRedFlag = 167,
+	UIHudIcon_EnemyGreenFlag = 168,
+	UIHudIcon_DirtBike = 169,
+	UIHudIcon_Count = 170
+}
+
+enum UIIconState {
+	UIIconState_Default = 0,
+	UIIconState_Enemy = 1,
+	UIIconState_Friendly = 2,
+	UIIconState_Neutral = 3,
+	UIIconState_Squad = 4,
+	UIIconState_Blink = 5,
+	UIIconState_BlinkEnemy = 6,
+	UIIconState_Count = 7
+}
+
+enum UIInputAction {
+	UIInputAction_NavigateUp = 0,
+	UIInputAction_NavigateDown = 1,
+	UIInputAction_NavigateLeft = 2,
+	UIInputAction_NavigateRight = 3,
+	UIInputAction_TabLeft = 4,
+	UIInputAction_TabRight = 5,
+	UIInputAction_Activate = 6,
+	UIInputAction_Deactivate = 7,
+	UIInputAction_Menu = 8,
+	UIInputAction_Cancel = 9,
+	UIInputAction_OK = 10,
+	UIInputAction_Back = 11,
+	UIInputAction_Tab = 12,
+	UIInputAction_Edit = 13,
+	UIInputAction_View = 14,
+	UIInputAction_LThumb = 15,
+	UIInputAction_RThumb = 16,
+	UIInputAction_MapZoom = 17,
+	UIInputAction_MapSize = 18,
+	UIInputAction_SayAllChat = 19,
+	UIInputAction_TeamChat = 20,
+	UIInputAction_SquadChat = 21,
+	UIInputAction_CommoRose = 22,
+	UIInputAction_ToggleChat = 23,
+	UIInputAction_ToggleMinimapType = 24,
+	UIInputAction_Size = 25,
+	UIInputAction_None = 26
+}
+
+enum UIInputActionEventType {
+	UIInputActionEventType_Pressed = 1,
+	UIInputActionEventType_Released = 2
+}
+
+enum UIInputEvent {
+	UIInputEvent_None = 0,
+	UIInputEvent_OnButtonA = 1,
+	UIInputEvent_OnButtonB = 2,
+	UIInputEvent_OnButtonBack = 3,
+	UIInputEvent_OnButtonDPad_Down = 4,
+	UIInputEvent_OnButtonDPad_Left = 5,
+	UIInputEvent_OnButtonDPad_Right = 6,
+	UIInputEvent_OnButtonDPad_Up = 7,
+	UIInputEvent_OnButtonLB = 8,
+	UIInputEvent_OnButtonRB = 9,
+	UIInputEvent_OnButtonStart = 10,
+	UIInputEvent_OnButtonX = 11,
+	UIInputEvent_OnButtonY = 12
+}
+
+enum UIInterruptID {
+	UIInterruptID_None = 0,
+	UIInterruptID_ControllerPull = 1
+}
+
+enum UIKeyboardEventType {
+	UIKeyboardEventType_KeyDown = 0,
+	UIKeyboardEventType_KeyUp = 1,
+	UIKeyboardEventType_Char = 2
+}
+
+enum UIListEmptyRowType {
+	emptyRow_28px = 0,
+	emptyRow_20px = 1,
+	emptyRowNone = 2
+}
+
+enum UIListNavigationType {
+	loop = 0,
+	noLoop = 1,
+	sendEventTopBottom = 2,
+	sendEventTop = 3,
+	sendEventBottom = 4,
+	none = 5
+}
+
+enum UIListRowType {
+	MixedRows = 0,
+	basicRow = 1,
+	baseSpawn = 2,
+	squadSpawn = 3,
+	MenuRow_34px = 4,
+	MenuRow_64px = 5,
+	ScoreboardRow = 6,
+	ScoreboardRow64Players = 7,
+	TextSelectorRow = 8,
+	TextSelectorRow_28px = 9,
+	BarSelectorRow = 10,
+	SquadRow = 11,
+	ServerListRow = 12,
+	StoreRow = 13,
+	ComCenterStandardDelimiter = 14,
+	ComCenterSquadDelimiter = 15,
+	ComCenterStandardFriendRow = 16,
+	ComCenterSquadFriendRow = 17,
+	ComCenterSquadButtonRow = 18,
+	ComCenterLivePartyDelimiter = 19,
+	ComCenterLivePartyFriendRow = 20,
+	SquadDetailedRow = 21,
+	ComCenterLivePartyButtonRow = 22,
+	CoopMissionTeamRow = 23,
+	LeaderBoardRow = 24,
+	CoopLeaderBoardRow = 25,
+	BattleLogStandardRow = 26,
+	BattleLogNewsRow = 27,
+	ServerLocationsRow = 28,
+	ServerExtendRow = 29,
+	ServerInfoSettingsRow = 30,
+	ServerInfoPlayersRow = 31,
+	CheckBoxRow = 32,
+	BarSelectorRow_28px = 33,
+	BasicRow_34px = 34,
+	KeyBindingRow = 35,
+	SquadListRow = 36,
+	teamSpawn = 37,
+	MatchListRow = 38,
+	MatchPlayerListRow = 39,
+	ManageServerPlayerRow = 40,
+	ServerSettingsRow = 41,
+	ServerPlayersRow = 42,
+	TopPlayersRow = 43,
+	MenuRowPremium_34px = 44,
+	MenuRowPremium_64px = 45
+}
+
+enum UIListUnFocusMode {
+	DeSelect = 0,
+	ChangeState = 1,
+	None = 2
+}
+
+enum UILogicOperator {
+	UILogicOperator_None = 0,
+	UILogicOperator_Equal = 1,
+	UILogicOperator_GreaterThan = 2,
+	UILogicOperator_GreaterThanOrEqual = 3,
+	UILogicOperator_LessThan = 4,
+	UILogicOperator_LessThanOrEqual = 5
+}
+
+enum UIMessageEntityType {
+	UIMessageEntityType_Message = 0,
+	UIMessageEntityType_Tooltip = 1,
+	UIMessageEntityType_LogLines = 2,
+	UIMessageEntityType_Subtitle = 3,
+	UIMessageEntityType_FailState = 4,
+	UIMessageEntityType_OutOfBounds = 5
+}
+
+enum UIMessageType {
+	UIMessageType_Text = 0,
+	UIMessageType_EnemyTank = 1,
+	UIMessageType_EnemyCar = 2,
+	UIMessageType_EnemyBoat = 3,
+	UIMessageType_EnemyHelicopter = 4,
+	UIMessageType_EnemyInfantry = 5,
+	UIMessageType_EnemyActivity = 6,
+	UIMessageType_EnemyC4 = 7,
+	UIMessageType_EnemyATMine = 8,
+	UIMessageType_ChatGo = 9,
+	UIMessageType_ChatFollowMe = 10,
+	UIMessageType_ChatNeedBackup = 11,
+	UIMessageType_ChatNeedPickup = 12,
+	UIMessageType_ChatNeedAmmo = 13,
+	UIMessageType_ChatNeedMedic = 14,
+	UIMessageType_ChatYes = 15,
+	UIMessageType_ChatNo = 16,
+	UIMessageType_ChatThanks = 17,
+	UIMessageType_ChatSorry = 18,
+	UIMessageType_ChatNeedRepair = 19,
+	UIMessageType_ChatGetIn = 20,
+	UIMessageType_ChatGetOut = 21,
+	UIMessageType_ChatDropMeOff = 22,
+	UIMessageType_OrderDefendBase = 23,
+	UIMessageType_OrderAttackBase = 24,
+	UIMessageType_OrderMoveToPos = 25,
+	UIMessageType_JoinedSquad = 26,
+	UIMessageType_LeftSquad = 27,
+	UIMessageType_RequestSquad = 28,
+	UIMessageType_InviteSquad = 29,
+	UIMessageType_KickSquad = 30,
+	UIMessageType_LeaderPromoted = 31,
+	UIMessageType_Connected = 32,
+	UIMessageType_Disconnected = 33,
+	UIMessageType_Killed = 34,
+	UIMessageType_Died = 35
+}
+
+enum UIMinimapZoomState {
+	UIMinimapZoomState_Default = 0,
+	UIMinimapZoomState_Overview = 1,
+	UIMinimapZoomState_CombatArea = 2,
+	UIMinimapZoomState_Mission = 3,
+	UIMinimapZoomState_Artillery = 4,
+	UIMinimapZoomState_Spawn = 5,
+	UIMinimapZoomState_ManDown = 6,
+	UIMinimapZoomState_Count = 7
+}
+
+enum UIMouseButton {
+	UIMouseButton_Left = 0,
+	UIMouseButton_Right = 1,
+	UIMouseButton_Middle = 2
+}
+
+enum UIMouseEventType {
+	UIMouseEventType_MouseMove = 0,
+	UIMouseEventType_MouseWheel = 1,
+	UIMouseEventType_ButtonDown = 2,
+	UIMouseEventType_ButtonUp = 3
+}
+
+enum UIPartIdentifier {
+	HCI_None = 0,
+	HCI_RangeMeter = 1,
+	HCI_PredictedSight = 2,
+	HCI_VelocityVector = 3,
+	HCI_RadioAltitude = 4
+}
+
+enum UIPopupType {
+	PopupType_MemCard = 0,
+	PopupType_ControllerDisconnected = 1,
+	PopupType_Login = 2,
+	PopupType_TermsOfService = 3,
+	PopupType_PrivacyPolicy = 4,
+	PopupType_RevivePrompt = 5,
+	PopupType_Generic = 6,
+	PopupType_ServerReminder = 7,
+	PopupType_Error = 8,
+	PopupType_ManagePlayer = 9,
+	PopupType_Invalid = 10,
+	PopupType_IngamePlayer = 11,
+	PopupType_OnlinePass = 12,
+	PopupType_Origin = 13,
+	PopupType_UpdateAvailable = 14,
+	PopupType_Dynamic = 15,
+	PopupType_GameQueue = 16,
+	PopupType_COOPMatchmaking = 17,
+	PopupType_PromoInfo = 18
+}
+
+enum UISettingSymbols {
+	UISettingSymbols_Pluses = 0,
+	UISettingSymbols_Values = 1,
+	UISettingSymbols_None = 2
+}
+
+enum UISettingType {
+	UISettingType_Slider = 0,
+	UISettingType_TickerUpDown = 1,
+	UISettingType_Droplist = 2,
+	UISettingType_Checkbox = 3,
+	UISettingType_Text = 4,
+	UISettingType_NotSet = 5
+}
+
+enum UIState {
+	UIState_Menu = 0,
+	UIState_LoadingSP = 1,
+	UIState_LoadingMP = 2,
+	UIState_Playing = 3,
+	UIState_Unload = 4,
+	UIState_Embedded = 5,
+	UIState_Static = 6,
+	UIState_StaticGenerated = 7,
+	UIState_PreEndOfRound = 8,
+	UIState_EndOfRound = 9,
+	UIState_PlayingSP = 10,
+	UIState_PlayingMP = 11,
+	UIState_None = 12
+}
+
+enum UISystemType {
+	UISystem_None = 0,
+	UISystem_Standard = 1
+}
+
+enum UIUpdateType {
+	UIUpdateType_Always = 0,
+	UIUpdateType_Odd = 1,
+	UIUpdateType_Even = 2,
+	UIUpdateType_Never = 3
+}
+
+enum UIWidgetEventID {
+	UIWidgetEventID_None = 0,
+	UIWidgetEventID_OnItemSelected = 1,
+	UIWidgetEventID_OnItemHighlighted = 2,
+	UIWidgetEventID_OnItemReleased = 3,
+	UIWidgetEventID_OnItemUnhighlighted = 4,
+	UIWidgetEventID_OnItemPressed = 5,
+	UIWidgetEventID_OnItemOver = 6,
+	UIWidgetEventID_OnItemOut = 7,
+	UIWidgetEventID_OnToggle = 8,
+	UIWidgetEventID_OnChanged = 9,
+	UIWidgetEventID_OnButtonBarChanged = 10,
+	UIWidgetEventID_EnterTop = 11,
+	UIWidgetEventID_EnterBottom = 12,
+	UIWidgetEventID_EnterAny = 13,
+	UIWidgetEventID_SetIndex = 14,
+	UIWidgetEventID_SetPercentage = 15,
+	UIWidgetEventID_OnReachedTop = 16,
+	UIWidgetEventID_OnReachedBottom = 17,
+	UIWidgetEventID_OnNavigateLeft = 18,
+	UIWidgetEventID_OnNavigateRight = 19,
+	UIWidgetEventID_Show = 20,
+	UIWidgetEventID_Hide = 21,
+	UIWidgetEventID_OnShow = 22,
+	UIWidgetEventID_OnHide = 23,
+	UIWidgetEventID_Toggle = 24,
+	UIWidgetEventID_ToggleOn = 25,
+	UIWidgetEventID_ToggleOff = 26,
+	UIWidgetEventID_ToggledOn = 27,
+	UIWidgetEventID_ToggledOff = 28,
+	UIWidgetEventID_Update = 29,
+	UIWidgetEventID_OnComplete = 30,
+	UIWidgetEventID_Focus = 31,
+	UIWidgetEventID_OnHeaderChanged = 32,
+	UIWidgetEventID_OnDescriptionChanged = 33,
+	UIWidgetEventID_OnMapChanged = 34,
+	UIWidgetEventID_Clear = 35,
+	UIWidgetEventID_Delete = 36,
+	UIWidgetEventID_LThumb = 37,
+	UIWidgetEventID_RThumb = 38,
+	UIWidgetEventID_LTAB = 39,
+	UIWidgetEventID_RTAB = 40,
+	UIWidgetEventID_OnLarge = 41,
+	UIWidgetEventID_OnSmall = 42,
+	UIWidgetEventID_TextEntered = 43,
+	UIWidgetEventID_PlaySoundNavigate = 44,
+	UIWidgetEventID_PlaySoundSelect = 45,
+	UIWidgetEventID_PlaySoundPageSwap = 46,
+	UIWidgetEventID_OnComPressed = 47,
+	UIWidgetEventID_OnComReleased = 48,
+	UIWidgetEventID_NumItems = 49
+}
+
+enum UIWidgetEventQuery {
+	UIWidgetEventQuery_FireEvent = 0
+}
+
+enum UndergrowthOrientationMode {
+	UndergrowthOrientationMode_Horizontal = 0,
+	UndergrowthOrientationMode_LeanToTerrain = 1,
+	UndergrowthOrientationMode_SkewToTerrain = 2
+}
+
+enum UndergrowthRotationMode {
+	UndergrowthRotationMode_Random = 0,
+	UndergrowthRotationMode_TowardsSlope = 1,
+	UndergrowthRotationMode_Fixed = 2
+}
+
+enum UnlockAvailability {
+	UnlockAvailability_All = 0,
+	UnlockAvailability_HumanPlayerOnly = 1,
+	UnlockAvailability_AIOnly = 2
+}
+
+enum UpdatePass {
+	UpdatePass_PreSim = 0,
+	UpdatePass_PostSim = 1,
+	UpdatePass_PostFrame = 2,
+	UpdatePass_FrameInterpolation = 3,
+	UpdatePass_PreInput = 4,
+	UpdatePass_PreFrame = 5,
+	UpdatePass_Count = 6
+}
+
+enum Vec3MathOp {
+	Vec3MathOp_Add = 0,
+	Vec3MathOp_Subtract = 1,
+	Vec3MathOp_Multiply = 2,
+	Vec3MathOp_Divide = 3,
+	Vec3MathOp_Min = 4,
+	Vec3MathOp_Max = 5,
+	Vec3MathOp_Dot = 6,
+	Vec3MathOp_Len = 7,
+	Vec3MathOp_LenSq = 8,
+	Vec3MathOp_Cross = 9,
+	Vec3MathOp_Norm = 10
+}
+
+enum VehicleCategory {
+	VehicleCategory_Land = 0,
+	VehicleCategory_Air = 1
+}
+
+enum VehicleHudType {
+	VehicleHudType_Car = 0,
+	VehicleHudType_Tank = 1,
+	VehicleHudType_Boat = 2,
+	VehicleHudType_Helicopter = 3,
+	VehicleHudType_Stationary = 4,
+	VehicleHudType_Strategic = 5,
+	VehicleHudType_Dummy = 6,
+	VehicleHudType_Count = 7
+}
+
+enum VehicleInputTweakType {
+	CombinedTimedSpeedTweakType = 0,
+	CombinedSpeedTweakType = 1,
+	SpeedTweakType = 2,
+	ScaledSpeedTweakType = 3
+}
+
+enum VehicleMode {
+	VmIdle = 0,
+	VmEntering = 1,
+	VmEntered = 2,
+	VmStarting = 3,
+	VmStarted = 4,
+	VmStopping = 5,
+	VmLeaving = 6
+}
+
+enum VehicleStateType {
+	VehicleStateType_Normal = 0,
+	VehicleStateType_LowHealth = 1,
+	VehicleStateType_CriticalState = 2,
+	VehicleStateType_LAST_ITEM = 3
+}
+
+enum VeniceNetworkUnlockGainedType {
+	VeniceNetworkUnlockGainedType_Bucket = 0,
+	VeniceNetworkUnlockGainedType_Rank = 1,
+	VeniceNetworkUnlockGainedType_Weapon = 2,
+	VeniceNetworkUnlockGainedType_Award = 3
+}
+
+enum VertexElementClassification {
+	VertexElementClassification_PerVertex = 0,
+	VertexElementClassification_PerInstance = 1,
+	VertexElementClassification_Index = 2
+}
+
+enum VertexElementFormat {
+	VertexElementFormat_None = 0,
+	VertexElementFormat_Float = 1,
+	VertexElementFormat_Float2 = 2,
+	VertexElementFormat_Float3 = 3,
+	VertexElementFormat_Float4 = 4,
+	VertexElementFormat_Half = 5,
+	VertexElementFormat_Half2 = 6,
+	VertexElementFormat_Half3 = 7,
+	VertexElementFormat_Half4 = 8,
+	VertexElementFormat_Byte4 = 10,
+	VertexElementFormat_Byte4N = 11,
+	VertexElementFormat_UByte4 = 12,
+	VertexElementFormat_UByte4N = 13,
+	VertexElementFormat_Short = 14,
+	VertexElementFormat_Short2 = 15,
+	VertexElementFormat_Short3 = 16,
+	VertexElementFormat_Short4 = 17,
+	VertexElementFormat_ShortN = 18,
+	VertexElementFormat_Short2N = 19,
+	VertexElementFormat_Short3N = 20,
+	VertexElementFormat_Short4N = 21,
+	VertexElementFormat_UShort2 = 22,
+	VertexElementFormat_UShort4 = 23,
+	VertexElementFormat_UShort2N = 24,
+	VertexElementFormat_UShort4N = 25,
+	VertexElementFormat_Int = 26,
+	VertexElementFormat_Int2 = 27,
+	VertexElementFormat_Int4 = 28,
+	VertexElementFormat_IntN = 29,
+	VertexElementFormat_Int2N = 30,
+	VertexElementFormat_Int4N = 31,
+	VertexElementFormat_UInt = 32,
+	VertexElementFormat_UInt2 = 33,
+	VertexElementFormat_UInt4 = 34,
+	VertexElementFormat_UIntN = 35,
+	VertexElementFormat_UInt2N = 36,
+	VertexElementFormat_UInt4N = 37,
+	VertexElementFormat_Comp3_10_10_10 = 38,
+	VertexElementFormat_Comp3N_10_10_10 = 39,
+	VertexElementFormat_UComp3_10_10_10 = 40,
+	VertexElementFormat_UComp3N_10_10_10 = 41,
+	VertexElementFormat_Comp3_11_11_10 = 42,
+	VertexElementFormat_Comp3N_11_11_10 = 43,
+	VertexElementFormat_UComp3_11_11_10 = 44,
+	VertexElementFormat_UComp3N_11_11_10 = 45,
+	VertexElementFormat_Comp4_10_10_10_2 = 46,
+	VertexElementFormat_Comp4N_10_10_10_2 = 47,
+	VertexElementFormat_UComp4_10_10_10_2 = 48,
+	VertexElementFormat_UComp4N_10_10_10_2 = 49,
+	VertexElementFormat_UByteN = 50,
+	VertexElementFormat_Int3 = 51,
+	VertexElementFormat_UInt3 = 52
+}
+
+enum VertexElementUsage {
+	VertexElementUsage_Unknown = 0,
+	VertexElementUsage_Pos = 1,
+	VertexElementUsage_BoneIndices = 2,
+	VertexElementUsage_BoneIndices2 = 3,
+	VertexElementUsage_BoneWeights = 4,
+	VertexElementUsage_BoneWeights2 = 5,
+	VertexElementUsage_Normal = 6,
+	VertexElementUsage_Tangent = 7,
+	VertexElementUsage_Binormal = 8,
+	VertexElementUsage_BinormalSign = 9,
+	VertexElementUsage_WorldTrans1 = 10,
+	VertexElementUsage_WorldTrans2 = 11,
+	VertexElementUsage_WorldTrans3 = 12,
+	VertexElementUsage_InstanceId = 13,
+	VertexElementUsage_InstanceUserData0 = 14,
+	VertexElementUsage_InstanceUserData1 = 15,
+	VertexElementUsage_XenonIndex = 16,
+	VertexElementUsage_XenonBarycentric = 17,
+	VertexElementUsage_XenonQuadID = 18,
+	VertexElementUsage_Index = 19,
+	VertexElementUsage_ViewIndex = 20,
+	VertexElementUsage_Color0 = 30,
+	VertexElementUsage_Color1 = 31,
+	VertexElementUsage_TexCoord0 = 33,
+	VertexElementUsage_TexCoord1 = 34,
+	VertexElementUsage_TexCoord2 = 35,
+	VertexElementUsage_TexCoord3 = 36,
+	VertexElementUsage_TexCoord4 = 37,
+	VertexElementUsage_TexCoord5 = 38,
+	VertexElementUsage_TexCoord6 = 39,
+	VertexElementUsage_TexCoord7 = 40,
+	VertexElementUsage_RadiosityTexCoord = 41,
+	VertexElementUsage_VisInfo = 42,
+	VertexElementUsage_SpriteSize = 43,
+	VertexElementUsage_PackedTexCoord0 = 44,
+	VertexElementUsage_PackedTexCoord1 = 45,
+	VertexElementUsage_PackedTexCoord2 = 46,
+	VertexElementUsage_PackedTexCoord3 = 47,
+	VertexElementUsage_ClipDistance0 = 48,
+	VertexElementUsage_ClipDistance1 = 49,
+	VertexElementUsage_SubMaterialIndex = 50,
+	VertexElementUsage_BranchInfo = 60,
+	VertexElementUsage_PosAndScale = 61,
+	VertexElementUsage_Rotation = 62,
+	VertexElementUsage_SpriteSizeAndUv = 63,
+	VertexElementUsage_FadePos = 90,
+	VertexElementUsage_SpawnTime = 91,
+	VertexElementUsage_PosAndSoftMul = 150,
+	VertexElementUsage_Alpha = 151,
+	VertexElementUsage_Misc0 = 152,
+	VertexElementUsage_Misc1 = 153,
+	VertexElementUsage_LeftAndRotation = 154,
+	VertexElementUsage_UpAndNormalBlend = 155,
+	VertexElementUsage_SH_R = 156,
+	VertexElementUsage_SH_G = 157,
+	VertexElementUsage_SH_B = 158,
+	VertexElementUsage_PosAndRejectCulling = 159,
+	VertexElementUsage_Shadow = 160,
+	VertexElementUsage_PatchUv = 180,
+	VertexElementUsage_Height = 181,
+	VertexElementUsage_MaskUVs0 = 182,
+	VertexElementUsage_MaskUVs1 = 183,
+	VertexElementUsage_MaskUVs2 = 184,
+	VertexElementUsage_MaskUVs3 = 185,
+	VertexElementUsage_UserMasks = 186,
+	VertexElementUsage_HeightfieldUv = 187,
+	VertexElementUsage_MaskUv = 188,
+	VertexElementUsage_GlobalColorUv = 189,
+	VertexElementUsage_HeightfieldPixelSizeAndAspect = 190,
+	VertexElementUsage_WorldPositionXz = 191,
+	VertexElementUsage_TerrainTextureNodeUv = 192,
+	VertexElementUsage_ParentTerrainTextureNodeUv = 193,
+	VertexElementUsage_Uv01 = 210,
+	VertexElementUsage_WorldPos = 211,
+	VertexElementUsage_EyeVector = 212,
+	VertexElementUsage_LightParams1 = 220,
+	VertexElementUsage_LightParams2 = 221,
+	VertexElementUsage_LightSubParams = 222,
+	VertexElementUsage_LightSideVector = 223,
+	VertexElementUsage_LightInnerAndOuterAngle = 224,
+	VertexElementUsage_LightDir = 225,
+	VertexElementUsage_LightMatrix1 = 226,
+	VertexElementUsage_LightMatrix2 = 227,
+	VertexElementUsage_LightMatrix3 = 228,
+	VertexElementUsage_LightMatrix4 = 229,
+	VertexElementUsage_Custom = 230
+}
+
+enum VertexNormalSpace {
+	VnsObject = 0,
+	VnsInstance = 1,
+	VnsWorld = 2
+}
+
+enum VirtualGameState {
+	VirtualGameState_Inactive = 0,
+	VirtualGameState_Active = 1,
+	VirtualGameState_Expired = 2,
+	VirtualGameState_Recreate = 3,
+	VirtualGameState_Updated = 4
+}
+
+enum VoiceChannel {
+	VoiceChannel_Off = 0,
+	VoiceChannel_Team = 1,
+	VoiceChannel_Squad = 2,
+	VoiceChannel_Loopback = 3,
+	VoiceChannel_Count = 4
+}
+
+enum VoiceOverArithmeticExpressionType {
+	VoiceOverArithmeticExpressionType_Addition = 0,
+	VoiceOverArithmeticExpressionType_Subtraction = 1,
+	VoiceOverArithmeticExpressionType_Multiplication = 2,
+	VoiceOverArithmeticExpressionType_Division = 3,
+	VoiceOverArithmeticExpressionType_Difference = 4
+}
+
+enum VoiceOverCompareExpressionType {
+	VoiceOverCompareExpressionType_Equals = 0,
+	VoiceOverCompareExpressionType_Differs = 1,
+	VoiceOverCompareExpressionType_Greater = 2,
+	VoiceOverCompareExpressionType_Less = 3,
+	VoiceOverCompareExpressionType_GreaterOrEquals = 4,
+	VoiceOverCompareExpressionType_LessOrEquals = 5
+}
+
+enum VoiceOverContainerConditionMode {
+	VoiceOverContainerConditionMode_All = 0,
+	VoiceOverContainerConditionMode_Any = 1
+}
+
+enum VoiceOverConversationInterruptMode {
+	VoiceOverConversationInterruptMode_Disallow = 0,
+	VoiceOverConversationInterruptMode_Allow = 1,
+	VoiceOverConversationInterruptMode_AllowSame = 2
+}
+
+enum VoiceOverConversationQueueGroupPolyphony {
+	VoiceOverConversationQueueGroupPolyphony_Sources = 0,
+	VoiceOverConversationQueueGroupPolyphony_Conversations = 1
+}
+
+enum VoiceOverConversationQueueMode {
+	VoiceOverConversationQueueMode_Always = 0,
+	VoiceOverConversationQueueMode_Never = 1,
+	VoiceOverConversationQueueMode_SamePriority = 2
+}
+
+enum VoiceOverDialogTakeBehavior {
+	VoiceOverDialogTakeBehavior_Start = 0,
+	VoiceOverDialogTakeBehavior_Clip = 1,
+	VoiceOverDialogTakeBehavior_Continuous = 2
+}
+
+enum VoiceOverLabelCompareMode {
+	VoiceOverLabelCompareMode_Any = 0,
+	VoiceOverLabelCompareMode_All = 1,
+	VoiceOverLabelCompareMode_One = 2
+}
+
+enum VoiceOverLabelSourceMode {
+	VoiceOverLabelSourceMode_Combined = 0,
+	VoiceOverLabelSourceMode_Shared = 1
+}
+
+enum VoiceOverLogicFlowMode {
+	VoiceOverLogicFlowMode_All = 0,
+	VoiceOverLogicFlowMode_One = 1
+}
+
+enum VoiceOverPronunciationFallback {
+	VoiceOverPronunciationFallback_None = 0,
+	VoiceOverPronunciationFallback_Master = 1
+}
+
+enum VoiceOverValueType {
+	VoiceOverValueType_Boolean = 0,
+	VoiceOverValueType_Integer = 1,
+	VoiceOverValueType_Float = 2,
+	VoiceOverValueType_Vector = 3,
+	VoiceOverValueType_Object = 4,
+	VoiceOverValueTypeCount = 5
+}
+
+enum VoiceOverWaveNameTranslation {
+	VoiceOverWaveNameTranslation_FullName = 0,
+	VoiceOverWaveNameTranslation_PathOnly = 1,
+	VoiceOverWaveNameTranslation_NameOnly = 2
+}
+
+enum VotingType {
+	VotingMap = 0,
+	VotingGameMode = 1,
+	VotingFriendlyFire = 2
+}
+
+enum WarningPlayerType {
+	WPTInflictor = 0,
+	WPTVictim = 1
+}
+
+enum WarnTarget {
+	wtWarnSoldierAndVehicle = 0,
+	wtWarnSoldier = 1,
+	wtWarnVehicle = 2,
+	wtWarnNone = 3
+}
+
+enum WaveCodec {
+	WaveCodec_EaLayer3 = 0,
+	WaveCodec_EaXma = 1,
+	WaveCodec_Xas = 2,
+	WaveCodec_EaSpeex = 3,
+	WaveCodec_Pcm = 4,
+	WaveCodec_Count = 5
+}
+
+enum WavePriority {
+	WpNone = 0,
+	WpLow = 1,
+	WpNormal = 2,
+	WpHigh = 3,
+	WpPermanent = 4
+}
+
+enum WaypointsSnappingSettings {
+	UseShapeSettings = 0,
+	SnapToTerrain = 1,
+	NoSnap = 2
+}
+
+enum WaypointVaultType {
+	WaypointVaultType_VaultOverHigh = 0,
+	WaypointVaultType_VaultOntoLow = 1,
+	WaypointVaultType_VaultDownLow = 2,
+	WaypointVaultType_VaultDownHigh = 3,
+	WaypointVaultType_ClimbUpHigh = 4,
+	WaypointVaultType_ClimbOverHigh = 5,
+	WaypointVaultType_JumpAcross = 6,
+	WaypointVaultType_Count = 7
+}
+
+enum WeaponAnimBaseSetEnum {
+	wabsRif = 0,
+	wabsPstl = 1,
+	wabsHgr = 2,
+	wabsAT = 3,
+	wabsShg = 4,
+	wabsLMG = 5,
+	wabsBag = 6,
+	wabsSnp = 7,
+	wabsCount = 8,
+	wabsNone = 9
+}
+
+enum WeaponAnimType {
+	WeaponAnimType_NoAddon = 0,
+	WeaponAnimType_Bipod = 1,
+	WeaponAnimType_Foregrip = 2,
+	WeaponAnimType_40mm_GL = 3,
+	WeaponAnimType_40mm_GL_Fire = 4,
+	WeaponAnimType_Underslung_Shotgun = 5,
+	WeaponAnimType_Underslung_Shotgun_Fire = 6,
+	WeaponAnimType_Straight_Pull_Bolt = 7,
+	WeaponAnimType_Extended_Mag = 8
+}
+
+enum WeaponClassEnum {
+	wc12gauge = 0,
+	wc338Magnum = 1,
+	wc357Magnum = 2,
+	wc44Magnum = 3,
+	wc45cal = 4,
+	wc46x30mm = 5,
+	wc50cal = 6,
+	wc545x45mmWP = 7,
+	wc556x45mmNATO = 8,
+	wc57x28mm = 9,
+	wc58x42mm = 10,
+	wc762x39mmWP = 11,
+	wc762x51mmNATO = 12,
+	wc762x54mmR = 13,
+	wc9x19mm = 14,
+	wc9x39mm = 15,
+	wcAssault = 16,
+	wcShotgun = 17,
+	wcSmg = 18,
+	wcLmg = 19,
+	wcSniper = 20,
+	wcUgl = 21,
+	wcHgr = 22,
+	wcAt = 23,
+	wcATMine = 24,
+	wcC4 = 25,
+	wcAutoInjector = 26,
+	wcKnife = 27,
+	wcLaserDesignator = 28,
+	wcLaserPainter = 29,
+	wcMedKit = 30,
+	wcMortarStrike = 31,
+	wcPowerTool = 32,
+	wcTracerDart = 33,
+	wcRadioBeacon = 34,
+	wcEodBot = 35,
+	wcReconMav = 36,
+	wcUGS = 37,
+	wcCount = 38,
+	wcNone = 39
+}
+
+enum WeaponClassification {
+	WCNone = 0,
+	WCPrimary = 1,
+	WCSecondary = 2
+}
+
+enum WeaponFiringEvent {
+	WeaponFiringEvent_Push = 0,
+	WeaponFiringEvent_Pop = 1,
+	WeaponFiringEvent_PrimaryStartedFiringCallback = 2,
+	WeaponFiringEvent_PrimaryFireCallback = 3,
+	WeaponFiringEvent_PrimaryFireReleaseCallback = 4,
+	WeaponFiringEvent_PrimaryFireShotSpawnedCallback = 5,
+	WeaponFiringEvent_PrimaryFireAutomaticBeginCallback = 6,
+	WeaponFiringEvent_PrimaryFireAutomaticEndCallback = 7,
+	WeaponFiringEvent_PrimaryStoppedFiringCallback = 8,
+	WeaponFiringEvent_ReloadPrimaryCallback = 9,
+	WeaponFiringEvent_ReloadPrimaryEndCallback = 10,
+	WeaponFiringEvent_BoltActionCallback = 11,
+	WeaponFiringEvent_BoltActionEndCallback = 12,
+	WeaponFiringEvent_DetonationSwitchCallback = 13,
+	WeaponFiringEvent_HoldAndReleaseReleaseCallback = 14,
+	WeaponFiringEvent_UpdateRequired = 15
+}
+
+enum WeaponOverrideValueType {
+	OverrideValue_BulletEntity_DistributeDamageOverTime = 0,
+	OverrideValue_BulletEntity_StartDamage = 1,
+	OverrideValue_BulletEntity_EndDamage = 2,
+	OverrideValue_BulletEntity_DamageFalloffStartDistance = 3,
+	OverrideValue_BulletEntity_DamageFalloffEndDistance = 4
+}
+
+enum WeaponSlot {
+	WeaponSlot_0 = 0,
+	WeaponSlot_1 = 1,
+	WeaponSlot_2 = 2,
+	WeaponSlot_3 = 3,
+	WeaponSlot_4 = 4,
+	WeaponSlot_5 = 5,
+	WeaponSlot_6 = 6,
+	WeaponSlot_7 = 7,
+	WeaponSlot_8 = 8,
+	WeaponSlot_9 = 9,
+	WeaponSlot_NumSlots = 10,
+	WeaponSlot_NotDefined = 11
+}
+
+enum WeaponSwitchingEnum {
+	wsSlot0 = 0,
+	wsSlot1 = 1,
+	wsSlot2 = 2,
+	wsSlot3 = 3,
+	wsSlot4 = 4,
+	wsSlot5 = 5,
+	wsSlot6 = 6,
+	wsSlot7 = 7,
+	wsMeleeWeapon = 7,
+	wsSlot8 = 8,
+	wsSlot9 = 9,
+	wsMaxSlots = 10,
+	wsLastPrimary = 11,
+	wsOtherPrimary = 12,
+	wsNotUsed = 13
+}
+
+enum WeaponUnlocks {
+	WeaponUnlocks_MaxAmount = 7
+}
+
+enum WheelPhysicsType {
+	wptNormal = 0,
+	wptFollow = 1,
+	wptStatic = 2
+}
+
+enum WidgetHorisontalAlignment {
+	WHA_Left = 0,
+	WHA_Center = 1,
+	WHA_Right = 2
+}
+
+enum WidgetVerticalAlignment {
+	WVA_Top = 0,
+	WVA_Center = 1,
+	WVA_Bottom = 2
+}
+
+enum WorldViewMode {
+	WorldViewMode_Default = 0,
+	WorldViewMode_RawLinear = 1,
+	WorldViewMode_RawLinearAlpha = 2,
+	WorldViewMode_Diffuse = 3,
+	WorldViewMode_Specular = 4,
+	WorldViewMode_Emissive = 5,
+	WorldViewMode_Normal = 6,
+	WorldViewMode_Smoothness = 7,
+	WorldViewMode_Material = 8,
+	WorldViewMode_Light = 9,
+	WorldViewMode_LightDiffuse = 10,
+	WorldViewMode_LightSpecular = 11,
+	WorldViewMode_LightIndirect = 12,
+	WorldViewMode_LightTranslucency = 13,
+	WorldViewMode_LightOverdraw = 14,
+	WorldViewMode_SkyVisibility = 15,
+	WorldViewMode_SkyVisibilityRaw = 16,
+	WorldViewMode_Overdraw = 17,
+	WorldViewMode_DynamicAO = 18,
+	WorldViewMode_Occluders = 19,
+	WorldViewMode_RadiosityLightMaps = 20,
+	WorldViewMode_RadiosityDiffuseColor = 21,
+	WorldViewMode_RadiosityTargetUV = 22,
+	WorldViewMode_VelocityVector = 23,
+	WorldViewMode_DistortionVector = 24
+}
+
+enum XenonShaderBranchType {
+	XsbtDefault = 0,
+	XsbtPredicate = 1,
+	XsbtPredicateBlock = 2,
+	XsbtBranch = 3
+}
+
+enum XenonTessellationMode {
+	XenonTessellationMode_Discrete = 0,
+	XenonTessellationMode_Continuous = 1,
+	XenonTessellationMode_PerEdge = 2
+}
+
+enum ZoomLevelActivateEventType {
+	ZoomLevelActivateEventType_Disable = 0,
+	ZoomLevelActivateEventType_Enable = 1,
+	ZoomLevelActivateEventType_ToggleOnLightSwitch = 2
+}
