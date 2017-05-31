@@ -1,0 +1,3062 @@
+struct ActionSuppressor {
+	EntryInputActionEnum ActionToSuppress;
+	float SuppressingValue;
+}
+
+struct AdvertisementZoneMember {
+	string Identifier;
+	string Filename;
+}
+
+struct AILocoBaseTaskData {
+	AntPoseEnum PoseChangeMovingTowards;
+	AntAttentionStateEnum AttentionChangeMovingTowards;
+	AntSpeedLevel SpeedChangeMovingTowards;
+	AntPoseEnum PoseChange;
+	AntAttentionStateEnum AttentionStateChange;
+	AntSpeedLevel SpeedLevelChange;
+	float Radius;
+	bool IsScripted;
+}
+
+struct AILocoBinding {
+	AntRef LocoTarget;
+	AntRef AttentionState;
+	AntRef EndPoseEnum;
+	AntRef CurrentPoseEnum;
+	AntRef EnterExitPoseEnum;
+	AntRef RunStyle;
+	AntRef TargetWaypointPosition;
+	AntRef TargetSpeedLevel;
+	AntRef EnableProceduralHeadAim;
+}
+
+struct AILocoCoverBinding {
+	AntRef PrepareFire;
+	AntRef ThrowGrenade;
+	AntRef PeekOut;
+	AntRef IdleBehindCover;
+	AntRef PeekType;
+	AntRef CoverTypeEnum;
+	AntRef CoverFireStyle;
+	AntRef EnterCover;
+	AntRef ExitCover;
+	AntRef IsCloseCover;
+	AntRef DistanceScale;
+	AntRef AbsoluteDistance;
+	AntRef AngleToNormal;
+	AntRef OutAngle;
+	AntRef ThreatAngle;
+	AntRef StopExitCoverOutAround;
+	AntRef EnterStrategy;
+	AntRef ExitStyle;
+}
+
+struct AILocoCoverTaskData {
+	Vec3 WantedPos;
+	Vec3 ThreatPosition;
+	AntPoseEnum CoverPose;
+	float WaitTime;
+	CoverPeekType PeekOut;
+	float WorldAngle;
+	float OffsetLength;
+	AntPoseEnum ExitPose;
+	float ExitAngle;
+	float DistanceToNextWaypoint;
+	AntCoverEnum CoverType;
+	CoverEnterStrategy EnterStrategy;
+	CoverExitStyle ExitStyle;
+	CoverFireType PrepareFireType;
+	bool ForceExitCover;
+	bool UseClientPosition;
+}
+
+struct AILocoMoveTaskData {
+	Vec3 WantedPos;
+	float WorldAngle;
+	float WaitTime;
+	AntPoseEnum EnterPose;
+	AntPoseEnum ExitPose;
+	bool OverrideAngle;
+	bool UseClientPosition;
+}
+
+struct AILocoVaultBinding {
+	AntRef Vault;
+	AntRef DistanceBeforeVault;
+	AntRef HeightBeforeVault;
+	AntRef LengthOfVaultableObject;
+	AntRef HeightAfterVault;
+	AntRef DistanceAfterVault;
+	AntRef VaultType;
+}
+
+struct AILocoVaultTaskData {
+	Vec3 StartPoint;
+	float DistanceBeforeVault;
+	float HeightBeforeVault;
+	float HeightAfterVault;
+	float LengthOfVaultableObject;
+	float WorldAngle;
+	float DistanceAfterVault;
+	WaypointVaultType VaultType;
+	bool UseClientPosition;
+}
+
+struct AimingConstraintEntityBinding {
+	AntRef ProneAimLimit;
+	AntRef ProneAimDistance;
+}
+
+struct AimingConstraintsData {
+	float MinYaw;
+	float MaxYaw;
+	float MinPitch;
+	float MaxPitch;
+}
+
+struct AimingPoseData {
+	float MinimumPitch;
+	float MaximumPitch;
+	float TargetingFov;
+	float AimSteadiness;
+	float SpeedMultiplier;
+	float RecoilMultiplier;
+}
+
+struct AIProximityReactionsBinding {
+	AntRef AIReaction;
+	AntRef AIExplosionReaction;
+	AntRef AIExplosionForce;
+	AntRef AIStunReaction;
+	AntRef AIStunReactionRandomFactor;
+	AntRef AIReactionDirection;
+	AntRef FireNearby;
+	AntRef AimUpAndDown;
+	AntRef FocusAimScale;
+	AntRef FocusAiming;
+	AntRef EnableProceduralHeadAim;
+	AntRef KillFromAnimation;
+	AntRef PlayerAnimationKill;
+	AntRef PlayerInitiatedRagdoll;
+}
+
+struct AirMissileJammingData {
+	float MinTurnSpeed;
+	float MaxRadius;
+	float MinRadius;
+	float Theta;
+	float Phi;
+	float UpdateJammingPositionTime;
+	float MaxTurnSpeed;
+	float QuietModeProbability;
+	float QuietModeTime;
+	float JammingTime;
+	float TurnCalculationTime;
+	bool EnableAirMissileJamming;
+}
+
+struct AmmoConfigData {
+	int32 MagazineCapacity;
+	int32 NumberOfMagazines;
+	uint32 TraceFrequency;
+	uint32 AmmoPickupMinAmount;
+	uint32 AmmoPickupMaxAmount;
+	float AutoReplenishDelay;
+	int32 AmmoBagPickupAmount;
+	float AmmoBagPickupDelayMultiplier;
+	bool AutoReplenishMagazine;
+}
+
+struct AngleOfImpactData {
+	float Zone12Delimiter;
+	float Zone23Delimiter;
+	float Zone1Multiplier;
+	float Zone2Multiplier;
+	float Zone3Multiplier;
+	bool Enabled;
+}
+
+struct Animated1pOnlyWeaponBinding {
+	AntRef UndeployFinished;
+	AntRef CameraFreeWeight;
+	AntRef Deploy1P;
+	AntRef HideWeapon1p;
+}
+
+struct Animated3pOnlyWeaponBinding {
+	AntRef Deploy3P;
+	AntRef HideWeapon3p;
+}
+
+struct AnimatedPointCloudAttributeDesc {
+	PointCloudAttributeUsage Usage;
+	PointCloudAttributeQuantization IFrameQuantization;
+	PointCloudAttributeQuantization DFrameQuantization;
+}
+
+struct AnimatedSkeletonDatabaseItem {
+	SkeletonAsset Asset;
+	int32[] Names;
+	SkeletonCollisionData SoldierCollision;
+	SkeletonCollisionData RagdollCollision;
+	RagdollAsset Ragdoll;
+	string[] SpecialBones;
+	string HipBone;
+	string HeadBone;
+}
+
+struct AnimatedWeaponBinding {
+	AntRef Deploy;
+	AntRef AltDeploy;
+	AntRef Undeploy;
+	AntRef QuickSwitch;
+	AntRef Reload;
+	AntRef ReloadShotgun;
+	AntRef Fire;
+	AntRef FireSingle;
+	AntRef FireHoldAndRelease;
+	AntRef FireSimple;
+	AntRef FirstShotSpawned;
+	AntRef BoltAction;
+	AntRef PumpAction;
+	AntRef MeleeAttack;
+	AntRef QuickThrow;
+	AntRef QuickThrowType;
+	AntRef AimBody;
+	AntRef AlwaysAimHead;
+	AntRef OneHanded;
+	AntRef OneHandedAiming;
+	AntRef AimingEnabled;
+	AntRef LowerGun;
+	AntRef BreathControl;
+	AntRef RflType;
+	AntRef PstlType;
+	AntRef HgrType;
+	AntRef ATType;
+	AntRef ShgType;
+	AntRef LMGType;
+	AntRef BagType;
+	AntRef SnpType;
+	AntRef Zoom;
+	AntRef AimBodyWeight;
+	AntRef DisableZoomToggleWeight;
+	AntRef ZoomParameter;
+	AntRef ZoomScaleFactor;
+	AntRef Dispersion;
+	AntRef AimTargetPosBody;
+	AntRef ZoomOutSpeed;
+	AntRef ZoomInSpeed;
+	AntRef UnDeploySpeed;
+	AntRef DeploySpeed;
+	AntRef LightEnabled;
+	AntRef FireModeChanged;
+	AntRef AnimType;
+	AntRef GunDown;
+	AntRef NumberOfBulletsLeftInGun;
+	AntRef BulletsLeftInGun;
+	AntRef AbortVehicleDeploy;
+	AntRef CurrentProjectileIndex;
+	AntRef WeaponActionESIG;
+	AntRef IsSprinting;
+	AntRef PreparingToBash;
+	AntRef JustStartedSprinting;
+	AntRef KickBackInIronSight;
+	AntRef ZoomingTime;
+	AntRef TriggerZoomGunTwitch;
+	AntRef WeaponChooserSignal;
+	AntRef WeaponClassSignal;
+	AntRef OffsetX;
+	AntRef OffsetY;
+	AntRef OffsetZ;
+	AntRef AIAllowFire;
+	AntRef AIAltFireFromAnt;
+}
+
+struct AnimationConfigurationData {
+	AnimationConfigurationShootModuleData ShootModuleData;
+	WeaponOffsetData WeaponOffsetModuleData;
+	WeaponSpeedData WeaponSpeedModuleData;
+}
+
+struct AnimationConfigurationShootModuleData {
+	float ZoomedKickbackFactor;
+}
+
+struct AnimationDrivenBinding {
+	AntRef Velocity;
+	AntRef EnableCollision;
+}
+
+struct AntAnimatableData {
+	AntRef Actor;
+	ProceduralAwarenessAntRefs ProceduralAwareness;
+	AntRef RightHandEffectorDisableOverride;
+	AntRef LeftHandEffectorDisableOverride;
+	MasterSkeletonAsset MasterSkeletonAsset;
+}
+
+struct AntAnimationHandlerData {
+	AntAnimatableData Animatable;
+	AntRef RootController;
+	LodBinding LodBinding;
+	AntPackageAsset[] AntPackageData;
+	GameplayBone[] BonesToMirror;
+	bool ReportBackFromAnt;
+	bool EnableMasterSlaveCopy;
+	bool IsProp;
+}
+
+struct AntDynamicAvoidanceBinding {
+	AntRef TimeUntilCollision;
+	AntRef DistanceUntilCollision;
+	AntRef NormalizedVelocity;
+	AntRef Speed;
+}
+
+struct AntEventData {
+	int32 TagId;
+	EventSpec Event;
+}
+
+struct AntInteractionBinding {
+	AntRef OtherAnimatableID;
+}
+
+struct AntiRollBars {
+	AntiRollBar Front;
+	AntiRollBar Rear;
+}
+
+struct AntiSpamConfig {
+	float DetectionInterval;
+	uint32 DetectionIntervalMaxMessageCount;
+	uint32 ServerSideMessageCountTolerance;
+	uint32 SecondsBlocked;
+	uint32 ServerSideSecondsBlockedTolerance;
+	string NotificationSid;
+	string StillBlockedSid;
+	SoundWaveAsset WarningSound;
+}
+
+struct AntRef {
+	int32 AssetId;
+}
+
+struct AreaValueTeam {
+	int32 AreaValue;
+	TeamId Team;
+}
+
+struct AssetAabbs {
+	AxisAlignedBox[] PartAabb;
+}
+
+struct AudioCurve {
+	AudioCurvePoint[] Points;
+	AudioCurveType CurveType;
+}
+
+struct AudioCurvePoint {
+	float X;
+	float Y;
+	float K;
+}
+
+struct AudioGraphNodePort {
+	float UnconnectedValue;
+	uint16 ValueIndex;
+	bool IsConnected;
+}
+
+struct AudioLanguageMapping {
+	AudioLanguage Source;
+	AudioLanguage Target;
+}
+
+struct AudioObstructionMaterialInfo {
+	MaterialContainerPair Material;
+	float ObstructionFrequency;
+	float GainReduction;
+}
+
+struct AutoAimData {
+	Vec3 AutoAimOuterBoxOffset;
+	Vec3 AutoAimOuterBoxExtends;
+	Vec3 AutoAimInnerBoxOffset;
+	Vec3 AutoAimInnerBoxExtends;
+	CharacterPoseType PoseType;
+}
+
+struct AwardStarNameInstance {
+	string Name;
+	StatsCategoryBaseData Category;
+}
+
+struct AwardStatus {
+	string Code;
+	uint32 CurrentValue;
+	uint32 OriginalValue;
+	CounterStatus[] Counters;
+	bool IsCounting;
+}
+
+struct BasicUnlockInfo {
+	guid UnlockGuid;
+	uint32 Identifier;
+	uint32 UnlockScore;
+	string[] Licenses;
+	string[] AdditionalLicenses;
+	string StringId;
+}
+
+struct BFServerConfigurationData {
+	uint32 ScoreMultiplier;
+	string Licenses;
+}
+
+struct BFServerConfigurationSchedule {
+	string[] Licenses;
+	string[] Levels;
+	BFServerConfigurationData Data;
+}
+
+struct BinaryOption {
+	string Name;
+}
+
+struct BlazeCreateGameParameters {
+	MatchmakingCreateGameParameters Base;
+}
+
+struct BlurEffectData {
+	float DispersionStrength;
+	float DispersionThreshhold;
+	float ExplosionStrength;
+	float BulletStrength;
+	float ExplosionFalloffSpeed;
+	float BulletFalloffSpeed;
+}
+
+struct BoltActionData {
+	float BoltActionDelay;
+	float BoltActionTime;
+	bool HoldBoltActionUntilFireRelease;
+	bool HoldBoltActionUntilZoomRelease;
+	bool ForceBoltActionOnFireTrigger;
+	bool UnZoomOnBoltAction;
+	bool ReturnToZoomAfterBoltAction;
+}
+
+struct BoneCollisionData {
+	Vec4 DebugDrawColor;
+	Vec3 CapsuleOffset;
+	string BoneName;
+	HitReactionType AnimationHitReactionType;
+	MaterialContainerPair MaterialPair;
+	int32 BoneAxis;
+	float CapsuleLength;
+	float CapsuleRadius;
+	PitchModifier MinPitch;
+	PitchModifier MaxPitch;
+	bool ValidInHiLod;
+	bool ValidInLowLod;
+	bool UsePhysicsRotation;
+	bool DeactivateIfBehindWall;
+}
+
+struct BoolShaderParameter {
+	string ParameterName;
+	bool Value;
+}
+
+struct Boost {
+	float ForwardStrength;
+	float ReverseStrength;
+	float DissipationTime;
+	float RecoveryTime;
+	float CrawlStrength;
+	float AccelerationScale;
+}
+
+struct BulletHitInfo {
+	Vec3 Direction;
+	Vec3 SpawnPosition;
+	SoldierWeaponUnlockAsset WeaponUnlockAsset;
+	AntHitReactionWeaponType WeaponType;
+	int32 BoneType;
+	int32 ShooterPlayerId;
+}
+
+struct BurstLimit {
+	int32 Min;
+	int32 Max;
+}
+
+struct CameraBinding {
+	AntRef Render1pInBackground;
+	AntRef ForceRender1pInForeground;
+}
+
+struct CameraLeapData {
+	LinearTransform Transform;
+	float Time;
+	float FovModifier;
+}
+
+struct CameraSineCurveData {
+	float Frequency;
+	float Amplitude;
+	float PhaseShift;
+}
+
+struct CannedAnimationBinding {
+	AntRef LevelIndex;
+	AntRef ScenarioIndex;
+	AntRef ActorIndex;
+	AntRef PartIndex;
+	AntRef TriggerCannedAnimation;
+	AntRef ExitCannedAnimation;
+	AntRef ExternalTime;
+	AntRef BlendValue;
+	AntRef AdvanceScenario;
+	AntRef EnteredLoop;
+}
+
+struct CharacterMeleeBinding {
+	AntRef TriggerMelee;
+	AntRef SelfActor;
+	AntRef OtherActor;
+	AntRef MeleeActive;
+}
+
+struct CharacterMeleeCommonBinding {
+	AntRef MeleeDistance;
+	AntRef MeleeAngle;
+	AntRef MeleeDefenceTime;
+	AntRef MeleeSequenceTime;
+	AntRef MeleeAborted;
+	AntRef CloseToTarget;
+	AntRef MeleeType;
+}
+
+struct CharacterPoseConstraintsData {
+	bool StandPose;
+	bool CrouchPose;
+	bool PronePose;
+}
+
+struct CharacterWeaponBinding {
+	AntRef WeaponId;
+}
+
+struct ChildStaticModelNetworkInfo {
+	IndexRange NetworkRange;
+	uint32 ParentPartComponentIndex;
+	uint32 ParentHealthStateIndex;
+	uint32 InstanceIndex;
+}
+
+struct ChunkStreamerCell {
+	Vec2[] Shape;
+	string BundleName;
+}
+
+struct ClimbLadderBinding {
+	AntRef ClimbLadderPhase;
+	AntRef ClimbLadderConnectPhase;
+	AntRef ClimbLadderTransitionPhase;
+	AntRef OnLadder;
+	AntRef LadderTopTransition;
+	AntRef FallHigh;
+}
+
+struct ColorTintData {
+	Vec3 Contrast;
+	Vec3 Brightness;
+	Vec3 Saturation;
+	float Hue;
+}
+
+struct ConstantForceData {
+	Vec3 Value;
+	ForceCondition Condition;
+	ForceType TypeOfForce;
+	SpaceType Space;
+}
+
+struct Consumable {
+	guid Instance;
+	ConsumableGroup Group;
+}
+
+struct ContinueWeaponAmmoData {
+	int32 MinMags;
+	int32 WeaponSlot;
+}
+
+struct CoreSettings {
+	int32 RandomTickSeed;
+	string AvailableLanguages;
+	int32 RandomSessionId;
+	int32 RandomTimeSeed;
+	float HardwareGpuBias;
+	HardwareProfile HardwareProfile;
+	int32 JobProcessorCount;
+	int32 MaxJobThreadCount;
+	string Host;
+	string HostUser;
+	string HostUserDomain;
+	string InitSeed;
+	CoreLogLevel LogLevel;
+	float HardwareCpuBias;
+	string GameConfigurationName;
+	string ProfileDirectoryName;
+	bool DisplayAsserts;
+	bool LiveEditingEnable;
+	bool UseStorageServer;
+	bool UseDiskCaching;
+	bool CrashOnFatalErrors;
+}
+
+struct CounterHelper {
+	bool dummy;
+}
+
+struct CounterStatus {
+	float CurrentValue;
+	float OriginalValue;
+}
+
+struct CoverSlot {
+	Vec3 Position;
+}
+
+struct CriteriaAward {
+	AwardData Award;
+	uint32 Count;
+	string Sid;
+}
+
+struct CriteriaStarCategoryInstance {
+	string Name;
+	StatsCategoryBaseData ParamX;
+	StatsCategoryBaseData ParamY;
+}
+
+struct CustomizedMeshMaterialsData {
+	ObjectBlueprint MeshBlueprint;
+	string[] MaterialNames;
+}
+
+struct CustomizeVisual {
+	UnlockAsset[] Visual;
+}
+
+struct CustomReportValueData {
+	string Name;
+	CustomReportValueKind Kind;
+	PersistentValueDataType DataType;
+}
+
+struct DataCopSettings {
+	DataCopValueSetting[] Values;
+}
+
+struct DataCopValueSetting {
+	int32 DataKey;
+	int32 FrameSpacing;
+	int32 Offset;
+}
+
+struct DataField {
+	string Value;
+	DataContainer ValueRef;
+	int32 Id;
+	FieldAccessType AccessType;
+}
+
+struct DataSource {
+	UIComponentData Category;
+	int32 Value;
+}
+
+struct DataVisualizerValue {
+	string Value;
+}
+
+struct DebrisClusterPartInfoData {
+	Vec3 AngularVelocity;
+	Vec3 LinearVelocity;
+	int32 NumberOfChildren;
+	int32 PartIndex;
+	float SplitSpeedThreshold;
+	bool InEffectWorldOnly;
+	bool SyncRestPosition;
+	bool SyncContinous;
+}
+
+struct DebrisHavokInfo {
+	HavokAsset HavokAsset;
+	int32 ReserveCount;
+}
+
+struct DebrisSystemMetrics {
+	int32 HavokParticleCount;
+	int32 HavokParticlePartCount;
+}
+
+struct DecalAtlasTile {
+	float TileIndexX;
+	float TileIndexY;
+	float TileCountX;
+	float TileCountY;
+	bool FlipX;
+	bool FlipY;
+}
+
+struct DefaultSelectionItem {
+	UIDataSourceInfo DefaultSelectionQuery;
+	int32 DefaultSelectionIndex;
+}
+
+struct DestructionVolumeAtlasTextureData {
+	float AtlasAlphaInfluence;
+	float MaskEdgeThickness;
+}
+
+struct DestructionVolumeProjectionData {
+	Vec3 Normal;
+	float TangentAngle;
+}
+
+struct DirectWeaponSwitchingMapData {
+	EntryInputActionEnum Action;
+	WeaponSwitchingEnum ToWeapon;
+	float PreventMeleeRepeatTime;
+	float SwitchBackToPrevMaxTimePressed;
+	bool UseQuickSwitch;
+	bool FireAndSwitchBackToPrev;
+}
+
+struct DivisibleLoopPlayerPlugins {
+	SoundGraphPluginRef SndPlayer;
+	SoundGraphPluginRef Pause;
+	SoundGraphPluginRef Gain;
+	SoundGraphPluginRef GainFader;
+}
+
+struct DynamicEvent {
+	int32 Id;
+}
+
+struct DynamicLink {
+	int32 Id;
+}
+
+struct DynamicWeaponPickupSlotData {
+	uint32 WeaponSlot;
+	int32 AltWeaponSlot;
+	int32 LinkedToWeaponSlot;
+}
+
+struct EdgeModelInstance {
+	LinearTransform Transform;
+}
+
+struct EdgeModelLightMapInstance {
+	Vec4 LightMapUv;
+	Vec3 Position;
+}
+
+struct EdgePointerData {
+	float NegativeXLimit;
+	float PositiveXLimit;
+	float NegativeYLimit;
+	float PositiveYLimit;
+}
+
+struct EditableActionMap {
+	string Id;
+	string NameId;
+	EntryInputActionMapsData ActionMap;
+	EditableActions ConfigurationLayout;
+}
+
+struct EditableActions {
+	EditableAction[] Actions;
+}
+
+struct EloExpectedFunctionPoint {
+	float XValue;
+	float YValue;
+}
+
+struct EloFunctionPoint {
+	float XValue;
+	float YValue;
+}
+
+struct EloParameters {
+	EloFunctionPoint[] KWinner;
+	EloFunctionPoint[] KLoser;
+	EloFunctionPoint[] KNewbie;
+	EloFunctionPoint[] KCompetitor;
+	EloExpectedFunctionPoint[] Expected;
+}
+
+struct EmitterTextureAtlasInfo {
+	Vec2 MinUv;
+	Vec2 MaxUv;
+	string TextureName;
+}
+
+struct EmitterTextureInfo {
+	string TextureName;
+	string NormalmapName;
+	float AnimationFrameCount;
+	float AnimationFrameColumnCount;
+	bool EnableAnimation;
+}
+
+struct EndPointData {
+	float Pos;
+	float EndDamping;
+	float SpringLength;
+	float SpringAcceleration;
+	float SpringDamping;
+}
+
+struct EnlightenDbInstance {
+	AxisAlignedBox WorldBoundingbox;
+	LinearTransform WorldTransform;
+	Vec2 UvTranslation;
+	Vec4 UvTransform;
+	uint32 GeometryId;
+	string ObjectVariation;
+	string GuidString;
+	uint32 UvSizeX;
+	uint32 UvSizeY;
+	float PixelSize;
+	string EnlightenMeshName;
+	string MeshAsset;
+	uint64[] InstanceAlbedos;
+	guid CacheKey;
+}
+
+struct EnlightenDbSystem {
+	AxisAlignedBox BoundingBox;
+	uint32 AtlasStartX;
+	uint32 AtlasStartY;
+	uint32 OutputWidth;
+	uint32 OutputHeight;
+	uint32 PixelCount;
+	float PixelSize;
+	int32 SystemId;
+	EnlightenDbInstance[] Instances;
+	int32[] InputSystems;
+	PrecomputeCache SystemCache;
+	PrecomputeCache ClusteringCache;
+	PrecomputeCache PreClusteringCache;
+	PrecomputeCache LightTransportCache;
+	PrecomputeCache VisibilityCache;
+	bool TerrainSystem;
+}
+
+struct EnlightenInputInstance {
+	LinearTransform Transform;
+	string Asset;
+	string ObjectVariation;
+	int32 SystemId;
+}
+
+struct EnlightenLightProbeSet {
+	LinearTransform Transform;
+	AxisAlignedBox BoundingBox;
+	uint32 SizeX;
+	uint32 SizeZ;
+	uint32 SizeY;
+	int32 SystemId;
+	float BlendDistance;
+	int32 Priority;
+	Vec3[] Positions;
+	uint32[] ValidIndices;
+	int32[] InputSystems;
+	PrecomputeCache Cache;
+	bool StaticProbeSet;
+}
+
+struct EnlightenPipelineTerrainMesh {
+	Vec2 UvTranslation;
+	AxisAlignedBox BoundingBox;
+	Vec4 UvTransform;
+	uint32 LightMapResolution;
+	string TerrainMeshName;
+}
+
+struct EntitlementData {
+	string License;
+	string EntitlementTag;
+	string GroupName;
+	string ProductId;
+	string ProjectId;
+	EntitlementType UsageType;
+	bool VerifyOwnership;
+}
+
+struct EntityUid {
+	uint32 Id;
+}
+
+struct EntryComponentHudData {
+	int32 Index;
+	EntrySeatType SeatType;
+	bool Frustum;
+	bool Visible;
+	bool MaximizeMiniMapOnEntry;
+}
+
+struct EventConnection {
+	DataContainer Source;
+	DataContainer Target;
+	EventSpec SourceEvent;
+	EventSpec TargetEvent;
+	EventConnectionTargetType TargetType;
+}
+
+struct EventScaleData {
+	StatEvent Event;
+	float Scale;
+}
+
+struct EventSpec {
+	int32 Id;
+}
+
+struct FaceAnimationWaveMapping {
+	int32 WaveNameHash;
+	int32 AntEnumValue;
+}
+
+struct FireEffectData {
+	Vec3 Rotation;
+	Vec3 Offset;
+	Vec3 ZoomRotation;
+	Vec3 ZoomOffset;
+	EffectBlueprint Effect;
+	bool UseZoomOffset;
+	bool UseZoomRotation;
+	bool DisableDuringZoom;
+	bool UpdateTransform;
+	bool StopLoopingEffects;
+}
+
+struct FireLogicData {
+	HoldAndReleaseData HoldAndRelease;
+	BoltActionData BoltAction;
+	RecoilData Recoil;
+	EntryInputActionEnum FireInputAction;
+	EntryInputActionEnum ReloadInputAction;
+	EntryInputActionEnum CycleFireModeInputAction;
+	float TriggerPullWeight;
+	float RateOfFire;
+	float RateOfFireForBurst;
+	float ClientFireRateMultiplier;
+	float ReloadDelay;
+	FireLogicType[] FireLogicTypeArray;
+	float ReloadThreshold;
+	float PreFireDelay;
+	float ReloadTime;
+	float ReloadTimeBulletsLeft;
+	FireLogicType FireLogicType;
+	ReloadLogic ReloadLogic;
+	float AutomaticDelay;
+	ReloadType ReloadType;
+	bool HoldOffReloadUntilZoomRelease;
+	bool ForceReloadActionOnFireTrigger;
+	bool HoldOffReloadUntilFireRelease;
+	bool AlwaysAutoReload;
+}
+
+struct FiringDispersionData {
+	float MinAngle;
+	float MaxAngle;
+	float IncreasePerShot;
+	float DecreasePerSecond;
+}
+
+struct FloatOption {
+	string Name;
+	float Value;
+	float Min;
+	float Max;
+	float Step;
+}
+
+struct FloatRange {
+	float Min;
+	float Max;
+}
+
+struct FloatRangeDefaultZero {
+	float Min;
+	float Max;
+}
+
+struct FootStepTrigger {
+	float Time;
+}
+
+struct FrictionScaleAtVelocity {
+	float FrictionScale;
+	float Velocity;
+}
+
+struct GameModeInformation {
+	GamePlatform Platform;
+	GameModeSize[] Sizes;
+	GameModeSize DefaultSize;
+	bool AllowFallbackToDefault;
+}
+
+struct GameModeSize {
+	string Name;
+	string ShortName;
+	string MetaIdentifier;
+	uint32 PlayerCount;
+	GameModeTeamSize[] Teams;
+	uint32 RoundsPerMap;
+	bool ForceSquad;
+}
+
+struct GameModeTeamSize {
+	uint32 PlayerCount;
+	uint32 SquadSize;
+}
+
+struct GameModeVariation {
+	string Identifier;
+	string Name;
+}
+
+struct GameplayBone {
+	string Name;
+	GameplayBones Bone;
+}
+
+struct GameTipData {
+	string Text;
+}
+
+struct GroundHeightData {
+	Vec2 HeightSpan;
+	float WorldSize;
+	uint16[] Data;
+}
+
+struct GunMasterLevelInfo {
+	CustomizeSoldierData CustomizeData;
+	int32 KillsNeeded;
+}
+
+struct GunMasterWeaponsPreset {
+	GunMasterLevelInfo[] GunMasterLevelInfos;
+	CustomizeSoldierData[] LevelOverrides;
+}
+
+struct GunSwayBaseData {
+	GunSwayDispersionData BaseValue;
+	GunSwayRecoilData Recoil;
+	GunSwayLagData GunSwayLag;
+}
+
+struct GunSwayBaseMoveData {
+	GunSwayDispersionData BaseValue;
+	GunSwayDispersionData Moving;
+	GunSwayRecoilData Recoil;
+	GunSwayLagData GunSwayLag;
+}
+
+struct GunSwayBaseMoveJumpData {
+	GunSwayDispersionData BaseValue;
+	GunSwayDispersionData Moving;
+	GunSwayDispersionData Jumping;
+	GunSwayDispersionData Sprinting;
+	GunSwayDispersionData VaultingSmallObject;
+	GunSwayDispersionData VaultingMediumObject;
+	GunSwayRecoilData Recoil;
+	GunSwayLagData GunSwayLag;
+}
+
+struct GunSwayCrouchProneData {
+	GunSwayBaseMoveData NoZoom;
+	GunSwayBaseMoveData Zoom;
+}
+
+struct GunSwayDispersionData {
+	float MinAngle;
+	float MaxAngle;
+	float IncreasePerShot;
+	float DecreasePerSecond;
+}
+
+struct GunSwayDispersionModData {
+	float MinAngleModifier;
+	float MaxAngleModifier;
+	float IncreasePerShotModifier;
+	float DecreasePerSecondModifier;
+}
+
+struct GunSwayLagData {
+	float MoveStrafeModifier;
+	float MoveForwardModifier;
+	float RotateYawModifier;
+	float RotatePitchModifier;
+	float ReleaseModifier;
+}
+
+struct GunSwayRecoilData {
+	float RecoilAmplitudeMax;
+	float RecoilAmplitudeIncPerShot;
+	float HorizontalRecoilAmplitudeIncPerShotMin;
+	float HorizontalRecoilAmplitudeIncPerShotMax;
+	float HorizontalRecoilAmplitudeMax;
+	float RecoilAmplitudeDecreaseFactor;
+}
+
+struct GunSwayStanceTransition {
+	GunSwayDispersionData MaxPenaltyValue;
+	float CoolDown;
+}
+
+struct GunSwayStanceZoomModifierData {
+	GunSwayDispersionModData DispersionMod;
+	float RecoilMagnitudeMod;
+	float RecoilAngleMod;
+	float LagYawMod;
+	float LagPitchMod;
+}
+
+struct GunSwayStandData {
+	GunSwayBaseMoveJumpData NoZoom;
+	GunSwayBaseMoveJumpData Zoom;
+}
+
+struct HealerData {
+	float Radius;
+	float Health;
+	float HealingTime;
+	float PickUpDelay;
+}
+
+struct HealingSphereData {
+	float Radius;
+	float HealthIncSpeed;
+}
+
+struct HidableSoldierMeshWeaponPart {
+	SkinnedMeshAsset WeaponMesh;
+	ObjectBlueprint WeaponMeshBlueprint;
+	string BoneName;
+	bool HideAlways;
+	bool HideInVehicleEntries;
+}
+
+struct HIKData {
+	float ReachT;
+	float ReachR;
+	float Pull;
+	float Resist;
+}
+
+struct HitReactionComponentBinding {
+	AntRef Hit;
+	AntRef AllowKillFromAnimation;
+	AntRef Direction;
+	AntRef FiringDistance;
+	AntRef BoneType;
+	AntRef ImpactType;
+	AntRef Immortal;
+	AntRef RandomAnimationIndex;
+}
+
+struct HoldAndReleaseData {
+	float MaxHoldTime;
+	float MinPowerModifier;
+	float MaxPowerModifier;
+	float PowerIncreasePerSecond;
+	float Delay;
+	float KilledHoldingPowerModifier;
+	bool ForceFireWhenKilledHolding;
+}
+
+struct HudData {
+	float CrosshairScaleMin;
+	float CrosshairScaleMax;
+	float CrosshairOpacityMin;
+	float CrosshairOpacityMax;
+	float CrosshairOpacityModifier;
+	string CrosshairTypeId;
+	string WeaponClass;
+	float CameraShakeModifier;
+	float SeaLevelAltFreq;
+	float LowAmmoWarning;
+	float ReloadPrompt;
+	int32 RenderTargetIndex;
+	UIPartPropertyList HudPropertyList;
+	bool ShowMinimap;
+	bool InfiniteAmmo;
+	bool HideCrosshairWhenAimOnFriend;
+	bool HideAmmo;
+	bool UseRangeMeter;
+	bool UsePredictedSight;
+	bool UseWeaponOrientations;
+	bool UseVelocityVectorMarker;
+	bool UseLockingController;
+	bool UseThrust;
+	bool UseGForce;
+	bool UseSkidSlip;
+	bool UseClimbRate;
+	bool UseAimWarning;
+	bool UseRenderTarget;
+}
+
+struct HudImpactData {
+	float MaxHealth;
+	float MinHealth;
+	float MaxTimeVisible;
+	float MinTimeVisible;
+	bool Enable;
+}
+
+struct IndexRange {
+	uint32 First;
+	uint32 Last;
+}
+
+struct InputRecorderTrackData {
+	string Name;
+	FloatPropertyTrackData PropertyTrack;
+}
+
+struct InputSuppressionData {
+	ActionSuppressor[] SuppressVehicleInput;
+}
+
+struct InspectAnimationTriggerData {
+	AntRef Animation;
+	float Probability;
+}
+
+struct InspectViewPointData {
+	string ViewPointID;
+	InspectAnimationTriggerData[] AnimationTriggers;
+	AntRef[] ContinuousAnimationSignal;
+	float LookAtHeight;
+	float Yaw;
+	float Pitch;
+	float Distance;
+	float FovOffset;
+	float AdjustmentYaw;
+	bool Fixed;
+}
+
+struct IntentData {
+	string Name;
+	float DefaultModifier;
+}
+
+struct InteractionTypesData {
+	bool InteractionEntity;
+	bool PickupEntity;
+	bool AmmoCrateEntity;
+	bool VehicleEntity;
+	bool ExplosionPackEntity;
+	bool SoldierEntity;
+}
+
+struct InterruptFlow {
+	UIInterruptID interruptEnum;
+	UIGraphAsset interruptFlow;
+}
+
+struct IntOption {
+	string Name;
+	int32 Value;
+}
+
+struct KillWeight {
+	float LowIntenseWeight;
+	float HighIntenseWeight;
+	float CoolDownTime;
+}
+
+struct LandingGearConditionData {
+	float Height;
+	float Velocity;
+	float Angle;
+}
+
+struct LensFlareElement {
+	Vec4 SizeCamDistCurve;
+	Vec4 SizeAngleCurve;
+	Vec2 Size;
+	Vec4 SizeOccluderCurve;
+	Vec4 SizeScreenPosCurve;
+	Vec4 AlphaCamDistCurve;
+	Vec4 AlphaOccluderCurve;
+	Vec4 AlphaAngleCurve;
+	Vec4 AlphaScreenPosCurve;
+	float SizeCamDistMax;
+	float RayDistance;
+	SurfaceShaderBaseAsset Shader;
+	float AlphaCamDistMax;
+}
+
+struct LevelDescription {
+	string Name;
+	string Description;
+	LevelDescriptionComponent[] Components;
+	bool IsCoop;
+	bool IsMenu;
+	bool IsMultiplayer;
+}
+
+struct LevelDescriptionInclusionCategory {
+	string Category;
+	string[] Mode;
+}
+
+struct LevelSetup {
+	string Name;
+	LevelSetupOption[] InclusionOptions;
+	uint32 DifficultyIndex;
+	string[] SubLevelNames;
+	int32[] SubLevelStates;
+	bool IsSaveGame;
+	bool ForceReloadResources;
+}
+
+struct LevelSetupOption {
+	string Criterion;
+	string Value;
+}
+
+struct LicenseInfo {
+	string Name;
+	GamePlatform StagingPlatform;
+	bool AllowStaging;
+	bool ClientOnly;
+}
+
+struct LinkConnection {
+	DataContainer Source;
+	DataContainer Target;
+	int32 SourceFieldId;
+	int32 TargetFieldId;
+}
+
+struct LockedSettingConfig {
+	string Key;
+	uint32 Value;
+}
+
+struct LodBinding {
+	AntRef DisableControllerUpdate;
+	AntRef DisablePoseUpdate;
+	AntRef DistanceFromCamera;
+}
+
+struct LookConstraintsData {
+	float MinLookYaw;
+	float MaxLookYaw;
+	float MinLookPitch;
+	float MaxLookPitch;
+}
+
+struct ManualDataEntry {
+	GamePlatform Platform;
+	LanguageFormat Language;
+	TextureAsset[] Textures;
+}
+
+struct MapRotataionLookup {
+	string GameMode;
+}
+
+struct MapRotationConfig {
+	int32 MapRotationId;
+	string NameSid;
+	string DescSid;
+	string Mod;
+	string GameMode;
+	bool RandomizeStartingMap;
+}
+
+struct MatchmakingCreateGameParameters {
+	MatchmakingNetworkTopology GameTopology;
+	MatchmakingPeer2PeerMode PeerMode;
+	MatchmakingNetworkTopology VoipTopology;
+	MatchmakingGameSettings Settings;
+	MatchmakingGameAttribute[] Attributes;
+	uint32 QueueCapacity;
+}
+
+struct MatchmakingCriteria {
+	MatchmakingSizeRule SizeRule;
+	MatchmakingPingSiteRule PingSiteRule;
+	MatchmakingRankedRule RankedRule;
+	MatchmakingGenericRule[] GenericRules;
+	MatchmakingVirtualizedRule VirtualizedRule;
+	MatchmakingUserExtendedDataRule[] UEDRules;
+}
+
+struct MatchmakingGameAttribute {
+	string Attribute;
+	string Value;
+	bool Override;
+}
+
+struct MatchmakingGameSettings {
+	bool OpenToBrowsing;
+	bool OpenToInvites;
+	bool OpenToMatchmaking;
+	bool OpenToJoinByPlayer;
+	bool HostMigratable;
+	bool Ranked;
+	bool AdminOnlyInvites;
+	bool EnforceSingleGroupJoin;
+	bool JoinInProgressSupported;
+	bool AdminInvitesOnlyIgnoreEntryChecks;
+	bool EnablePersistedGameId;
+	bool AllowSameTeamId;
+}
+
+struct MatchmakingGenericRule {
+	string Rule;
+	string MinFitThresHold;
+	string Setting;
+	MatchmakingRuleString[] DesiredValues;
+	bool IgnoreIfDefault;
+	bool MergeValues;
+	bool SortValues;
+}
+
+struct MatchmakingPingSiteRule {
+	string MinFitThreshold;
+}
+
+struct MatchmakingRankedRule {
+	string MinFitThreshold;
+}
+
+struct MatchmakingRuleString {
+	string Value;
+	MatchmakingPlatform Platform;
+	string[] Licenses;
+	bool UseOnlyIfEmpty;
+}
+
+struct MatchmakingSizeConfiguration {
+	MatchmakingPlatform Platform;
+	string[] Settings;
+	uint32 DesiredPlayerCount;
+	uint32 MinPlayerCount;
+	uint32 MaxPlayerCapacity;
+	string MinFitThreshold;
+}
+
+struct MatchmakingSizeRule {
+	string Setting;
+	MatchmakingSizeConfiguration[] Configurations;
+}
+
+struct MatchmakingUserExtendedDataRule {
+	string Rule;
+	string MinFitThresHold;
+}
+
+struct MatchmakingVirtualizedRule {
+	string MinFitThreshold;
+	MatchmakingVirtualizationMode VirtualizationMode;
+}
+
+struct MaterialInteractionGridRow {
+	MaterialRelationPropertyPair[] Items;
+}
+
+struct MaterialRelationPropertyPair {
+	PhysicsMaterialRelationPropertyData[] PhysicsMaterialProperties;
+	PhysicsPropertyRelationPropertyData[] PhysicsPropertyProperties;
+}
+
+struct MeshScatteringMaskScaleDrawMethodData {
+}
+
+struct MeshVariationDatabaseMaterial {
+	MeshMaterial Material;
+	MeshMaterialVariation MaterialVariation;
+	TextureShaderParameter[] TextureParameters;
+}
+
+struct MeshVariationInfo {
+	MeshAsset MeshAsset;
+	MeshAsset OrigMeshAsset;
+	ObjectVariation VariationAsset;
+}
+
+struct MessageInfo {
+	string RowTypeName;
+	uint32 MessageQueueSize;
+	float NormalMessageTime;
+	float ShortMessageTime;
+}
+
+struct MessageLineData {
+	string MessageSid;
+	EntryInputActionEnum EntryInputAction;
+}
+
+struct MinimapCameraOffsetData {
+	Vec2 Position;
+	float CameraFov;
+}
+
+struct MinimapData {
+	Vec2 Position;
+	Vec3 CameraPosition;
+	Vec2 Size;
+	Vec3 OverlayColor;
+	float AnchorPosVertical;
+	float AnchorPosHorizontal;
+	float CameraLookDistance;
+	float CameraDistance;
+	float CameraFov;
+	float OverlayAlpha;
+	float CameraRotation;
+	int32 StartZoomLevel;
+	int32 InnerZoomFactor;
+	int32 MaxZoomLevels;
+	bool CenterOnCombatArea;
+	bool RotationFromPlayer;
+	bool PositionFromPlayer;
+}
+
+struct MissileLockableInfoData {
+	float HeatSignature;
+	float RadarSignature;
+}
+
+struct MissileUnguidedData {
+	Vec2 StaticPosition;
+	Vec2 TargetPositionOffset;
+	bool UseTargetPosition;
+	bool UseStaticPosition;
+}
+
+struct MixerPresetGroupData {
+	MixGroup Group;
+	MixGroupState State;
+	float AttackTime;
+	float ReleaseTime;
+	MixGroupPropertyValue[] Properties;
+	bool IsDominant;
+}
+
+struct MixerPresetNodeData {
+	AudioGraphNodeData Node;
+	float Value;
+}
+
+struct MixGroupPropertyValue {
+	uint32 Property;
+	float Value;
+}
+
+struct MovementComponentBinding {
+	AntRef AnimationControlled;
+}
+
+struct MPModeData {
+	int32 VehiclePoints;
+}
+
+struct NearTargetDetonationData {
+	float DetonationRadius;
+	float MinDetonationDelay;
+	float MaxDetonationDelay;
+	bool DetonateNearTarget;
+}
+
+struct NestedList {
+	string Label;
+	string Index;
+	UIDataSourceInfo ListDataSource;
+	UIDataSourceInfo DynamicShowList;
+	string[] StaticItems;
+	DefaultSelectionItem DefaultHighlighted;
+	UIListRowType RowType;
+	bool UseAsNormalListRows;
+	bool HiddenOnPC;
+	bool HiddenOnXenon;
+	bool HighLightOnUpdate;
+}
+
+struct NetworkDataId {
+	uint32 Value;
+}
+
+struct NetworkVoteDetails {
+	uint32 Issuer;
+	bool Personal;
+	int8 VoteId;
+}
+
+struct NormalizeSettings {
+	float Maximum;
+	float Minimum;
+	float Velocity;
+	float Lower;
+	float Upper;
+	bool Normalize;
+}
+
+struct OnlineEnvironmentConsoleUrl {
+	OnlineEnvironmentConsoleUrlData[] Urls;
+}
+
+struct OnlineEnvironmentConsoleUrlData {
+	GamePlatform Platform;
+	OnlineEnvironmentUrl Url;
+}
+
+struct OnlineEnvironmentUrl {
+	OnlineEnvironmentUrlData[] Urls;
+}
+
+struct OnlineEnvironmentUrlData {
+	string Url;
+	OnlineEnvironment Environment;
+}
+
+struct OnlinePlatformConfiguration {
+	GamePlatform Platform;
+	OnlineServicesAsset Services;
+	PresenceBackendData[] ClientBackends;
+	ServerBackendData[] ServerBackends;
+	bool IsFallback;
+}
+
+struct OnlineProviderConfiguration {
+	GamePlatform Platform;
+	string Client;
+	string ServiceName;
+	string SKU;
+	string Version;
+	uint32 ServerSocketPacketSize;
+	bool IsServer;
+}
+
+struct OverHeatData {
+	float HeatPerBullet;
+	float HeatDropPerSecond;
+	float OverHeatPenaltyTime;
+	float OverHeatThreshold;
+	FireEffectData OverHeatEffect;
+}
+
+struct PackagingDetailInfo {
+	int32 MipsToSkip;
+	int32 LodsToSkip;
+	bool IncludeAnimation;
+	bool IncludeMeshes;
+	bool IncludeSounds;
+	bool IncludeTextures;
+}
+
+struct PartInfoData {
+	AxisAlignedBox Aabb;
+	Vec3 Translation;
+}
+
+struct PathfindingBlob {
+	guid BlobId;
+	uint32 BlobSize;
+	uint32[] ChunkSizes;
+}
+
+struct PathfindingObjectCategoryRepresentation {
+	PathfindingObjectCategoryAsset Category;
+	PathfindingRepresentation Representation;
+}
+
+struct PeerCreateGameParameters {
+	MatchmakingCreateGameParameters Base;
+	uint32 PlayerCapacity;
+}
+
+struct PerformanceFpsHistogram {
+	float Below5;
+	float Below10;
+	float Below15;
+	float Below20;
+	float Below25;
+	float Below30;
+	float Below60;
+	float Above60;
+}
+
+struct PersistenceConsumableMapping {
+	ConsumableGroup Group;
+}
+
+struct PersistentValueTemplateData {
+	string Name;
+	string DefaultValue;
+	float DefaultFloatValue;
+	int32 DefaultIntValue;
+	PersistentValueType ValueType;
+	PersistentValueDataType DataType;
+	PersistentValueHistoryType HistoryType;
+	AwardGroup Group;
+	bool ClubStat;
+	bool ForceIntoTemplate;
+}
+
+struct PhysicsDrivenAnimationEntityBinding {
+	AntRef AimLeftRight;
+	AntRef AimUpDown;
+	AntRef Crouch;
+	AntRef ForceSetTrajectory;
+	AntRef InAir;
+	AntRef Skydive;
+	AntRef Parachute;
+	AntRef Swim;
+	AntRef InputBackward;
+	AntRef InputForward;
+	AntRef InputLeft;
+	AntRef InputRight;
+	AntRef IsEnemy;
+	AntRef Jump;
+	AntRef LeanLeftRight;
+	AntRef Prone;
+	AntRef Sprint;
+	AntRef GroundSupported;
+	AntRef GroundNormal;
+	AntRef GroundDistance;
+	AntRef GroundAngleZ;
+	AntRef GroundAngleX;
+	AntRef GroundAngleFromNormal;
+	AntRef IsClientAnimatable;
+	AntRef CustomizationScreen;
+	AntRef Minimal3pServer;
+	AntRef VerticalImpact;
+	AntRef FalseSignal;
+	AntRef LockArmsToCameraWeight;
+}
+
+struct PhysicsPartInfo {
+	uint32 PartComponentIndex;
+	uint32 HealthStateIndex;
+}
+
+struct PickupSettingsData {
+	Vec3 MeshRenderOffset;
+	Vec3 MeshRenderRotation;
+}
+
+struct PitchModifier {
+	Vec3 Offset;
+	float PitchVal;
+	float PitchAngle;
+}
+
+struct PlayerScore {
+	int32 Rank;
+	uint32 Kills;
+	uint32 Deaths;
+	uint32 ScoreMultiplier;
+	int32 Score;
+	int32 GlobalScoreOriginal;
+	int32 GlobalScoreUpdated;
+	float Time;
+	uint32 GunMasterLevel;
+}
+
+struct PointEnvelopePoint {
+	float X;
+	float Y;
+}
+
+struct PoissonRadialBlurData {
+	Vec2 PoissonDiscScale;
+	float BlendFactor;
+	float RadialScale;
+	float RadialExponent;
+}
+
+struct PolynomialTempData {
+	Vec4 Coefficients;
+	float ScaleValue;
+	float MinClamp;
+	float MaxClamp;
+}
+
+struct PoseConstraintsData {
+	bool StandPose;
+	bool CrouchPose;
+	bool PronePose;
+}
+
+struct PoseTransitionTime {
+	CharacterPoseType ToPose;
+	float TransitionTime;
+}
+
+struct PrecomputeCache {
+	guid Guid;
+	string Key;
+	bool CachedDataEnable;
+}
+
+struct PresetTypeConfig {
+	int32 PresetId;
+	string Key;
+	string NameSid;
+	string DescSid;
+	LockedSettingConfig[] LockedSettings;
+	bool Predefined;
+}
+
+struct ProfileOptionDataEnumItem {
+	string DisplayName;
+	bool Default;
+}
+
+struct PropertyConnection {
+	DataContainer Source;
+	DataContainer Target;
+	int32 SourceFieldId;
+	int32 TargetFieldId;
+}
+
+struct Ps3AgeLevels {
+	int32 AgeLevel7;
+	int32 AgeLevel8;
+	int32 AgeLevel9;
+	int32 AgeLevel10;
+}
+
+struct Ps3ParentalLockAgeSettings {
+	string Region;
+	Ps3AgeLevels AgeLevels;
+	Ps3ParentalLockAgeSettingsOverrides CountryOverrides;
+}
+
+struct Ps3ParentalLockAgeSettingsForCountry {
+	string CountryCode;
+	Ps3AgeLevels AgeLevels;
+}
+
+struct Ps3SkuSettings {
+	string TitleId;
+	string SpId;
+	bool GrantsOnlinePass;
+}
+
+struct RagdollBinding {
+	AntRef RagdollOnBack;
+	AntRef RagdollBlend;
+	AntRef RagdollForceBlendDisabled;
+	AntRef RagdollActiveTime;
+	AntRef RagdollFullyBlendedIn;
+}
+
+struct ReadinessLevelCharacteristics {
+	float MinReactionTime;
+	float MaxReactionTime;
+	float ReductionTime;
+}
+
+struct ReadinessLevels {
+	ReadinessLevelCharacteristics Patrol;
+	ReadinessLevelCharacteristics Ready;
+	ReadinessLevelCharacteristics Combat;
+}
+
+struct RecoilData {
+	float MaxRecoilAngleX;
+	float MinRecoilAngleX;
+	float MaxRecoilAngleY;
+	float MinRecoilAngleY;
+	float MaxRecoilAngleZ;
+	float MinRecoilAngleZ;
+	float MaxRecoilFov;
+	float MinRecoilFov;
+	bool RecoilFollowsDispersion;
+}
+
+struct RectangularCoverageData {
+}
+
+struct RegularCameraViewData {
+	Vec3 MeshOffset;
+	InputSuppressionData InputSuppression;
+	float FieldOfView;
+	RigidMeshAsset Mesh;
+	float ScreenExposureAreaScale;
+	ObjectBlueprint MaskMeshBlueprint;
+	bool LockMeshToRenderView;
+	bool AllowFieldOfViewScaling;
+	bool FLIREnabled;
+}
+
+struct RibbonPointData {
+	Vec4 UserMaskRight;
+	Vec4 UserMaskLeft;
+	float Right;
+	float Left;
+}
+
+struct RichPresenceContextSetting {
+	RichPresenceContext Context;
+	RichPresenceContextValue Value;
+}
+
+struct RichPresenceProperty {
+	string Name;
+	RichPresencePropertyType PropertyType;
+}
+
+struct RigidMeshSocketTransform {
+	LinearTransform Transform;
+	WeaponRegularSocketObjectData SocketObject;
+}
+
+struct RotateToHitData {
+	float RotationSpeedFactor;
+}
+
+struct RotorModelData {
+	float RotationRpm;
+	uint32 PartIndex;
+}
+
+struct RumbleFiringData {
+	float LowRumble;
+	float HighRumble;
+	float RumbleDuration;
+}
+
+struct SamplerPlugins {
+	SoundGraphPluginRef SndPlayer;
+	SoundGraphPluginRef Resample;
+	SoundGraphPluginRef Pause;
+	SoundGraphPluginRef Gain;
+}
+
+struct ScenarioTaskData {
+	Vec3 EndPointWorldOffset;
+	Vec3 StartPoint;
+	int32 ScenarioId;
+	int32 ActorId;
+	int32 PartId;
+	int32 LevelId;
+	float WorldAngle;
+	LinearTransform[] ConnectTransforms;
+	float StartTurnDistance;
+	float StartTimerDistance;
+	float TriggerScenarioDelay;
+	bool TriggerScenario;
+	bool UseClientPosition;
+}
+
+struct ScoringBucketUnlockData {
+	uint32 PointsNeeded;
+	BasicUnlockInfo UnlockInfo;
+}
+
+struct ScreenshotInfo {
+	string Name;
+	uint32 CropImageY1;
+	uint32 CropImageX1;
+	uint32 CropImageX2;
+	uint32 CropImageY2;
+	uint32 ResizeOutputImageHeight;
+	uint32 ResizeOutputImageWidth;
+	bool ResizeOutputImage;
+	bool CropImage;
+}
+
+struct SensingLimits {
+	float HearingDistance;
+	float HearingCutoff;
+	float ViewAngle;
+	float ViewDistance;
+	float PeripheralViewAngle;
+	float PeripheralViewDistance;
+	float PeripheralMovementCutoff;
+}
+
+struct SensingSphere {
+	Vec3 Position;
+	float RadiusSqr;
+}
+
+struct SensitivityAtVelocity {
+	float SteeringSensitivity;
+	float Velocity;
+}
+
+struct SequenceEventData {
+	EventSpec Event;
+	int32 Time;
+}
+
+struct ServerBackendAttributeMapping {
+	ServerBackendAttribute Attribute;
+	string Setting;
+	string DefaultValue;
+}
+
+struct ServerInfoSetting {
+	string Key;
+	string Name;
+	bool IsBool;
+}
+
+struct SettingConfig {
+	string Key;
+	string NameSid;
+	string DescSid;
+	uint32 Max;
+	uint32 Default;
+	uint32 Min;
+	bool Ranked;
+}
+
+struct ShaderParameterVector {
+	Vec4 Value;
+	string ParameterName;
+}
+
+struct ShotConfigData {
+	Vec3 InitialPosition;
+	Vec3 InitialDirection;
+	Vec3 InitialSpeed;
+	float InheritWeaponSpeedAmount;
+	ExplosionEntityData MuzzleExplosion;
+	ProjectileEntityData ProjectileData;
+	ProjectileEntityData SecondaryProjectileData;
+	ProjectileBlueprint Projectile;
+	ProjectileBlueprint SecondaryProjectile;
+	UnlockableProjectile[] AlternateProjectiles;
+	float SpawnDelay;
+	uint32 NumberOfBulletsPerShell;
+	uint32 NumberOfBulletsPerShot;
+	uint32 NumberOfBulletsPerBurst;
+	bool RelativeTargetAiming;
+	bool ForceSpawnToCamera;
+	bool SpawnVisualAtWeaponBone;
+	bool ActiveForceSpawnToCamera;
+}
+
+struct SimpleAnimationControlBinding {
+	AntRef LocoTarget;
+}
+
+struct SimpleMovementActionTimeData {
+	float Time;
+	float MaxVariation;
+}
+
+struct SkyCloudLayer {
+	Vec3 Color;
+	float TileFactor;
+	float Rotation;
+	float Altitude;
+	float Speed;
+	float SunLightPower;
+	float AmbientLightIntensity;
+	float SunLightIntensity;
+	float AlphaMul;
+	TextureAsset Texture;
+}
+
+struct SmokeJammingData {
+	float JammingTime;
+	float MaxRadius;
+	float MinRadius;
+	float TargetUpdateTime;
+	bool EnableSmokeJamming;
+	bool JammingPositionIsLocationDependent;
+	bool ReportJammedBasedOnStartPosition;
+}
+
+struct SoldierAnimatedCameraData {
+	float CameraTransitionTime;
+	bool EnableFeature;
+}
+
+struct SoldierDetonationData {
+	float Angle;
+	float MinSpeedForActivation;
+	float Radius;
+	float SoldierDetonationActivationDelay;
+	bool UseAngle;
+	bool HasSoldierDetonation;
+}
+
+struct SoldierEmoteBinding {
+	AntRef Speak;
+	AntRef IsSquadLeader;
+	AntRef EmoteSpot;
+	AntRef EmoteOk;
+	AntRef EmoteNeedARide;
+	AntRef EmoteGoGoGo;
+	AntRef EmoteNeedBackup;
+	AntRef EmoteThanks;
+	AntRef EmoteNeedMedic;
+	AntRef EmoteFollowMe;
+	AntRef EmoteNeedAmmo;
+	AntRef EmoteSorry;
+	AntRef EmoteNo;
+	AntRef EmoteDefendCapturePoint;
+	AntRef EmoteAttackCapturePoint;
+	AntRef EmoteMoveToPosition;
+}
+
+struct SoldierHeadCollisionPoseData {
+	Vec3 IdleOffset;
+	Vec3 MovingForwardOffset;
+}
+
+struct SoldierHealthModuleBinding {
+	AntRef HeadShot;
+	AntRef LeftArmHit;
+	AntRef RightArmHit;
+	AntRef LeftLegHit;
+	AntRef RightLegHit;
+	AntRef OnGround;
+	AntRef DeathAnimationTriggered;
+	AntRef RandomAnimationIndex;
+	AntRef Sprinting;
+	AntRef HitLeft;
+	AntRef HitRight;
+	AntRef HitFront;
+	AntRef HitBack;
+	AntRef DeathHitDirection;
+	AntRef Explosion;
+	AntRef Dead;
+	AntRef Revived;
+	AntRef RandomValue;
+	AntRef Pose;
+	AntRef RightSpeed;
+	AntRef ForwardSpeed;
+	AntRef CriticallyHit;
+	AntRef InteractiveManDown;
+}
+
+struct SoldierMeshData {
+	SkinnedMeshAsset Mesh;
+	ObjectBlueprint MeshBlueprint;
+	int32 RandomGroup;
+}
+
+struct SoldierParachuteBinding {
+	AntRef Enabled;
+	AntRef SteerLeftRight;
+	AntRef AccelerateBrake;
+	AntRef Pitch;
+	AntRef Roll;
+}
+
+struct SoldierWeaponDispersion {
+	FiringDispersionData StandDispersion;
+	FiringDispersionData CrouchDispersion;
+	FiringDispersionData ProneDispersion;
+	float JumpDispersionAngle;
+	float ProneTransitionDispersionAngle;
+	float MoveDispersionAngle;
+	float MoveZoomedDispersionAngle;
+	float DecreasePerSecond;
+}
+
+struct SoundDataChunk {
+	guid ChunkId;
+	uint32 ChunkSize;
+}
+
+struct SoundGraphInfo {
+	SoundGraphVoiceInfo[] Voices;
+	SoundGraphLinkedPluginAttribute[] LinkedPluginAttributes;
+	SoundGraphPluginConnection[] Connections;
+	SoundGraphPluginConstructParam[] ConstructParams;
+	uint32 PluginsParamCount;
+	uint32 PluginCount;
+}
+
+struct SoundGraphLinkedPluginAttribute {
+	SoundGraphPluginRef Plugin;
+	AudioGraphNodeData Node;
+	AudioGraphNodePort Port;
+	int8 AttributeIndex;
+	bool AllowExtremeValues;
+}
+
+struct SoundGraphPluginConnection {
+	SoundGraphPluginConnectionType ConnectionType;
+	SoundGraphPluginConnectionParam[] Parameters;
+	SoundBusData Bus;
+	int8 VoiceIndex;
+}
+
+struct SoundGraphPluginConnectionParam {
+	float Value;
+	int8 Index;
+}
+
+struct SoundGraphPluginConstructParam {
+	float Value;
+	int8 Index;
+}
+
+struct SoundGraphPluginInfo {
+	uint32 Id;
+	uint32 EnableAttributeReadMask;
+	int8 ConnectionIndex;
+	int8 OutputChannelCount;
+	int8 ConstructParamsIndex;
+	int8 ConstructParamCount;
+}
+
+struct SoundGraphPluginRef {
+	bool IsValid;
+	int8 VoiceIndex;
+	int8 PluginIndex;
+}
+
+struct SoundGraphVoiceInfo {
+	SoundGraphPluginInfo[] Plugins;
+	int8 ProcessingStage;
+}
+
+struct SoundPatchPublicNode {
+	AudioGraphNodeData Node;
+	uint32 Id;
+}
+
+struct SoundScopeStrategyMapping {
+	SoundScopeData Scope;
+	SoundScopeStrategyData Strategy;
+}
+
+struct SoundWaveLocalizationInfo {
+	AudioLanguage Language;
+	uint16 FirstVariationIndex;
+	uint16 VariationCount;
+}
+
+struct SoundWaveSubtitle {
+	float Time;
+	int8 StringIndex;
+}
+
+struct SoundWaveVariationSegment {
+	uint32 SamplesOffset;
+	uint32 SeekTableOffset;
+	float SegmentLength;
+}
+
+struct SpawnScreenWeaponData {
+	string WeaponName;
+	TextureAsset Texture;
+}
+
+struct SpecialMoveInterpolatedPoint {
+	Vec3 Value;
+	float Time;
+}
+
+struct SpecialMovesBinding {
+	AntRef TriggerHighVault;
+	AntRef TriggerUpVault;
+	AntRef TriggerLowVault;
+	AntRef TriggerSlideIntoProne;
+	AntRef TriggerSpecialAnimation;
+	AntRef SpecialAnimationIndex;
+	AntRef ObjectHeight;
+	AntRef ObjectDistance;
+	AntRef StartObjectDistanceTimer;
+	AntRef VaultObjectPositionX;
+	AntRef VaultObjectPositionZ;
+	AntRef CancelAnimation;
+}
+
+struct SpecialMoveStateData {
+	float MinHeightScale;
+	float OptimumDistanceFromObject;
+	float OptimumHeightOfObject;
+	float OptimumLengthOfObject;
+	float MaxDistanceScale;
+	float MinDistanceScale;
+	float MaxHeightScale;
+	SpecialMoveInterpolatedPoint[] MotionPoints;
+	float MaxObjectLengthScale;
+	float MinObjectLengthScale;
+	float ExitAnimationDrivenStateVelocity;
+	SpecialMovesPoseType ResetPose;
+	SpecialMovesPoseType OverridePose;
+	SpecialMoveInterpolatedPoint[] GravityPoints;
+	bool KeepInitialSoldierDirection;
+	bool ScaleWithDistanceToObject;
+}
+
+struct SpecialMoveVaultStateCriteria {
+	float DistToObject;
+	float DistToObjectTolerance;
+	float HeightOfObject;
+	float HeightOfObjectTolerance;
+	float LengthOfObject;
+	float LengthOfObjectTolerance;
+	SpecialMoveStateData SpecialMoveState;
+}
+
+struct SpeedModifierData {
+	float ForwardConstant;
+	float BackwardConstant;
+	float LeftConstant;
+	float RightConstant;
+}
+
+struct SphereCollisionData {
+	float ExtraRadius;
+	float CounterNormalBrakeForceMod;
+	bool Enabled;
+}
+
+struct SpringData {
+	float Length;
+	float Stiffness;
+	float Damping;
+	float MaxSpringForce;
+	float ProgressiveStartRatio;
+	float ProgressiveExponent;
+	float VisualClipOffset;
+	float AttachOffsetY;
+	float DisabledStrenghModifier;
+}
+
+struct StabilizerSettings {
+	StabilizerProperty Property;
+	float Strength;
+	bool Advanced;
+}
+
+struct StanceCameraData {
+	int32[] ValidStances;
+	int32[] DefaultCameraForStances;
+}
+
+struct StanceSwitchSoundData {
+	SoundAsset StanceSwitchSound;
+	int32[] ValidStances;
+}
+
+struct StaticListItem {
+	string ItemName;
+	UIDataSourceInfo DynamicDisable;
+	UIDataSourceInfo DynamicNewContent;
+	bool AppendPlatformToSID;
+	bool ExcludeInRetail;
+}
+
+struct StaticModelGroupMemberData {
+	LinearTransform[] InstanceTransforms;
+	float[] InstanceScale;
+	uint32[] InstanceObjectVariation;
+	bool[] InstanceCastSunShadow;
+	GamePhysicsEntityData MemberType;
+	EntityData MeshEntityType;
+	uint32 InstanceCount;
+	uint32 HealthStateEntityManagerId;
+	IndexRange PhysicsPartRange;
+	uint32 PhysicsPartCountPerInstance;
+	IndexRange NetworkIdRange;
+	uint32 NetworkIdCountPerInstance;
+}
+
+struct StaticModelNetworkInfo {
+	IndexRange[] PartNetworkIdRanges;
+	uint32 NetworkIdCount;
+	ChildStaticModelNetworkInfo[] ChildNetworkInfos;
+	uint32 ChildNetworkIdCount;
+}
+
+struct StatSpamSetting {
+	StatEvent Event;
+	uint32 AmountLimit;
+	float TimeLimit;
+	bool PlayerToPlayer;
+}
+
+struct StreamGridCell {
+	ReferenceObjectData ReferenceData;
+	int32 X;
+	int32 Z;
+}
+
+struct Strengths {
+	float Infantry;
+	float LightArmour;
+	float HeavyArmour;
+	float Helicopter;
+}
+
+struct StringOption {
+	string Name;
+	string Value;
+}
+
+struct SubScreenData {
+	Vec3 ScreenPosition;
+	float ProjectionAngleY;
+	float ProjectionAngleZ;
+	float ProjectionAngleX;
+	float ScreenSize;
+	float IconSize;
+	float ScaleIconSizeByDepthStrength;
+	float RenderTargetApectRatio;
+	int32 RenderTargetIndex;
+	bool UseRenderTarget;
+}
+
+struct SubSkeleton {
+	SkeletonAsset Skeleton;
+	int32[] BoneMap;
+	LinearTransform[] TransformMap;
+}
+
+struct SubsystemTimingConfigData {
+	float Sensing;
+	float Evaluation;
+	float GoalUpdates;
+	float IntentUpdates;
+	float BehaviourSelection;
+	float BehaviourExecution;
+}
+
+struct SupplyData {
+	SupplyUnitSphereData Healing;
+	SupplyUnitSphereData Ammo;
+	bool SupplyVehicles;
+	bool SupplySoldiers;
+	bool TeamSpecific;
+	bool ExcludeSelf;
+}
+
+struct SupplyUnitSphereData {
+	float Radius;
+	float SupplyIncSpeed;
+	float SupplyPointsCapacity;
+	float SupplyPointsRefillSpeed;
+	bool InfiniteCapacity;
+}
+
+struct SupportedShootingBinding {
+	AntRef Supported;
+	AntRef SupportedPos;
+	AntRef ForwardVector;
+	AntRef Yaw;
+	AntRef Pitch;
+	AntRef DistToObject;
+	AntRef HeightOfObject;
+	AntRef Undeploying;
+	AntRef AnimatedCamera;
+}
+
+struct SupportedShootingProximityChecking {
+	float RayAboveGunHeightOffset;
+	float RayAboveLength;
+	float RayBelowGunHeightOffset;
+	float RayBelowLength;
+}
+
+struct SuppressionReactionData {
+	float SuppressionHighThreshold;
+	float SuppressionLowThreshold;
+	float SuppressionUIThreshold;
+}
+
+struct Surface2dDrawMethodData {
+}
+
+struct Surface2dDrawPassData {
+}
+
+struct Surface3dDrawMethodData {
+}
+
+struct SurfaceShaderInstanceDataStruct {
+	SurfaceShaderBaseAsset Shader;
+	BoolShaderParameter[] BoolParameters;
+	VectorShaderParameter[] VectorParameters;
+	VectorArrayShaderParameter[] VectorArrayParameters;
+	TextureShaderParameter[] TextureParameters;
+}
+
+struct TerrainGeoTexture {
+}
+
+struct TerrainLayerCombinationDrawData {
+}
+
+struct TerrainLayerCombinationDrawPassData {
+}
+
+struct TerrainLayerProceduralMask {
+	float AltitudeMin;
+}
+
+struct TerrainQuadDecalAtlasTile {
+	uint32 TileIndexX;
+	uint32 TileIndexY;
+	uint32 TileCountX;
+	uint32 TileCountY;
+	bool FlipX;
+	bool FlipY;
+}
+
+struct TextureShaderParameter {
+	string ParameterName;
+	TextureBaseAsset Value;
+}
+
+struct TicketCountPercentage {
+	int32 MaxPercentOfTicketsLeft;
+	int32 TicketLossPerMin;
+}
+
+struct TurnEffectData {
+	float MaxRollAngle;
+	float MaxPitchAngle;
+	float YawVelocityThreshhold;
+	float VelocityThreshhold;
+	float SafeTime;
+	float BeginTime;
+	float HoldTime;
+	float EndTime;
+}
+
+struct TurretRotationInfo {
+	RotationAxis RotationAxis;
+	RotationChannel Channel;
+	float MaxRotation;
+	float MinRotation;
+	float PhaseOffset;
+	bool NormalizeRotation;
+	bool InvertRotation;
+}
+
+struct UavCameraPointData {
+	float MinTime;
+	float MaxTime;
+	float Speed;
+	float AccelerationTime;
+}
+
+struct UIAudioEventMapping {
+	string EventName;
+	SoundAsset SoundAsset;
+}
+
+struct UIBundleAssetState {
+	string StateName;
+	UIState UIState;
+	string ResourceBundleName;
+}
+
+struct UIButton {
+	string ButtonLabel;
+	string ButtonId;
+	bool IsPremium;
+}
+
+struct UIButtonSet {
+	UIButton[] Buttons;
+}
+
+struct UICreditsLine {
+	UICreditsTextType TextType;
+	string Text;
+}
+
+struct UICreditsPage {
+	string Header1;
+	string Header2;
+	UICreditsLine[] Lines;
+}
+
+struct UIDataSourceInfo {
+	string DataName;
+	UIComponentData DataCategory;
+	int32 DataKey;
+	bool UseDirectAccess;
+	bool UpdateOnInitialize;
+}
+
+struct UIFontMapping {
+	string[] ScaleformFontName;
+	string FontLongName;
+}
+
+struct UIGeoLatitude {
+	int32 Degrees;
+	int32 Minuites;
+	int32 Seconds;
+}
+
+struct UIGeoLongitude {
+	int32 Degrees;
+	int32 Minuites;
+	int32 Seconds;
+}
+
+struct UIGPSPosition {
+	double Latitude;
+	double Longitude;
+	double SeaLevelOffset;
+}
+
+struct UILeaderboardData {
+	string Name;
+	string Description;
+}
+
+struct UILevelLocation {
+}
+
+struct UILevelSpecificPageHeader {
+	string LevelNameSID;
+	string Header;
+	string SubHeader;
+}
+
+struct UILevelStatData {
+	string StatEasy;
+	string StatMedium;
+	string StatHard;
+	string StatHardcore;
+}
+
+struct UIListItem {
+	string Label;
+	UIDataSourceInfo IsEnabled;
+	UIDataSourceInfo IsVisible;
+	UIDataSourceInfo ToggleItems;
+	UIDataSourceInfo DataUpdate;
+	bool DefaultIsVisible;
+	bool DefaultIsEnabled;
+}
+
+struct UIMinimapConfig {
+	float CombatAreaCameraDelay;
+	float CameraInterpolationTime;
+	float CombatAreaFadeSpeed;
+	UIMinimapZoomConfig[] ZoomStates;
+	float CameraPanSensitivity;
+	float MinVelocity;
+	float MaxVelocity;
+	float VelocityModifier;
+	bool DisableDefaultState;
+}
+
+struct UIMinimapData {
+	Vec2 WorldCenter;
+	Vec4 CombatAreaColor;
+	Vec4 DetailTextureTint;
+	Vec2 CombatAreaMultiplyWrapAmount;
+	UIMinimapDistanceFieldParams Vegetation;
+	TextureAsset FadeTexture;
+	float StreamingMinimapDelay;
+	TextureAsset AirRadarFadeTexture;
+	TextureAsset DetailTexture;
+	UIMinimapDistanceFieldParams Detail;
+	float StreamingMinimapTransitionSpeed;
+	float WorldRotation;
+	float WorldRange;
+	float CombatAreaDistanceScale;
+	float CombatAreaFadeSpeed;
+	float CombatAreaAlphaThreshold;
+	TextureAsset CombatAreaMultiplyTexture;
+	float WorldSize;
+	float AirRadarRange;
+	float CombatAreaScale;
+	bool UseStreamingMinimap;
+	bool UseCombatAreaTexture;
+}
+
+struct UIMinimapDistanceFieldParams {
+	Vec4 ColorTint;
+	Vec4 OutlineColor;
+	float DistanceScale;
+	float AlphaThreshold;
+	float OutlineInner;
+	float OutlineOuter;
+	UIDistanceFieldAsset DistanceField;
+}
+
+struct UIMinimapIconTexture {
+	UIHudIcon IconType;
+	UIMinimapIconTextureState[] States;
+}
+
+struct UIMinimapIconTextureState {
+	UIIconState State;
+	float FrameRate;
+	UIMinimapIconUv[] TextureInfos;
+	bool ShouldRotate;
+}
+
+struct UIMinimapIconUv {
+	Vec2 MinUv;
+	Vec2 MaxUv;
+}
+
+struct UIMinimapZoomConfig {
+	UIMinimapZoomState State;
+	MinimapData Data;
+}
+
+struct UINetworkTextInfo {
+	string StringId;
+	float DisplayTime;
+}
+
+struct UIntRange {
+	uint32 Min;
+	uint32 Max;
+}
+
+struct UIPartProperties {
+	UIPartIdentifier Identifier;
+	float Range;
+	float Frequency;
+	bool CompensateFreelook;
+}
+
+struct UIPopupButton {
+	UIInputAction InputConcept;
+	string Label;
+}
+
+struct UIPopupTextInput {
+	string Id;
+	string Label;
+	string DefaultValue;
+	bool IsPassword;
+}
+
+struct UISettingsGroup {
+	string NameSid;
+	int32 ScreenColumn;
+	UISettingsItem[] SettingsItems;
+}
+
+struct UISettingsItem {
+	string NameSid;
+	UISettingSymbols StartEndSymbols;
+	ProfileOptionData Setting;
+}
+
+struct UISettingsPage {
+	string NameSid;
+	UISettingsGroup[] SettingsGroups;
+}
+
+struct UITaggedVehicleCrosshair {
+	float MinDistance;
+	float MaxDistance;
+	int32 MinSize;
+	int32 MaxSize;
+}
+
+struct UITextureAtlasInfo {
+	Vec2 MinUv;
+	Vec2 MaxUv;
+}
+
+struct UIWidgetProperty {
+	string Name;
+	string Value;
+}
+
+struct UnlockableProjectile {
+	Vec3 InitialSpeed;
+	ProjectileEntityData ProjectileData;
+	ProjectileBlueprint Projectile;
+	UnlockAssetBase Unlock;
+}
+
+struct UnlockAssetPair {
+	UnlockAssetBase Second;
+	UnlockAssetBase Result;
+}
+
+struct UnlockWeaponAndSlot {
+	SoldierWeaponUnlockAsset Weapon;
+	WeaponSlot Slot;
+	UnlockAssetBase[] UnlockAssets;
+}
+
+struct UrgencyModifierData {
+	string Name;
+	float Modifier;
+}
+
+struct ValueAtX {
+	float X;
+	float Value;
+}
+
+struct VectorArrayShaderParameter {
+	string ParameterName;
+	ShaderParameterType ParameterType;
+	Vec4[] Values;
+}
+
+struct VectorShaderParameter {
+	Vec4 Value;
+	ShaderParameterType ParameterType;
+	string ParameterName;
+}
+
+struct VehicleCameraControlBinding {
+	AntRef EnableAnimatedVehicleCamera;
+}
+
+struct VehicleEntryListenerBinding {
+	AntRef InVehicle;
+	AntRef InOpenEntry;
+	AntRef VehicleEntryFire;
+	AntRef VehicleEntryYaw;
+	AntRef VehicleEntryPitch;
+	AntRef VehicleEntryRoll;
+	AntRef VehicleEntryRotation;
+	AntRef VehicleEntryForceX;
+	AntRef VehicleEntryForceY;
+	AntRef VehicleEntryForceZ;
+	AntRef VehicleEntryIndex;
+	AntRef VehicleEntryIndexUpdated;
+	AntRef VehicleOpenEntryIndex;
+	AntRef InVehicleRetrigger;
+	AntRef VehicleEntryChooserIndex;
+}
+
+struct VehicleHealthZoneData {
+	float MaxHealth;
+	float MaxShieldHealth;
+	float DamageAngleMultiplier;
+	float MinDamageAngle;
+	bool UseDamageAngleCalculation;
+}
+
+struct VehicleHudData {
+	Vec3 CustomizationOffset;
+	VehicleCustomizationAsset Customization;
+	UIHudIcon MinimapIcon;
+	TextureAsset Texture;
+	uint32 VehicleItemHash;
+}
+
+struct VehicleInputData {
+	float ThrottleDeadzone;
+	float BrakeDeadzone;
+	float YawDeadzone;
+	float PitchDeadzone;
+	float RollDeadzone;
+	float ThrottleInertiaOutDuration;
+	float ThrottleInertiaInDuration;
+	float ThrottleInertiaMinRatio;
+	float BrakeInertiaOutDuration;
+	float BrakeInertiaInDuration;
+	float BrakeInertiaMinRatio;
+	float YawInertiaOutDuration;
+	float YawInertiaInDuration;
+	float YawInertiaMinRatio;
+	float PitchInertiaOutDuration;
+	float PitchInertiaInDuration;
+	float PitchInertiaMinRatio;
+	float RollInertiaOutDuration;
+	float RollInertiaInDuration;
+	float RollInertiaMinRatio;
+}
+
+struct VehicleLockableInfoData {
+	float HeatSignature;
+	float RadarSignature;
+	float LowAltitudeHeight;
+	float LowAltitudeHeatSignature;
+}
+
+struct VehicleParachuteBinding {
+	AntRef Enabled;
+	AntRef VehicleType;
+}
+
+struct VehicleTrackerRenderTargetData {
+	Vec2 PositionOffset;
+	int32 RenderTargetIndex;
+	float RenderTargetApectRatio;
+	float ScaleSize;
+	bool UseRenderTarget;
+}
+
+struct VisionBoxSettings {
+	float DecreaseXz;
+	float LowerTop;
+	float RaiseBottom;
+	float RaiseBottomHuman;
+}
+
+struct VoiceOverDialogTake {
+	SoundWaveAsset Wave;
+}
+
+struct VoiceOverDialogTakeMapping {
+	float TakeControlMin;
+	float TakeControlMax;
+	int8 TakeIndex;
+}
+
+struct VoiceOverManuscriptLanguageColumns {
+	AudioLanguage Language;
+	string TextColumn;
+	string SubtitleOffsetColumn;
+}
+
+struct WarpAnimationBinding {
+	AntRef ConnectJointGroup;
+	AntRef ConnectJointWeight;
+	AntRef EnableAlign;
+	AntRef DisableCulling;
+	AntRef TranslationYWarpTolerance;
+}
+
+struct WeaponLagBinding {
+	AntRef EntityPitch;
+	AntRef EntityYaw;
+	AntRef PitchResult;
+	AntRef YawResult;
+	AntRef RollResult;
+}
+
+struct WeaponLagEffectForceData {
+	Vec3 OffsetForce;
+	Vec3 RotationForce;
+}
+
+struct WeaponLagEffectSpringData {
+	float Constant;
+	float Damping;
+}
+
+struct WeaponLagEffectSpringVector {
+	WeaponLagEffectSpringData SpringX;
+	WeaponLagEffectSpringData SpringY;
+	WeaponLagEffectSpringData SpringZ;
+}
+
+struct WeaponMiscModifierSettings {
+	bool EnableBreathControl;
+	bool CanBeInSupportedShooting;
+	bool UnZoomOnBoltAction;
+	bool HoldBoltActionUntilZoomRelease;
+	bool IsSilenced;
+}
+
+struct WeaponModifier {
+	int32 DummyToMakeFrostEDcompile;
+}
+
+struct WeaponModifierData {
+	UnlockAssetBase UnlockAsset;
+	WeaponModifierBase[] Modifiers;
+}
+
+struct WeaponOverrideValue {
+	WeaponOverrideValueType ValueType;
+	float Value;
+}
+
+struct WeaponPickupData {
+	SoldierWeaponBlueprint Weapon;
+	uint32 WeaponSlot;
+	int32 AltWeaponSlot;
+	int32 LinkedToWeaponSlot;
+	uint32 MinAmmo;
+	uint32 MaxAmmo;
+}
+
+struct WeaponStateData {
+	uint32[] ReferencedAssetHashes;
+	BoneFakePhysicsData[] BoneFakePhysics;
+	SkinnedMeshAsset Mesh1p;
+	SkinnedMeshAsset MeshZoom1p;
+	SkinnedMeshAsset Mesh3p;
+	AntRef Weapon;
+	float ZoomMeshTransitionFactor;
+	float ZoomScaleFactor;
+	float[] ZoomInOutMeshTransitionFactors;
+	ScopeFilterData ZoomedScopeFilter;
+	ScopeFilterData NonZoomedScopeFilter;
+	float KeepAimingTime;
+	AnimationConfigurationData AnimationConfiguration;
+	AnimatedFireEnum AnimatedFireType;
+	AnimatedAimingEnum AnimatedAimingType;
+	LinearTransform[] Mesh3pTransforms;
+	RigidMeshSocketTransform[] Mesh3pRigidMeshSocketObjectTransforms;
+	float HideProjectileAfterFireTime;
+	string ProjectileBoneName;
+	bool IsOneHanded;
+	bool PlayDeployAfterFire;
+	bool SkipFireAnimation;
+	bool SkipDeployAnimation;
+	bool SkipReloadAnimation;
+	bool AlwaysAimHead;
+}
+
+struct WeaponSwitchingMapData {
+	WeaponSwitchingEnum FromWeapon;
+	EntryInputActionEnum Action;
+	WeaponSwitchingEnum[] ToWeapon;
+	bool FireAndSwitchBackToPrev;
+}
+
+struct WeaponUnlockPickupData {
+	UnlockWeaponAndSlot UnlockWeaponAndSlot;
+	int32 AltWeaponSlot;
+	int32 LinkedToWeaponSlot;
+	uint32 MinAmmo;
+	uint32 MaxAmmo;
+	bool DefaultToFullAmmo;
+}
+
+struct WidgetEventQueryPair {
+	string Name;
+	UIWidgetEventID Query;
+	string InstanceName;
+	bool IsOutput;
+}
+
+struct ZoomLevelLockData {
+	float OutlineTaggedDistance;
+	LockType LockType;
+}
+
+struct ZoomLevelSpecificTransitionTime {
+	int32 FromZoomLevel;
+	int32 ToZoomLevel;
+	float ZoomTransitionTime;
+	float FovTransitionTime;
+}
