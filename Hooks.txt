@@ -1,0 +1,18 @@
+Server:
+Player:SelectTeam player, team
+Engine:SuppressEnemies suppressionModifier
+ServerEntityFactory:Create data, transform (returns an Entity)
+
+
+Client:
+Input:PreUpdate cache, deltaTime
+UI:InputConceptEvent eventType, action
+UI:CreateChatMessage message, channelId, playerId, recipientMask, senderIsDead
+UI:EnableCursorMode enable, cursor
+UI:PushScreen screen, parentGraph (returns bool)
+ClientChatManager:IncomingMessage playerId, recipientMask, channelId, senderIsDead
+ClientEntityFactory:Create data, transform (returns an Entity)
+
+
+Both:
+ResourceManager:LoadBundle bundleName, compartment (returns bool)
