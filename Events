@@ -1,0 +1,36 @@
+Server: 
+Player:Joining playername, playerguid, ip
+Player:ModuleLoaded player
+Player:Authenticated player
+Player:Destroyed player
+Player:SpawnOnPlayer player, playerToSpawnOn
+Player:SpawnAtVehicle player, vehicleEntity
+Player:SpawnOnSelectedSpawnedPoint player
+Player:Respawn player
+Player:Killed victim, inflictor, position, weapon, roadkill, headshot, victimInReviveState
+Player:Chat player, recipientMask, message
+Player:SquadChange player, squad
+Player:TeamChange player, team, squad
+Server:RoundOver roundTime, winningTeam
+Server:LevelLoaded map, gameMode, round
+Soldier:PrePhysicsUpdate soldierEntity, deltaTime
+Player:Update player, deltaTime
+
+
+Client:
+Client:PostFrameUpdate deltaTime
+FreeCam:PostFrameUpdate deltaTime
+Client:UpdateInput simDeltaTime
+VU:Spec:PreUpdate deltaTime
+VU:Spec:PostUpdate deltaTime
+Player:Deleted player
+Player:Connected player
+VE:StateAdded state
+VE:StateRemoved state
+VE:StatesCleared
+
+
+Both:
+Partition:ReadInstance instance, partitionGuid, instanceGuid
+Level:LoadResources dedicatedServer
+Engine:Message message
