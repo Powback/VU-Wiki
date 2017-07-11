@@ -31,20 +31,20 @@ struct SoldierEntity : SoldierEntityData{
   LinearTransform transform
   bool alive
   float deathTimer
-  player
-  health
-  weaponsComponent
-  isManDown
-  isFiring
-  isReloading
+  PlayerData player
+  float health
+  WeaponsComponentData weaponsComponent
+  bool isManDown
+  bool isFiring
+  bool isReloading
   
   write:
-  authorativeYaw
-  authorativePitch
-  aimingEnable
-  forceInvisible
-  sprintRecoveryTimer
-  wasSprinting
+  float authorativeYaw
+  float authorativePitch
+  bool aimingEnable
+  bool forceInvisible
+  float sprintRecoveryTimer
+  bool wasSprinting
   
   client: (Read Only)
   GetCurrentWeaponSlot()
