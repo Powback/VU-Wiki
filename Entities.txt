@@ -1,0 +1,89 @@
+struct CapturePointEntity {
+  transform
+  contested
+  team
+  attackingTeam
+  location
+  name
+  captureEnabled
+  attacked
+  controlled
+  data
+}
+
+struct LifeCounterEntity {
+  startingLifeCounter
+  lifeCounter
+  reinforceCounter
+  objectiveAliveCount
+  baseAliveCount
+  transform
+}
+
+struct TicketCounter {
+  team
+  ticketCount
+  initialTicketCount
+  data
+}
+
+struct SoldierEntity {
+  transform
+  alive
+  deathTimer
+  player
+  health
+  weaponsComponent
+  isManDown
+  isFiring
+  isReloading
+  
+  write:
+  authorativeYaw
+  authorativePitch
+  aimingEnable
+  forceInvisible
+  sprintRecoveryTimer
+  wasSprinting
+  
+  client: (Read Only)
+  GetCurrentWeaponSlot()
+  GetCurrentWeaponName()
+  GetCurrentPrimaryAmmo(
+  GetCurrentSecondaryAmmo()
+  GetWeaponCount()
+  GetWeaponNameByIndex(idx)
+  GetWeaponPrimaryAmmoByIndex(idx)
+  GetWeaponSecondaryAmmoByIndex(idx)
+  GetHeadPosition()
+  
+  Server: (read only)
+  transform
+  player
+  isManDown
+  isFiring
+  isReloading
+  
+  Server Write
+  detailedCollisionEnabled
+  physicsEnabled
+  forceInvisible
+  aimingEnabled
+  maxHealth
+  waterLevel
+  
+  GetCurrentWeaponSlot()
+  GetCurrentWeaponName()
+  GetCurrentPrimaryAmmo()
+  GetCurrentSecondaryAmmo()
+  GetWeaponCount()
+  GetWeaponNameByIndex(idx)
+  GetWeaponPrimaryAmmoByIndex(idx)
+  GetWeaponSecondaryAmmoByIndex(idx)
+  SetPosition(vec3)
+  Kill(bool killedByAdmin)
+}
+
+struct SpatialEntity {
+  transform (Read/Write)
+}
