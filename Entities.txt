@@ -1,36 +1,36 @@
-struct CapturePointEntity {
-  transform
-  contested
-  team
-  attackingTeam
-  location
-  name
-  captureEnabled
-  attacked
-  controlled
-  data
+struct CapturePointEntity : CapturePointEntityData {
+  LinearTransform transform
+  bool contested
+  TeamID team
+  TeamID attackingTeam
+  float location
+  string name
+  bool captureEnabled
+  bool attacked
+  bool controlled
+  CapturePointentityData data
 }
 
-struct LifeCounterEntity {
-  startingLifeCounter
-  lifeCounter
-  reinforceCounter
-  objectiveAliveCount
-  baseAliveCount
-  transform
+struct LifeCounterEntity : LifeCounterEntityData {
+  int startingLifeCounter
+  int lifeCounter
+  int reinforceCounter
+  int objectiveAliveCount
+  int baseAliveCount
+  LinearTransform transform
 }
 
-struct TicketCounter {
-  team
-  ticketCount
-  initialTicketCount
-  data
+struct TicketCounterEntity : TicketCounterEntityData {
+  TeamId team
+  int ticketCount
+  int initialTicketCount
+  TicketCounterEntityData data
 }
 
-struct SoldierEntity {
-  transform
-  alive
-  deathTimer
+struct SoldierEntity : SoldierEntityData{
+  LinearTransform transform
+  bool alive
+  float deathTimer
   player
   health
   weaponsComponent
