@@ -1,4 +1,5 @@
-Server: 
+
+-----------Server-----------
 Player:Joining playername, playerguid, ip
 Player:ModuleLoaded player
 Player:Authenticated player
@@ -11,13 +12,36 @@ Player:Killed victim, inflictor, position, weapon, roadkill, headshot, victimInR
 Player:Chat player, recipientMask, message
 Player:SquadChange player, squad
 Player:TeamChange player, team, squad
+Player:Update player, deltaTime
+Player:KitReplaced(player, oldSoldier, newSoldier)
+Player:ReviveAccepted(reviver, revivee)
+Player:ReviveRefused(revivee)
+Player:ManDownRevived(reviver, revivee, isAdrenalineRevive)
+Player:EnteredCapturePoint(player, capturePointEntity)
+Player:ExitedCapturePoint(player, capturePointEntity)
+Player:SetSquad(player, squad)
+Player:SetSquadLeader(player)
+Player:KickedFromSquad(player, oldSquad)
 Server:RoundOver roundTime, winningTeam
 Server:LevelLoaded map, gameMode, round
 Soldier:PrePhysicsUpdate soldierEntity, deltaTime
-Player:Update player, deltaTime
 
+(don't work yet:)
 
-Client:
+CapturePoint:Captured(capturePointEntity)
+CapturePoint:Lost(capturePointEntity)
+Server:RoundReset
+Vehicle:Enter(vehicleEntity, player)
+Vehicle:Exit(vehicleEntity, player)
+Vehicle:Damage(vehicleEntity, damageDone)
+Vehicle:Destroyed(vehicleEntity, vehiclePoints, hotTeam)
+Vehicle:Disabled(vehicleEntity)
+Vehicle:SpawnDone(vehicleEntity)
+Vehicle:Unspawn(vehicleEntity)
+Player:ChangingWeapon(player)
+Player:Reload(player, weapon, position)
+
+-----------Client-----------
 Client:PostFrameUpdate deltaTime
 FreeCam:PostFrameUpdate deltaTime
 Client:UpdateInput simDeltaTime
@@ -30,7 +54,7 @@ VE:StateRemoved state
 VE:StatesCleared
 
 
-Both:
+-----------Shared-----------
 Partition:ReadInstance instance, partitionGuid, instanceGuid
 Level:LoadResources dedicatedServer
 Engine:Message message
