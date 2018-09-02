@@ -1,0 +1,28 @@
+Shared Hooks
+
+void ResourceManager:LoadBundles(string[] bundles, ResourceCompartment compartment)
+bool ResourceManager:ReadEbx(string name, int stage)
+void ResourceManager:LoadResource(string name)
+DataContainer ResourceManager:LookupDC(ResourceCompartment compartment, string name)
+void ResourceManager:LoadResource2(string name)
+
+
+====================================================
+Client Hooks
+
+void Input:PreUpdate(ConceptCache cache, float deltaTime)
+void UI:InputConceptEvent(UIInputActionEventType eventType, UIInputAction action)
+void UI:CreateChatMessage(string message, int channelId, int playerId, int recipientMask, bool senderIsDead)
+void UI:EnableCursorMode(bool enable, int cursor)
+bool UI:PushScreen(DataContainer screen, int graphPriority, DataContainer parentGraph)
+void ClientChatManager:IncomingMessage(string message, int playerId, int recipientMask, int channelId, bool senderIsDead)
+Entity ClientEntityFactory:Create(DataContainer data, LinearTransform transform)
+
+
+====================================================
+Server Hooks
+
+void Player:SelectTeam(Player player, TeamId team)
+void Server:SupressEnemies(float suppressionModifier)
+Entity ServerEntityFactory:Create(DataContainer data, LinearTransform transform)
+void Soldier:Damage(SoldierEntity soldier, ServerDamageInfo info, Player inflictor, Player assistant)

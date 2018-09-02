@@ -1,0 +1,70 @@
+Shared Events
+
+Level:LoadResources(string levelName, string gameMode, bool dedicatedServer)
+Partition:Loaded(DatabasePartition partition)
+Engine:Init(bool dedicatedServer)
+UpdateManager:Update(float deltaTime, UpdatePass pass)
+Engine:Update(float deltaTime, float simDeltaTime)
+
+
+====================================================
+Client Events
+
+Client:PostFrameUpdate(float deltaTime)
+FreeCam:PostFrameUpdate(float deltaTime)
+Client:UpdateInput(float simDeltaTime)
+ClientSoldier:HealthAction(SoldierEntity soldier, HealthStateAction action)
+VU:Spec:PreUpdate(float deltaTime)
+VU:Spec:PostUpdate(float deltaTime)
+Player:Deleted(Player player)
+Player:Connected(Player player)
+VE:StateAdded(VisualEnvironmentState state)
+VE:StateRemoved(VisualEnvironmentState state)
+VE:StatesCleared()
+Client:LevelLoaded(string levelName, string gameMode)
+Client:LevelFinalized(string levelName, string gameMode) -- This may not work on current builds
+
+
+====================================================
+Server Events
+
+Player:SetSquad(Player player, SquadId squad)
+Player:KickedFromSquad(Player player, SquadId squad)
+Player:SetSquadLeader(Player player)
+Player:Joining(string playerName, string playerGUID, string ip)
+Player:ModuleLoaded(Player player)
+ServerSoldier:HealthAction(SoldierEntity soldier, HealthStateAction action)
+Player:Authenticated(Player player)
+Player:Destroyed(Player player)
+Player:SpawnOnPlayer(Player player, Player playerToSpawnOn)
+Player:SpawnAtVehicle(Player player, Entity vehicle)
+Player:SpawnOnSelectedSpawnPoint(Player player)
+Player:Respawn(Player player)
+Player:ReviveAccepted(Player player, Player revivee)
+Player:Killed(Player player, Player inflictor, Vec3 position, string weapon, bool roadKill, bool headShot, bool victimInReviveState)
+Player:Chat(Player player, int recepientMask, string message)
+Player:SquadChange(Player player, SquadId squad)
+Player:TeamChange(Player player, TeamId team, SquadId squad)
+Player:KitReplaced(Player player, SoldierEntity oldSoldier, SoldierEntity newSoldier)
+Player:ReviveRefused(Player player)
+Player:ManDownRevived(Player reviver, Player player, bool isAdrenalineRevive)
+Player:Left(Player player)
+Server:RoundOver(float roundTime, TeamId winningTeam)
+Server:RoundReset()
+Server:LevelLoaded(string levelName, string gameMode, int round, int roundsPerMap)
+Vehicle:Enter(Entity vehicle, Player player)
+Vehicle:Exit(Entity vehicle, Player player)
+Vehicle:Damage(Entity vehicle, float damage)
+Vehicle:Destroyed(Entity vehicle, int vehiclePoints, TeamId hotTeam)
+Vehicle:Disabled(Entity vehicle)
+Vehicle:SpawnDone(Entity vehicle)
+Vehicle:Unspawn(Entity vehicle)
+CapturePoint:Captured(Entity capturePoint)
+CapturePoint:Lost(Entity capturePoint)
+Player:ChangingWeapon(Player player)
+Player:Reload(Player player, string weaponName, Vec3 position)
+Player:EnteredCapturePoint(Player player, Entity capturePoint)
+Player:ExitedCapturePoint(Player player, Entity capturePoint)
+Soldier:PrePhysicsUpdate(SoldierEntity soldier, float deltaTime)
+Player:Update(Player player, float deltaTime)
+Level:Destroy()

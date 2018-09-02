@@ -1,0 +1,197 @@
+Shared Libraries
+
+EntityManager -- Will soon become split between client and server
+EntityIterator GetClientIterator(string entityType)
+EntityIterator GetServerIterator(string entityType)
+Entity CreateClientEntity(DataContainer data, LinearTransform transform)
+Entity CreateClientEntity(DataContainer data, EntityCreationParams params)
+Entity CreateServerEntity(DataContainer data, LinearTransform transform)
+Entity CreateServerEntity(DataContainer data, EntityCreationParams params)
+Entity[] CreateClientEntitiesFromBlueprint(DataContainer data, LinearTransform transform)
+Entity[] CreateClientEntitiesFromBlueprint(DataContainer data, EntityCreationParams params)
+Entity[] CreateServerEntitiesFromBlueprint(DataContainer data, LinearTransform transform)
+Entity[] CreateServerEntitiesFromBlueprint(DataContainer data, EntityCreationParams params)
+
+Events
+Event Subscribe(string message, function callback)
+Event Subscribe(string message, object obj, function callback)
+void Dispatch(string message, ...args)
+void DispatchLocal(string message, ...args)
+void Unsubscribe() -- unsubscribes all
+void Unsubscribe(string match)
+
+Hooks
+Hook Install(string hook, int priority, funtion callback)
+Hook Install(string hook, int priority, object obj, funtion callback)
+
+Net
+HttpResponse GetHTTP(string url, HttpOptions options = nil)
+HttpResponse HeadHTTP(string url, HttpOptions options = nil)
+HttpResponse PostHTTP(string url, string data, HttpOptions options = nil)
+HttpResponse PutHTTP(string url, string data, HttpOptions options = nil)
+HttpResponse DeleteHTTP(string url, HttpOptions options = nil)
+HttpResponse OptionsHTTP(string url, HttpOptions options = nil)
+HttpResponse PatchHTTP(string url, string data, HttpOptions options = nil)
+NetSocket Socket(NetSocketFamily family, NetSocketType type)
+
+ResourceManager
+void MountSuperBundle(string superbundle, MediaHint = MediaHint_Default, bool optional = false)
+void UnmountSuperBundle(string superbundle)
+int BeginLoadData(ResourceCompartment compartment, string[] bundles)
+bool EndLoadData(int handle)
+bool PollBundleOperation(int handle)
+void CancelBundleOperation(int handle)
+int BeginClear(ResourceCompartment compartment)
+void EndClear(int handle)
+ResourceCompartment AllocateDynamicCompartment(string name, ResourceCompartment parent, bool clientOnly)
+void DestroyDynamicCompartment(ResourceCompartment compartment)
+DataContainer GetSettings(string settings)
+DataContainer FindInstanceByGUID(Guid partitionGuid, Guid instanceGuid)
+DataContainer LookupDataContainer(ResourceCompartment compartment, string name)
+DataContainer SearchForInstanceByGUID(Guid instanceGuid)
+DatabasePartition FindDatabasePartition(Guid partitionGuid)
+
+SharedUtils
+void Print(object message)
+int GetTime()
+int GetTimeMS()
+float GetRandom(float from, float to)
+bool IsClientModule()
+bool IsServerModule()
+string SerializeTable(table data)
+Vec2 WorldToScreen(Vec3 worldPos)
+
+
+====================================================
+Client Libraries
+
+ChatManager
+SendMessage(string message)
+SendMessage(string message, TeamId team)
+SendMessage(string message, TeamId team, SquadId squad)
+
+ClientUtils
+LinearTransform GetCameraTransform()
+Vec2 WorldToScreen(Vec3 worldPos)
+
+EffectManager
+int PlayEffect(DataContainer asset, LinearTransform transform, EffectParams params, bool firstPersonEffect)
+void StopEffect(int handle)
+void ResetEffect(int handle)
+void SetEffectParameterBool(int handle, string name, bool value)
+void SetEffectParameterInt(int handle, string name, int value)
+void SetEffectParameterFloat(int handle, string name, float value)
+void SetEffectTransform(int handle, LinearTransform transform)
+bool IsEffectPlaying(int handle)
+bool IsEffectDead(int handle)
+void DisableEffects(float disableTimer)
+void Clear()
+
+InputManager
+float GetLevel(InputConceptIdentifiers identifier)
+bool IsDown(InputConceptIdentifiers identifier)
+bool WentDown(InputConceptIdentifiers identifier)
+bool WentUp(InputConceptIdentifiers identifier)
+bool IsKeyDown(InputDeviceKeys key)
+bool WentKeyDown(InputDeviceKeys key)
+bool WentKeyUp(InputDeviceKeys key)
+bool IsMouseButtonDown(InputDeviceMouseButtons button)
+bool WentMouseButtonDown(InputDeviceMouseButtons button)
+bool WentMouseButtonUp(InputDeviceMouseButtons button)
+float GetMouseLevel(InputDeviceAxes axes)
+void SetCursorPosition(int x, int y)
+bool IsMouseActive()
+float GetMouseSensitivity()
+void SetMouseSensitivity(float sensitivity)
+
+NetEvents
+NetEvent Subscribe(string message, function callback)
+NetEvent Subscribe(string message, object obj, function callback)
+void Send(string message, ...args)
+void SendLocal(string message, ...args)
+void Unsubscribe()
+void Unsubscribe(string match)
+
+PlayerManager
+Player[] GetPlayers()
+Player GetPlayerByID(int id)
+Player GetPlayerByName(string name)
+Player[] GetPlayersByName(string match)
+int GetPlayerCount()
+Player GetLocalPlayer()
+
+RaycastManager
+Entity GetEntityInRaycast(float distance)
+RayCastHit Raycast(Vec3 from, Vec3 to, int flags)
+
+SpectatorManager
+void SpectatePlayer(Player player, bool firstPerson)
+Player GetSpectatedPlayer()
+SpectatorCameraMode GetCameraMode()
+void SetCameraMode(SpectatorCameraMode mode)
+LinearTransform GetFreecameraTransform()
+void SetFreecameraTransform(LinearTransform transform)
+
+VisualEnvironmentManager
+bool dirty -- All these fields will become functions soon
+float sunRotationX
+float sunRotationY 
+float sunRotationOffsetX
+VisualEnvironmentState[] GetStates()
+
+WebUI
+void Init()
+void Show()
+void Hide()
+void BringToFront()
+void EnableKeyboard()
+void EnableMouse()
+void DisableKeyboard()
+void DisableMouse()
+void ExecuteJS(string script)
+string QuoteString(string string)
+
+
+====================================================
+Server Libraries
+
+ChatManager
+bool SendMessage(string message)
+bool SendMessage(string message, TeamId team)
+bool SendMessage(string message, TeamId team, SquadId squad)
+
+NetEvents
+NetEvent Subscribe(string message, function callback)
+NetEvent Subscribe(string message, object obj, function callback)
+void SendTo(string message, Player player, ...args)
+void SendToLocal(string message, Player player, ...args)
+void Broadcast(string message, ...args)
+void BroadcastLocal(string message, ...args)
+void Unsubscribe()
+void Unsubscribe(string match)
+
+PlayerManager
+Player[] GetPlayers()
+Player GetPlayerByID(int id)
+Player GetPlayerByOnlineID(int onlineId)
+Player GetPlayerByGUID(string guid)
+Player GetPlayerByName(string name)
+Player[] GetPlayersByName(string match)
+int GetPlayerCount()
+
+RCON
+string[] SendCommand(string command, string[] args = {})
+int RegisterCommand(string command, int flags, string defaultValue, function callback)
+int RegisterCommand(string command, int flags, string defaultValue, function callback, object  obj) -- The order of the last two parameters will soon change
+void DeregisterCommand(int handle)
+Guid GetServerGUID()
+
+TeamSquadManager
+int GetSquadPlayerCount(TeamId team, SquadId squad)
+int GetTeamPlayerCount(TeamId team)
+
+TicketManager
+bool SetTicketCount(TeamId team, int ticketCount)
+int GetTicketCount(TeamId team)
+int GetCurrentRound()
+int GetRoundCount()

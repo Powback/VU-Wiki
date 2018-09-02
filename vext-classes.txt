@@ -1,0 +1,591 @@
+Shared Classes
+
+AxisAlignedBox
+AxisAlignedBox(Vec3 min, Vec3 max)
+AxisAlignedBox(AxisAlignedBox ref)
+Vec3 min
+Vec3 max
+TypeInformation typeInfo
+AxisAlignedBox Clone()
+STATIC: TypeInformation AxisAlignedBox.typeInfo
+
+CollisionEvent : EntityEvent
+CollisionEvent(int eventId, Vec3 position, Vec3 normal, float speed)
+CollisionEvent(string eventId, Vec3 position, Vec3 normal, float speed)
+Vec3 position
+Vec3 normal
+float speed
+
+DatabasePartition
+DatabasePartition(DatabasePartition ref)
+DataContainer[] instances
+Guid guid
+DataContainer primaryInstance
+string name
+DataContainer FindInstance(Guid guid)
+void ReplaceInstance(DataContainer instance, DataContainer replacement, bool replaceReferences = true)
+
+DataContainer
+DataContainer(DataContainer ref)
+TypeInformation typeInfo
+bool isLazyLoading
+bool isReadOnly
+Guid instanceGuid
+bool Eq(DataContainer other)
+DataContainer AsDC()
+DataContainer Clone(Guid guid = nil)
+void ReplaceReferences(DataContainer replacement)
+void MakeWritable()
+STATIC: TypeInformation DataContainer.typeInfo
+
+DebrisSpawnEvent : EntityEvent
+DebrisSpawnEvent(int eventId, float min, float max, float current)
+DebrisSpawnEvent(string eventId, float min, float max, float current)
+float min
+float max
+float current
+
+Entity
+Entity(Entity ref)
+TypeInformation typeInfo
+DataContainer data
+void Init(Realm realm, bool enableAllowed, bool isGhost = false)
+void Destroy()
+bool Is(string type)
+void FireEvent(int eventId)
+void FireEvent(string eventId)
+void FireEvent(EntityEvent event)
+void PropertyChanged(int propertyName)
+void PropertyChanged(int propertyName, value)
+void PropertyChanged(string propertyName)
+void PropertyChanged(string propertyName, value)
+operator==(Entity other)
+STATIC: TypeInformation Entity.typeInfo
+
+EntityCreationParams 
+EntityCreationParams()
+LinearTransform transform
+int variationNameHash
+bool networked
+
+EntityEvent
+EntityEvent(int eventId)
+EntityEvent(string eventId)
+int eventId
+
+EntityIterator
+Entity Next()
+
+Event
+string name
+void Unsubscribe()
+
+FieldInformation
+string name
+int value
+TypeInformation typeInfo
+
+FloatParameterEvent : EntityEvent
+FloatParameterEvent(int eventId, float parameter)
+FloatParameterEvent(string eventId, float parameter)
+float parameter
+
+Guid
+Guid(Guid ref)
+Guid(string guid, string format = "D")
+Guid(int a, int b, int c, int data)
+int a
+int b
+int c
+int d
+int e
+int f
+int g
+int h
+int i
+int j
+int k
+string ToString(string format)
+operator==(Guid other)
+operator string()
+
+Hook
+string name
+int priority
+void Pass(...args)
+void Return(value = nil)
+void Uninstall()
+void Next()
+object Call()
+
+HttpOptions
+HttpOptions()
+HttpOptions(table headers, int timeout = 30)
+int timeout
+bool verifyCertificate
+table headers
+void SetHeader(string key, sting value)
+void RemoveHeader(string key)
+string GetHeader(string key)
+bool HasHeader(string key)
+
+HttpResponse
+int status
+string body
+table headers
+string GetHeader(string key)
+bool HasHeader(string key)
+
+IntParameterEvent : EntityEvent
+IntParameterEvent(int eventId, int parameter)
+IntParameterEvent(string eventId, int parameter)
+int parameter
+
+LinearTransform
+LinearTransform()
+LinearTransform(float)
+LinearTransform(LinearTransform ref)
+LinearTransform(Vec3 left, Vec3 up, Vec3 forward, Vec3 trans)
+Vec3 left
+Vec3 up
+Vec3 forward
+Vec3 trans
+TypeInformation typeInfo
+LinearTransform Clone()
+LookAtTransform()
+Vec3 GetYawPitchRollFromUpLeftForward(Vec3 left, Vec3 up, Vec3 forward) -- This will be moved to a separate class soon
+LinearTransform GetTransformFromYawPitchRoll(float yaw, float pitch, float roll) -- This will be moved to a separate class soon
+QuatTransform ToQuatTransform(bool hasScale)
+operator+(LinearTransform other)
+operator-(LinearTransform other)
+operator*(LinearTransform other)
+operator==(LinearTransform other)
+operator string()
+STATIC: TypeInformation LinearTransform.typeInfo
+
+Message
+MessageCategory category
+MessageType type
+
+NetSocket
+int Connect(string target, int port)
+(string, int) Read(int length)
+(int, int) Write(string data)
+int Destroy()
+(string, string, int, int) ReadFrom(int length, string host, int port)
+(int, int) WriteTo(string data, string host, int port)
+
+Quat
+Quat()
+Quat(Quat ref)
+Quat(float x, float y, float z, float w)
+Quat(Vec3 eulerVec)
+float x
+float y
+float z
+float w
+Vec3 ToEuler()
+void Normalize()
+Quat Clone()
+operator*(Quat other)
+operator==(Quat other)
+operator string()
+
+QuatTransform
+QuatTransform()
+QuatTransform(QuatTransform ref)
+QuatTransform(Quat rotation, Vec4 transAndScale)
+Quat rotation
+Vec4 transAndScale
+QuatTransform Clone()
+LinearTransform ToLinearTransform()
+operator==(QuatTransform other)
+operator string()
+
+RayCastHit
+Vec3 position
+Entity rigidBody
+
+SpatialEntity : Entity
+SpatialEntity(Entity ref)
+LinearTransform transform
+AxisAlignedBox aabb
+LinearTransform aabbTransform
+STATIC: TypeInformation SpatialEntity.typeInfo
+
+TransformParameterEvent : EntityEvent
+TransformParameterEvent(int eventId, LinearTransform transform)
+TransformParameterEvent(string eventId, LinearTransform transform)
+LinearTransform transform
+
+TypeInformation
+string name
+TypeInformation super
+TypeInformation elementType
+FieldInformation[] fields
+bool array
+bool enum
+-- Note: Will soon have operator==()
+
+Vec2
+Vec2()
+Vec2(Vec2 ref)
+Vec2(float x, float y)
+float x
+float y
+TypeInformation typeInfo
+Vec2 Clone()
+operator+(Vec2 other)
+operator-(Vec2 other)
+operator*(Vec2 other)
+operator/(Vec2 other)
+operator==(Vec2 other)
+operator string()
+STATIC: TypeInformation Vec2.typeInfo
+
+Vec3
+Vec3()
+Vec3(Vec3 ref)
+Vec3(float x, float y, float z)
+float x
+float y
+float z
+TypeInformation typeInfo
+float Dot(Vec3 other)
+Vec3 Cross(Vec3 other)
+Vec3 Normalize()
+float Distance(Vec3 other)
+Vec3 Clone()
+operator+(Vec3 other)
+operator-(Vec3 other)
+operator*(Vec3 other)
+operator/Vec3 other)
+operator==(Vec3 other)
+operator string()
+STATIC: TypeInformation Vec3.typeInfo
+STATIC: Vec3 Vec3.back
+STATIC: Vec3 Vec3.down
+STATIC: Vec3 Vec3.forward
+STATIC: Vec3 Vec3.left
+STATIC: Vec3 Vec3.negativeInfinity
+STATIC: Vec3 Vec3.one
+STATIC: Vec3 Vec3.positiveInfinity
+STATIC: Vec3 Vec3.right
+STATIC: Vec3 Vec3.up
+STATIC: Vec3 Vec3.zero
+
+Vec4
+Vec4()
+Vec4(Vec4 ref)
+Vec4(float x, float y, float z, float w)
+float x
+float y
+float z
+float w
+TypeInformation typeInfo
+Vec4 Clone()
+operator+(Vec4 other)
+operator-(Vec4 other)
+operator*(Vec4 other)
+operator/Vec4 other)
+operator==(Vec4 other)
+operator string()
+STATIC: TypeInformation Vec4.typeInfo
+
+
+====================================================
+Client Classes
+
+CapturePointEntity : SpatialEntity
+CapturePointEntity(Entity ref)
+TypeInformation typeInfo
+bool contested
+TeamId team
+TeamId attackingTeam
+float location
+string name
+bool captureEnabled
+bool attacked
+bool controlled
+
+ClientPlayerEvent : EntityEvent
+ClientPlayerEvent(int eventId, Player player)
+ClientPlayerEvent(string eventId, Player player)
+Player player
+
+ClientDoublePlayerEvent : ClientPlayerEvent
+ClientDoublePlayerEvent(int eventId, Player player, Player extraPlayer)
+ClientDoublePlayerEvent(string eventId, Player player, Player extraPlayer)
+Player extraPlayer
+
+ConceptCache
+ConceptCache()
+ConceptCache(ConceptCache ref)
+float GetLevel(InputConceptIdentifiers identifier)
+void SetLevel(InputConceptIdentifiers identifier, float level)
+operator[](InputConceptIdentifiers key)
+
+EffectParams
+EffectParams()
+int size
+bool SetBool(sting name, bool value)
+bool SetInt(string name, int value)
+bool SetFloat(string name, float value)
+bool SetVec4(string name, Vec4 value)
+bool GetBool(string name)
+int GetInt(string name)
+float GetFloat(string name)
+Vec4 GetVec4(string name)
+bool HasBool(string name)
+bool HasInt(string name)
+bool HasFloat(string name)
+bool HasVec4(string name)
+
+ExplosionEntity : SpatialEntity
+ExplosionEntity(Entity ref)
+void Detonate(LinearTransform transform, Vec3 impactNormal, float damageMultiplier, Player shooterPlayer)
+STATIC: TypeInformation ExplosionEntity.typeInfo
+
+LifeCounterEntity : SpatialEntity
+LifeCounterEntity(Entity ref)
+int startingLifeCounter
+int lifeCounter
+int reinforceCounter
+int objectiveAliveCount
+int baseAliveCount
+STATIC: TypeInformation LifeCounterEntity.typeInfo
+
+NetEvent
+string name
+void Unsubscribe()
+
+Player
+string name
+int id
+TeamId teamID
+SquadId squadID
+bool inVehicle
+SoldierEntity soldier
+SoldierEntity corpse
+Entity attachedControllable
+Entity controlledControllable
+bool isSquadLeader
+bool alive
+int GetKills() -- Will soon be .kills
+int GetDeaths() -- Will soon be .deaths
+int GetTime() -- Will soon be .time
+int GetScore() -- Will soon be .score
+LinearTransform GetCameraTransform() -- Will soon be .cameraTransform
+operator==(Player other)
+
+RagdollComponent
+DataContainer data
+QuatTransform GetLocalTransform(int boneIndex)
+void SetLocalTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetWorldTransform(int boneIndex)
+void SetWorldTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetRenderTransform(int boneIndex)
+void SetRenderTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetInterpolatedLocalTransform(int boneIndex)
+void SetInterpolatedLocalTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetInterpolatedWorldTransform(int boneIndex)
+void SetInterpolatedWorldTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetActiveWorldTransform(int boneIndex)
+void SetActiveWorldTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetActiveLocalTransform(int boneIndex)
+void SetActiveLocalTransform(int boneIndex, QuatTransform transform)
+QuatTransform GetBoneVelocity(int boneIndex)
+void SetBoneVelocity(int boneIndex, QuatTransform transform)
+
+SoldierEntity : SpatialEntity
+SoldierEntity(Entity ref)
+LinearTransform worldTransform
+bool alive
+float deathTimer
+Player player
+float health
+float authorativeYaw
+float authorativePitch
+bool aimingEnable
+bool forceInvisible
+float sprintRecoveryTimer
+bool wasSprinting
+SoldierWeaponsComponent weaponsComponent
+RagdollComponent ragdollComponent
+bool isManDown
+bool isAlive
+bool isDead
+bool isDying
+bool isInteractiveManDown
+bool isFiring
+bool isReloading
+int GetCurrentWeaponSlot()
+string GetCurrentWeaponName()
+int GetCurrentPrimaryAmmo()
+int GetCurrentSecondaryAmmo()
+FireLogicType GetCurrentWeaponFireLogic()
+int GetWeaponCount()
+string GetWeaponNameByIndex(int index)
+int GetWeaponPrimaryAmmoByIndex(int index)
+int GetWeaponSecondaryAmmoByIndex(int index)
+FireLogicType GetWeaponFireLogicByIndex(int index)
+void SetPosition(Vec3 position)
+operator==(SoldierEntity other)
+STATIC: TypeInformation SoldierEntity.typeInfo
+
+SoldierWeaponsComponent
+LinearTransform weaponTransform
+
+TicketCounterEntity : SpatialEntity
+TicketCounterEntity(Entity ref)
+TeamId team
+int ticketCount
+int initialTicketCount
+STATIC: TicketCounterEntity.typeInfo
+
+VisualEnvironmentState
+VisualEnvironmentState(string entityName = "")
+VisualEnvironmentState(VisualEnvironmentState ref)
+string entityName
+float visibility
+int priority
+bool overrideVisibility
+bool excluded
+int stateId
+Vec3 activeEffectPosition
+int sharedParamsCount
+OutdoorLightData outdoorLight
+EnlightenData enlighten
+TonemapData tonemap
+ColorCorrectionData colorCorrection
+SkyData sky
+FogData fog
+WindData wind
+SunFlareData sunFlare
+DynamicAOData dynamicAO
+DofData dof
+VignetteData vignette
+FilmGrainData filmGrain
+LensScopeData lensScope
+CameraParamsData cameraParams
+ScreenEffectData screenEffect
+DamageEffectData damageEffect
+PlanarReflectionData planarReflection
+DynamicEnvmapData dynamicEnvmap
+CharacterLightingData characterLighting
+MotionBlurData motionBlur
+
+
+====================================================
+Server Classes
+
+ExplosionEntity : SpatialEntity
+ExplosionEntity(Entity ref)
+void Detonate(LinearTransform transform, Vec3 impactNormal, Vec3 origin, float latency, float damageMultiplier, Vec3 externalDamageDirection, float blastAngle)
+STATIC: TypeInformation ExplosionEntity.typeInfo
+
+NetEvent
+string name
+void Unsubscribe()
+
+Player
+string name
+int int
+int onlineID
+string guid
+string ip
+int ping
+bool alive
+bool isSquadLeader
+bool isSquadPrivate
+bool hasSoldier
+SoldierEntity soldier
+SoldierEntity corpse
+TeamId teamID
+SquadId squadID
+bool isAllowedToSpawn
+DataContainer selectedKit
+int score
+int kills
+int deaths
+void Kick(string reason = "")
+void Ban()
+bool Spawn(Entity spawnPoint, bool checkSpawnArea)
+void SelectWeapon(WeaponSlot slot, DataContainer weaponUnlockAsset, DataContainer[] unlockAssets)
+void SelectUnlockAssets(DataContainer characterCustomizationAsset, DataContainer[] visualUnlockAssets)
+SoldierEntity CreateSoldier(DataContainer blueprint, LinearTransform transform)
+void SpawnSoldierAt(SoldierEntity entity, LinearTransform transform, CharacterPoseType pose)
+void SetSquadLeader(bool leader, bool squadPrivate)
+void EnableInput(EntryInputActionEnum action, bool enable)
+operator==(Player other)
+
+ServerDamageInfo
+ServerDamageInfo()
+ServerDamageInfo(ServerDamageInfo ref)
+Vec3 position
+Vec3 direction
+Vec3 origin
+float damage
+float distributeDamageOverTime
+float empTime
+float stamina
+float collisionSpeed
+int boneIndex
+bool isDemolitionDamage
+bool includeChildren
+bool isExplosionDamage
+bool shouldForceDamage
+bool isBulletDamage
+bool isClientDamage
+
+ServerPlayerEvent : EntityEvent
+ServerPlayerEvent(int eventId, Player player, bool sendToPlayerOnly, bool sendToHostOnly, bool sendToTeamOnly, bool invertPlayerFilter, bool invertTeamFilter, TeamId team)
+ServerPlayerEvent(string eventId, Player player, bool sendToPlayerOnly, bool sendToHostOnly, bool sendToTeamOnly, bool invertPlayerFilter, bool invertTeamFilter, TeamId team)
+Player player
+bool sendToPlayerOnly
+bool sendToHostOnly
+bool sendToTeamOnly
+bool invertPlayerFilter
+bool invertTeamFilter
+TeamId team
+
+ServerDoublePlayerEvent : ServerPlayerEvent
+ServerDoublePlayerEvent(int eventId, Player player, Player extraPlayer, bool sendToPlayerOnly, bool sendToHostOnly, bool sendToTeamOnly, bool invertPlayerFilter, bool invertTeamFilter, TeamId team)
+ServerDoublePlayerEvent(string eventId, Player player, Player extraPlayer, bool sendToPlayerOnly, bool sendToHostOnly, bool sendToTeamOnly, bool invertPlayerFilter, bool invertTeamFilter, TeamId team)
+Player extraPlayer
+
+SoldierEntity : SpatialEntity
+SoldierEntity(Entity ref)
+LinearTransform worldTransform
+Player player
+bool detailedCollisionEnabled
+bool physicsEnabled
+bool forceInvisible
+bool aimingEnabled
+float maxHealth
+float waterLevel
+bool isManDown
+bool isAlive
+bool isDead
+bool isDying
+bool isInteractiveManDown
+bool isFiring
+bool isReloading
+float health
+int GetCurrentWeaponSlot()
+string GetCurrentWeaponName()
+int GetCurrentPrimaryAmmo()
+int GetCurrentSecondaryAmmo()
+int GetWeaponCount()
+string GetWeaponNameByIndex(int index)
+int GetWeaponPrimaryAmmoByIndex(int index)
+int GetWeaponSecondaryAmmoByIndex(int index)
+void SetPosition(Vec3 position)
+void Kill()
+void ApplyDamage(ServerDamageInfo info)
+void ApplyCustomization(DataContainer customizeSoldierData)
+operator==(SoldierEntity other)
+STATIC: TypeInformation SoldierEntity.typeInfo
+
+
+
