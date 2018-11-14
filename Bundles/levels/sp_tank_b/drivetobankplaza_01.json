@@ -1,0 +1,11 @@
+[
+  "animations/antanimations/b_sp07_sub_50caltodriver",
+  "levels/sp_tank_b/drivetobankplaza_01",
+  "levels/sp_tank_b/drivetobankplaza_01/layer0_drivetobankplaza_01_volumes",
+  "levels/sp_tank_b/drivetobankplaza_01/layer1_drivetobankplaza_01_enemyai",
+  "levels/sp_tank_b/drivetobankplaza_01/layer2_drivetobankplaza_01_enemyai_schematic",
+  "levels/sp_tank_b/drivetobankplaza_01/layer3_drivetobankplaza_01_friendlyai",
+  "levels/sp_tank_b/drivetobankplaza_01/layer4_drivetobankplaza_01_friendlyai_schematic",
+  "levels/sp_tank_b/drivetobankplaza_01/layer5_drivetobankplaza_01_vo",
+  "levels/sp_tank_b/drivetobankplaza_01/meshvariationdb_win32"
+]

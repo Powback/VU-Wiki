@@ -1,0 +1,14 @@
+[
+  "animations/antanimations/b_sp05_sub_trappedbytank",
+  "animations/characters/sp/sp_bank/trappedbytank/trappedbytank_flare_animset",
+  "animations/skeletons/template/onejointconnectanim",
+  "fx/ambient/warfare/signalflare/prefab_signalflare_red_noauto",
+  "levels/sp_bank/passage_cutscene",
+  "levels/sp_bank/passage_cutscene/layer0_passage_cutscene_scm",
+  "levels/sp_bank/passage_cutscene/layer1_passage_cutscene_log",
+  "levels/sp_bank/passage_cutscene/meshvariationdb_win32",
+  "levels/sp_bank/prefabs/anim/trappedbytank",
+  "sound/vo/en/sp/scenes/01_003_bank6_trappedbytank_el_wm_rs_jl",
+  "sound/vo/en/sp/scenes/patches/01_003_bank6_trappedbytank_el_wm_rs_jl",
+  "sound/vo/en/sp/scenes/poscinematic_3person_flatsfx_player"
+]

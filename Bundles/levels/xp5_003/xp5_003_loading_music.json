@@ -1,0 +1,9 @@
+[
+  "sound/levels/xp5_kiasarrail/music/xp5_03_kiasarrail_music_loading_patchconfig",
+  "sound/levels/xp5_kiasarrail/music/xp5_03_kiasarrail_music_loading_wave",
+  "sound/master",
+  "sound/mixers/fademixer",
+  "sound/mixers/movieandmusic_mixer_01",
+  "sound/mixersystem",
+  "sound/music/loading_music_player"
+]

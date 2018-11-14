@@ -1,0 +1,11 @@
+[
+  "animations/antanimations/b_sp09_sub_colebriefsnco",
+  "levels/sp_valley/prefabs/colebriefsnco_anim",
+  "levels/sp_valley/valleytankbriefing",
+  "levels/sp_valley/valleytankbriefing/layer0_valley_colencobriefing",
+  "levels/sp_valley/valleytankbriefing/layer1_valley_colencobriefinglogic",
+  "levels/sp_valley/valleytankbriefing/meshvariationdb_win32",
+  "sound/vo/en/sp/scenes/01_003_valley4_colebriefsnco_el_wm_rs_dh_nh",
+  "sound/vo/en/sp/scenes/conversation_1person_player",
+  "sound/vo/en/sp/scenes/patches/01_003_valley4_colebriefsnco_el_wm_rs_dh_nh"
+]

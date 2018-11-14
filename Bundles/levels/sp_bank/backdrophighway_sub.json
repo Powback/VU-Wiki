@@ -1,0 +1,18 @@
+[
+  "architecture/teheran_backdrop_01/teheran_facade_01_backdrop",
+  "architecture/teheran_backdrop_01/teheran_facade_01_backdrop_mesh",
+  "architecture/texturesshared/me_highrise_backdrop_win_d",
+  "architecture/texturesshared/me_highrise_backdrop_win_s",
+  "architecture/texturesshared/teheran_backdrop_atlas_01_02_d",
+  "architecture/texturesshared/teheran_backdrop_atlas_01_d",
+  "levels/mp_003/props/mp_003_vista01",
+  "levels/mp_003/props/mp_003_vista01_mesh",
+  "levels/mp_003/props/mp_003_vista01_spbank",
+  "levels/mp_003/props/textures/mp_003_vistabuildings_sheet_c",
+  "levels/mp_003/props/textures/mp_003_vistabuildings_sheet_emissive_c",
+  "levels/sp_bank/architecture/win_night/night_windows_04_d",
+  "levels/sp_bank/architecture/win_night/nightwindowslighttile_01_d",
+  "levels/sp_bank/backdrophighway_sub",
+  "levels/sp_bank/backdrophighway_sub/layer0_backdrophighway_art",
+  "levels/sp_bank/backdrophighway_sub/meshvariationdb_win32"
+]

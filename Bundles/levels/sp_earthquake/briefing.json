@@ -1,0 +1,18 @@
+[
+  "animations/antanimations/b_faceposer_sp_cole",
+  "animations/antanimations/b_sp03_sub_firstbriefing",
+  "animations/characters/sp/sp03/firstbriefing/firstbriefingmug",
+  "animations/characters/sp/sp03/firstbriefing/mugske",
+  "gameplay/logic/fourplayerareatrigger",
+  "levels/sp_earthquake/briefing",
+  "levels/sp_earthquake/briefing/layer0_briefingschema",
+  "levels/sp_earthquake/briefing/layer1_briefinglogic",
+  "levels/sp_earthquake/briefing/layer2_briefingsound",
+  "levels/sp_earthquake/briefing/meshvariationdb_win32",
+  "levels/sp_earthquake/prefabs/anim/colebriefing",
+  "sound/levels/sp03/sfx/sp03_sfx_briefing_noise",
+  "sound/levels/sp03/sfx/sp03_sfx_briefing_noise_wave",
+  "sound/vo/en/sp/scenes/01_001_earthquake2_colebriefing_el_wm_rs_dh_nh",
+  "sound/vo/en/sp/scenes/conversation_2person_player",
+  "sound/vo/en/sp/scenes/patches/01_001_earthquake2_colebriefing_el_wm_rs_dh_nh"
+]

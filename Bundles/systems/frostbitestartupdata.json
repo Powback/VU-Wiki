@@ -1,0 +1,8 @@
+[
+  "systems/postprocess/colorcuberef_linear",
+  "systems/shader/bestfitnormalscale",
+  "systems/translucency/translucencylut",
+  "ui/static/serverbanner/bfserverbanner",
+  "ui/static/transitiontexture",
+  "ui/static/transitiontexturewin32"
+]

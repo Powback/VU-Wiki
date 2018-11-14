@@ -1,0 +1,9 @@
+[
+  "sound/levels/xp3_alborz/music/xp3_alborz_music_loading_01",
+  "sound/levels/xp3_alborz/music/xp3_alborz_music_loading_01_patchconfig",
+  "sound/master",
+  "sound/mixers/fademixer",
+  "sound/mixers/movieandmusic_mixer_01",
+  "sound/mixersystem",
+  "sound/music/loading_music_player"
+]

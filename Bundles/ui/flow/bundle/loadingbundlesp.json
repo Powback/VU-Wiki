@@ -1,0 +1,13 @@
+[
+  "ui/assets/hudtextures",
+  "ui/assets/hudtextures/hudtextures_i3",
+  "ui/assets/iconsmenu",
+  "ui/assets/iconsmenu/iconsmenu_i1",
+  "ui/assets/loadingmessage",
+  "ui/assets/loadingmessage/loadingmessage_i1",
+  "ui/assets/menutransition",
+  "ui/assets/menutransition/menutransition_i2",
+  "ui/assets/textures",
+  "ui/assets/textures/textures_i1",
+  "ui/flow/state/loadingstate"
+]

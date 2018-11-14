@@ -1,0 +1,22 @@
+[
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_01",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_01_mesh",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_02",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_02_mesh",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_03",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_03_mesh",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_04",
+  "levels/sp_jet/areas/props/sp_jet_backdropclouds_04_mesh",
+  "levels/sp_villa/halo_backdrop",
+  "levels/sp_villa/halo_backdrop/layer0_halo_backdrop_art",
+  "levels/sp_villa/halo_backdrop/meshvariationdb_win32",
+  "levels/sp_villa/props/cloudplane_01",
+  "levels/sp_villa/props/cloudplane_01_mesh",
+  "levels/sp_villa/props/cloudplane_02",
+  "levels/sp_villa/props/sp_villa_halojumpclouds_01",
+  "levels/sp_villa/props/sp_villa_halojumpclouds_02",
+  "levels/sp_villa/props/sp_villa_halojumpclouds_03",
+  "levels/sp_villa/props/sp_villa_halojumpclouds_04",
+  "levels/sp_villa/terrain/sp_villa_backdropclouds_01_d"
+]

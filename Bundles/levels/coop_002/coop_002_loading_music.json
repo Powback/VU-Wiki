@@ -1,0 +1,9 @@
+[
+  "sound/levels/coop_02_breached/music/coop_02_breached_music_loading_01_patchconfig",
+  "sound/levels/coop_02_breached/music/coop_02_breached_music_loading_01_wave",
+  "sound/master",
+  "sound/mixers/fademixer",
+  "sound/mixers/movieandmusic_mixer_01",
+  "sound/mixersystem",
+  "sound/music/loading_music_player"
+]

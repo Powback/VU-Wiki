@@ -1,0 +1,11 @@
+[
+  "levels/sp_finale/lighting/e_sp_finale_train",
+  "levels/sp_finale/lighting/e_sp_finale_train_skyvisibilitytexture",
+  "levels/sp_finale/lighting/e_sp_finale_train_static",
+  "levels/sp_finale/lighting/e_sp_finale_train_static_directiontexture",
+  "levels/sp_finale/lighting/e_sp_finale_train_static_irradiancechromatexture",
+  "levels/sp_finale/lighting/e_sp_finale_train_static_irradiancelumatexture",
+  "levels/sp_finale/lightmap_02",
+  "levels/sp_finale/lightmap_02/layer0_lightmap_02_l",
+  "levels/sp_finale/lightmap_02/meshvariationdb_win32"
+]

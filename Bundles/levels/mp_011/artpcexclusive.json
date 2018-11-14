@@ -1,0 +1,16 @@
+[
+  "levels/mp_011/artpcexclusive",
+  "levels/mp_011/artpcexclusive/layer0_pcexclusivepropssmall",
+  "levels/mp_011/artpcexclusive/layer1_pcexclusivevegetation",
+  "levels/mp_011/artpcexclusive/layer2_pcexclusivefacadedetails",
+  "levels/mp_011/artpcexclusive/layer3_object_destruction",
+  "levels/mp_011/artpcexclusive/meshvariationdb_win32",
+  "lodgroups/world_streamablelods2_30mshadow",
+  "props/buildingprops/awning_rounded_01/awning_rounded_01",
+  "props/buildingprops/awning_rounded_01/awning_rounded_01_mesh",
+  "props/buildingprops/awning_rounded_01/awning_rounded_01_red",
+  "props/streetprops/debrispile_03/debrispile_03_d",
+  "props/streetprops/debrispile_03/debrispile_03_n",
+  "props/streetprops/debrispile_03/debrispile_03_v5",
+  "props/streetprops/debrispile_03/debrispile_03_v5_mesh"
+]

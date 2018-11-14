@@ -1,0 +1,23 @@
+[
+  "levels/sp_jet/areas/airfield_ground",
+  "levels/sp_jet/areas/airfield_ground_mesh",
+  "levels/sp_jet/areas/textures/airfield_01_d",
+  "levels/sp_jet/areas/textures/airfield_02_d",
+  "levels/sp_jet/areas/textures/airfield_tarmac_01_d",
+  "levels/sp_jet/areas/textures/baseground",
+  "levels/sp_jet/areas/textures/desert_detailmap_d",
+  "levels/sp_jet/areas/textures/ground_01_01",
+  "levels/sp_jet/areas/textures/ground_01_02",
+  "levels/sp_jet/areas/textures/ground_01_03",
+  "levels/sp_jet/areas/textures/ground_01_04",
+  "levels/sp_jet/areas/textures/ground_tiles_01_d",
+  "levels/sp_jet/areas/textures/groundnear_01_01",
+  "levels/sp_jet/areas/textures/groundnear_01_02",
+  "levels/sp_jet/areas/textures/groundnear_01_03",
+  "levels/sp_jet/areas/textures/road_01_d",
+  "levels/sp_jet/areas/textures/roadtarmac_01_d",
+  "levels/sp_jet/areas/textures/tarmac_gritty_01_d",
+  "levels/sp_jet/art_dogfightparttwo_backdrop",
+  "levels/sp_jet/art_dogfightparttwo_backdrop/layer0_art_dogfight2_ground",
+  "levels/sp_jet/art_dogfightparttwo_backdrop/meshvariationdb_win32"
+]

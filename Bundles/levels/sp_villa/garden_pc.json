@@ -1,0 +1,23 @@
+[
+  "levels/sp_villa/garden_pc",
+  "levels/sp_villa/garden_pc/layer0_garden_pc_art",
+  "levels/sp_villa/garden_pc/meshvariationdb_win32",
+  "levels/sp_villa/props/flowerbed_01",
+  "levels/sp_villa/props/flowerbed_01_mesh",
+  "levels/sp_villa/scattermeshes/textures/flowers_01_d",
+  "levels/sp_villa/scattermeshes/textures/plant01_dead_d",
+  "levels/sp_villa/scattermeshes/textures/treebeechatlas_01_d",
+  "levels/sp_villa/scattermeshes/treebeech_m_01_cluster_singelplayer_sp_villa",
+  "levels/sp_villa/scattermeshes/treebeech_m_01_cluster_static_singelplayer_sp_villa",
+  "lodgroups/vegetation_large_singelplayer",
+  "objects/bushframe_01/earth_d",
+  "objects/helicopterpad_01/helicopterpad_01colormap_d",
+  "objects/vegetation/textures/treebeechbark_01_d",
+  "objects/vegetation/textures/treebeechbark_01_n",
+  "objects/vegetation/textures/treebeechbarklod_01_d",
+  "objects/vegetation/treebeech_m_01_cluster/treebeech_m_01_cluster_singelplayer",
+  "objects/vegetation/treebeech_m_01_cluster/treebeech_m_01_cluster_singelplayer_mesh",
+  "objects/vegetation/treebeech_m_01_cluster/treebeech_m_01_cluster_skeleton",
+  "objects/vegetation/treebeech_m_01_cluster/treebeech_m_01_cluster_static_singelplayer",
+  "objects/vegetation/treebeech_m_01_cluster/treebeech_m_01_cluster_static_singelplayer_mesh"
+]

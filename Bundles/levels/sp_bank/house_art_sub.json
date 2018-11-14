@@ -1,0 +1,22 @@
+[
+  "levels/sp_bank/house_art_sub",
+  "levels/sp_bank/house_art_sub/layer0_house_art_scm",
+  "levels/sp_bank/house_art_sub/meshvariationdb_win32",
+  "lodgroups/world_longcull",
+  "lodgroups/world_shortcull",
+  "objects/debrispile_02/debrispile_02_d",
+  "objects/debrispile_02/debrispile_02_g",
+  "objects/debrispile_02/debrispile_02_g_mesh",
+  "objects/debrispile_02/debrispile_02_n",
+  "objects/debrispile_02/debrispile_02_objects_d",
+  "objects/pipesystem_01/pipesystem_01a",
+  "objects/pipesystem_01/pipesystem_01a_mesh",
+  "objects/pipesystem_01/t_pipesystem_01_d",
+  "objects/pipesystem_01/t_pipesystem_01_n",
+  "objects/pipesystem_02/pipesystem_02g",
+  "objects/pipesystem_02/pipesystem_02g_mesh",
+  "objects/pipesystem_02/pipesystem_02h",
+  "objects/pipesystem_02/pipesystem_02h_mesh",
+  "objects/pipesystem_02/t_pipesystem_02_d",
+  "objects/pipesystem_02/t_pipesystem_02_n"
+]

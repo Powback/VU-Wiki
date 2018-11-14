@@ -1,0 +1,11 @@
+[
+  "levels/sp_finale/lighting/e_sp_finale_sewer",
+  "levels/sp_finale/lighting/e_sp_finale_sewer_skyvisibilitytexture",
+  "levels/sp_finale/lighting/e_sp_finale_sewer_static",
+  "levels/sp_finale/lighting/e_sp_finale_sewer_static_directiontexture",
+  "levels/sp_finale/lighting/e_sp_finale_sewer_static_irradiancechromatexture",
+  "levels/sp_finale/lighting/e_sp_finale_sewer_static_irradiancelumatexture",
+  "levels/sp_finale/lightmap_03",
+  "levels/sp_finale/lightmap_03/layer0_lightmap_03_l",
+  "levels/sp_finale/lightmap_03/meshvariationdb_win32"
+]

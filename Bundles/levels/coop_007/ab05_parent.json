@@ -1,0 +1,18 @@
+[
+  "gameplay/weapons/invisiblerpg7",
+  "levels/coop_007/ab05_parent",
+  "levels/coop_007/ab05_parent/layer0_ab05_gameplaylogic",
+  "levels/coop_007/ab05_parent/layer1_ab05_gameplaylogic_schematic",
+  "levels/coop_007/ab05_parent/layer2_ab05_sound",
+  "levels/coop_007/ab05_parent/layer3_ab05_sound_schematic",
+  "levels/coop_007/ab05_parent/meshvariationdb_win32",
+  "levels/sp_bank/laserbeam",
+  "levels/sp_bank/laserbeam_mesh",
+  "sound/levels/sp_paris/sfx/sp_paris_sfx_street_rpg_miss",
+  "sound/levels/sp_paris/sfx/sp_paris_sfx_street_rpg_miss_wave",
+  "sound/weapons/handheld/rpg-7/rpg-7_reload_1p_wave",
+  "sound/weapons/handheld/rpg-7/weapon_at_rpg7",
+  "vehicles/dummyweapons/dummy_rpg7",
+  "vehicles/dummyweapons/dummy_rpg7_mesh",
+  "weapons/rpg7/rpg7projectile"
+]

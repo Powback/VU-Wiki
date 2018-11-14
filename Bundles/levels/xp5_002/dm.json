@@ -1,0 +1,17 @@
+[
+  "levels/xp5_002/dm",
+  "levels/xp5_002/dm/layer0_dm_shared",
+  "levels/xp5_002/dm/layer1_dm_shared_schematic",
+  "levels/xp5_002/dm/meshvariationdb_win32",
+  "objects/loadingpallet_01/loadingpallet_01",
+  "objects/loadingpallet_01/loadingpallet_01_cluster",
+  "objects/loadingpallet_01/loadingpallet_01_cluster_mesh",
+  "objects/loadingpallet_01/loadingpallet_01_mesh",
+  "objects/loadingpallet_01/loadingpallet_01pile",
+  "objects/loadingpallet_01/loadingpallet_01pile_mesh",
+  "props/vehicles/deliverytruck/deliverytruck",
+  "props/vehicles/deliverytruck/deliverytruck_mesh",
+  "props/vehicles/deliverytruck/deliverytruck_prefab",
+  "props/vehicles/wheels/vanwheel01",
+  "props/vehicles/wheels/vanwheel01_mesh"
+]

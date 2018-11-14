@@ -1,0 +1,10 @@
+[
+  "levels/xp4_parl/deathmatch",
+  "levels/xp4_parl/deathmatch/layer0_dm_shared_logic",
+  "levels/xp4_parl/deathmatch/layer1_dm_shared_logic_schematic",
+  "levels/xp4_parl/deathmatch/layer2_dm_added_objects",
+  "levels/xp4_parl/deathmatch/meshvariationdb_win32",
+  "objects/rocks_01/rock_01wall_d",
+  "xp_raw/props/rock_01/rock_01wall",
+  "xp_raw/props/rock_01/rock_01wall_mesh"
+]

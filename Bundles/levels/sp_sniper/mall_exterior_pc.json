@@ -1,0 +1,20 @@
+[
+  "architecture/destructionvolumes/destructioncut_concrete_d",
+  "architecture/destructionvolumes/destructioncut_concrete_n",
+  "architecture/destructionvolumes/destructionmask_concrete_d",
+  "architecture/facadedecorations/concrete_edgedecorationhighres_s256_01",
+  "architecture/facadedecorations/concrete_edgedecorationhighres_s256_02",
+  "architecture/facadedecorations/concrete_edgedecorationhighres_s512_01",
+  "architecture/facadedecorations/concrete_edgedecorationhighres_s512_02",
+  "architecture/texturesshared/defaultnormal",
+  "levels/sp_sniper/mall_exterior_pc",
+  "levels/sp_sniper/mall_exterior_pc/layer0_mall_exterior_pc_art",
+  "levels/sp_sniper/mall_exterior_pc/meshvariationdb_win32",
+  "props/buildingprops/facadead_01/facadeadd_01_support_d",
+  "props/buildingprops/facadead_02/facadead_02",
+  "props/buildingprops/facadead_02/facadead_02_ad01",
+  "props/buildingprops/facadead_02/facadead_02_banner_d",
+  "props/buildingprops/facadead_02/facadead_02_iran",
+  "props/buildingprops/facadead_02/facadead_02_mesh",
+  "props/buildingprops/facadead_02/iran_facadead_banner_d"
+]

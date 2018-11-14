@@ -1,0 +1,14 @@
+[
+  "animations/antanimations/b_sharedaisoldier",
+  "gameplay/logic/spammocrate",
+  "gameplay/logic/spammocrate_nongroupable_autogen",
+  "levels/sp_valley/rundownhill",
+  "levels/sp_valley/rundownhill/layer0_rundownhill_orders",
+  "levels/sp_valley/rundownhill/layer1_rundownhill_logic",
+  "levels/sp_valley/rundownhill/meshvariationdb_win32",
+  "objects/coop_ammobox/coop_ammobox",
+  "objects/coop_ammobox/coop_ammobox_mesh",
+  "sound/character/equipment/resupply_ammo",
+  "weapons/gadgets/ammobag/ammocrate_d",
+  "weapons/gadgets/ammobag/ammocrate_n"
+]

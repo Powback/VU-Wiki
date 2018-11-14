@@ -1,0 +1,12 @@
+[
+  "animations/antanimations/b_sp09_sub_valleyjet",
+  "levels/sp_valley/prefabs/jetattacksbriefing_anim",
+  "levels/sp_valley/valleyjetbriefing",
+  "levels/sp_valley/valleyjetbriefing/layer0_valley_jetbriefing",
+  "levels/sp_valley/valleyjetbriefing/layer1_valleyjetbriefing_logic",
+  "levels/sp_valley/valleyjetbriefing/meshvariationdb_win32",
+  "sound/levels/sp_valley/mixers/sp_valley_mixer_anti-vehicular_mixer",
+  "sound/vo/en/sp/scenes/01_005_valley5_jetattacks_el_wm_rs_dh_nh",
+  "sound/vo/en/sp/scenes/conversation_4person_player",
+  "sound/vo/en/sp/scenes/patches/01_005_valley5_jetattacks_el_wm_rs_dh_nh"
+]

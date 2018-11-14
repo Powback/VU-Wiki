@@ -1,0 +1,15 @@
+[
+  "levels/xp4_fd/deathmatch",
+  "levels/xp4_fd/deathmatch/layer0_dm_shared_logic",
+  "levels/xp4_fd/deathmatch/layer1_dm_shared_logic_schematic",
+  "levels/xp4_fd/deathmatch/layer2_dm_block_art",
+  "levels/xp4_fd/deathmatch/meshvariationdb_win32",
+  "objects/sandbags/sandbags_wall_straight",
+  "objects/sandbags/sandbags_wall_straight_mesh",
+  "props/streetprops/me_wall/me_pillar_02",
+  "props/streetprops/me_wall/me_pillar_02_mesh",
+  "props/streetprops/me_wall/me_wall_02_d",
+  "props/streetprops/me_wall/me_wall_02_n",
+  "props/streetprops/me_wall/me_wall_tile_d",
+  "props/streetprops/me_wall/me_wall_tile_n"
+]

@@ -1,0 +1,21 @@
+[
+  "fx/meshparticles/vehicles/airplanes/an_22_background",
+  "fx/meshparticles/vehicles/airplanes/an_22_background_mesh",
+  "levels/sp_valley/airdrop",
+  "levels/sp_valley/airdrop/layer0_airdropflyover",
+  "levels/sp_valley/airdrop/layer1_airdropprops",
+  "levels/sp_valley/airdrop/meshvariationdb_win32",
+  "levels/sp_valley/prefabs/an22_parachutejumpers_closerange",
+  "levels/sp_valley/prefabs/an22_parachutejumpers_midrange",
+  "objects/an-22/an-22",
+  "objects/an-22/an-22_d",
+  "objects/an-22/an-22_mesh",
+  "objects/an-22/an-22_n",
+  "objects/an-22/an-22_s",
+  "objects/an-22/an-22propeller_d",
+  "objects/an-22/an-22propeller_o",
+  "sound/levels/shared/vehicle/bomber/shared_ambients_bigworld_bomber_distant_looping_01",
+  "sound/levels/sp_valley/sfx/sp_valley_sfx_an22_pass_close",
+  "sound/levels/sp_valley/sfx/sp_valley_sfx_an22_pass_wave",
+  "sound/levels/sp_valley/sfx/sp_valley_sfx_distant_an-22"
+]

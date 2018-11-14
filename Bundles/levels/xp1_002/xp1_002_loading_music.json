@@ -1,0 +1,9 @@
+[
+  "sound/levels/mp18/music/mp018_music_loading_01_patchconfig",
+  "sound/levels/mp18/music/mp18_music_loading_01_wave",
+  "sound/master",
+  "sound/mixers/fademixer",
+  "sound/mixers/movieandmusic_mixer_01",
+  "sound/mixersystem",
+  "sound/music/loading_music_player"
+]

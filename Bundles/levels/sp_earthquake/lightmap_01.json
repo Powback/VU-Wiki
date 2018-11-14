@@ -1,0 +1,11 @@
+[
+  "levels/sp_earthquake/lighting/e_sp_earthquake_l_01",
+  "levels/sp_earthquake/lighting/e_sp_earthquake_l_01_skyvisibilitytexture",
+  "levels/sp_earthquake/lighting/es_sp_earthquake_l_01",
+  "levels/sp_earthquake/lighting/es_sp_earthquake_l_01_directiontexture",
+  "levels/sp_earthquake/lighting/es_sp_earthquake_l_01_irradiancechromatexture",
+  "levels/sp_earthquake/lighting/es_sp_earthquake_l_01_irradiancelumatexture",
+  "levels/sp_earthquake/lightmap_01",
+  "levels/sp_earthquake/lightmap_01/layer0_lightmap_01_l",
+  "levels/sp_earthquake/lightmap_01/meshvariationdb_win32"
+]

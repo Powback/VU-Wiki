@@ -1,0 +1,9 @@
+[
+  "sound/levels/xp2_palace/music/xp2_palace_music_loading_01",
+  "sound/levels/xp2_palace/music/xp2_palace_music_loading_01_wav",
+  "sound/master",
+  "sound/mixers/fademixer",
+  "sound/mixers/movieandmusic_mixer_01",
+  "sound/mixersystem",
+  "sound/music/loading_music_player"
+]

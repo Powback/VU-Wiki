@@ -1,0 +1,11 @@
+[
+  "levels/sp_bank/lighting/e_sp_bank_01",
+  "levels/sp_bank/lighting/e_sp_bank_01_skyvisibilitytexture",
+  "levels/sp_bank/lighting/es_sp_bank_01",
+  "levels/sp_bank/lighting/es_sp_bank_01_directiontexture",
+  "levels/sp_bank/lighting/es_sp_bank_01_irradiancechromatexture",
+  "levels/sp_bank/lighting/es_sp_bank_01_irradiancelumatexture",
+  "levels/sp_bank/lightmap_01",
+  "levels/sp_bank/lightmap_01/layer0_lightmap_01_l",
+  "levels/sp_bank/lightmap_01/meshvariationdb_win32"
+]

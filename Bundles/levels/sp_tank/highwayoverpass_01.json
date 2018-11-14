@@ -1,0 +1,18 @@
+[
+  "architecture/texturesshared/floors/floortilesstone01_d",
+  "levels/sp_bank/architecture/win_night/nightwindowslighttile_01_d",
+  "levels/sp_tank/highwayoverpass_01",
+  "levels/sp_tank/highwayoverpass_01/layer0_highwayoverpass_01_levelart",
+  "levels/sp_tank/highwayoverpass_01/layer1_highwayoverpassschema",
+  "levels/sp_tank/highwayoverpass_01/layer2_highwayoverpass_01_volumes",
+  "levels/sp_tank/highwayoverpass_01/layer3_highwayoverpass_01_substream_01",
+  "levels/sp_tank/highwayoverpass_01/layer4_highwayoverpass_animation",
+  "levels/sp_tank/highwayoverpass_01/meshvariationdb_win32",
+  "levels/sp_tank/props/suburbancluster/subcluster_02_d",
+  "levels/sp_tank/props/suburbancluster/subcluster_large_01",
+  "levels/sp_tank/props/suburbancluster/subcluster_large_01_mesh",
+  "levels/sp_tank/props/suburbancluster/subsingle_01",
+  "levels/sp_tank/props/suburbancluster/subsingle_01_mesh",
+  "levels/sp_tank/props/suburbancluster/subsingle_08",
+  "levels/sp_tank/props/suburbancluster/subsingle_08_mesh"
+]

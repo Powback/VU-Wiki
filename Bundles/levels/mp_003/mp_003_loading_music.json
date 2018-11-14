@@ -1,0 +1,9 @@
+[
+  "sound/levels/mp03/music/mp03_loading_music_01_wave",
+  "sound/levels/mp03/music/mp03_music_loading_01_patchconfig",
+  "sound/master",
+  "sound/mixers/fademixer",
+  "sound/mixers/movieandmusic_mixer_01",
+  "sound/mixersystem",
+  "sound/music/loading_music_player"
+]
